@@ -8,11 +8,21 @@
       <ObjectId>16385</ObjectId>
       <StateNumber>557</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>565</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1985</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
       <Relations>sequence|table|16386|16388|1
-sequence|table|16394|16396|1
+sequence|table|19668|19670|1
+sequence|table|19688|19690|1
+sequence|table|19696|19698|1
+sequence|table|19704|19706|1
+sequence|table|19717|19719|1
+sequence|table|19732|19734|1
+sequence|table|19784|19786|1
+sequence|table|19745|19747|1
+sequence|table|19763|19765|1
+sequence|table|19771|19773|1
+sequence|table|19810|19812|1
 </Relations>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -95,7 +105,7 @@ sequence|table|16394|16396|1
       <Comment>standard public schema</Comment>
       <StateNumber>351</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>566</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1986</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -155,7 +165,63 @@ sequence|table|16394|16396|1
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
-    <sequence id="24" parent="16" name="migrations_id_seq">
+    <sequence id="24" parent="16" name="authors_author_id_seq">
+      <ObjectId>19696</ObjectId>
+      <StateNumber>1961</StateNumber>
+      <Owner>root</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="25" parent="16" name="books_id_seq">
+      <ObjectId>19717</ObjectId>
+      <StateNumber>1965</StateNumber>
+      <Owner>root</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="26" parent="16" name="chief_editors_editor_id_seq">
+      <ObjectId>19763</ObjectId>
+      <StateNumber>1971</StateNumber>
+      <Owner>root</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="27" parent="16" name="documents_document_id_seq">
+      <ObjectId>19688</ObjectId>
+      <StateNumber>1959</StateNumber>
+      <Owner>root</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="28" parent="16" name="inv_editors_id_seq">
+      <ObjectId>19771</ObjectId>
+      <StateNumber>1973</StateNumber>
+      <Owner>root</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="29" parent="16" name="journal_issues_id_seq">
+      <ObjectId>19745</ObjectId>
+      <StateNumber>1969</StateNumber>
+      <Owner>root</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="30" parent="16" name="journal_volumes_id_seq">
+      <ObjectId>19732</ObjectId>
+      <StateNumber>1967</StateNumber>
+      <Owner>root</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="31" parent="16" name="migrations_id_seq">
       <ObjectId>16386</ObjectId>
       <StateNumber>558</StateNumber>
       <Owner>root</Owner>
@@ -163,30 +229,542 @@ sequence|table|16394|16396|1
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="25" parent="16" name="users_id_seq">
-      <ObjectId>16394</ObjectId>
-      <StateNumber>561</StateNumber>
+    <sequence id="32" parent="16" name="proceedings_id_seq">
+      <ObjectId>19784</ObjectId>
+      <StateNumber>1975</StateNumber>
       <Owner>root</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <table id="26" parent="16" name="migrations">
+    <sequence id="33" parent="16" name="publishers_publisher_id_seq">
+      <ObjectId>19810</ObjectId>
+      <StateNumber>1981</StateNumber>
+      <Owner>root</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="34" parent="16" name="users_id_seq">
+      <ObjectId>19668</ObjectId>
+      <StateNumber>1955</StateNumber>
+      <Owner>root</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="35" parent="16" name="writes_id_seq">
+      <ObjectId>19704</ObjectId>
+      <StateNumber>1963</StateNumber>
+      <Owner>root</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="36" parent="16" name="authors">
+      <ObjectId>19698</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>1963</StateNumber>
+    </table>
+    <table id="37" parent="16" name="books">
+      <ObjectId>19719</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>1977</StateNumber>
+    </table>
+    <table id="38" parent="16" name="chief_editors">
+      <ObjectId>19765</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>1979</StateNumber>
+    </table>
+    <table id="39" parent="16" name="documents">
+      <ObjectId>19690</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>1983</StateNumber>
+    </table>
+    <table id="40" parent="16" name="inv_editors">
+      <ObjectId>19773</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>1973</StateNumber>
+    </table>
+    <table id="41" parent="16" name="journal_issues">
+      <ObjectId>19747</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>1973</StateNumber>
+    </table>
+    <table id="42" parent="16" name="journal_volumes">
+      <ObjectId>19734</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>1979</StateNumber>
+    </table>
+    <table id="43" parent="16" name="migrations">
       <ObjectId>16388</ObjectId>
       <Owner>root</Owner>
       <StateNumber>558</StateNumber>
     </table>
-    <table id="27" parent="16" name="password_resets">
-      <ObjectId>16407</ObjectId>
+    <table id="44" parent="16" name="password_resets">
+      <ObjectId>19681</ObjectId>
       <Owner>root</Owner>
-      <StateNumber>563</StateNumber>
+      <StateNumber>1957</StateNumber>
     </table>
-    <table id="28" parent="16" name="users">
-      <ObjectId>16396</ObjectId>
+    <table id="45" parent="16" name="proceedings">
+      <ObjectId>19786</ObjectId>
       <Owner>root</Owner>
-      <StateNumber>561</StateNumber>
+      <StateNumber>1975</StateNumber>
     </table>
-    <column id="29" parent="26" name="id">
+    <table id="46" parent="16" name="publishers">
+      <ObjectId>19812</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>1983</StateNumber>
+    </table>
+    <table id="47" parent="16" name="users">
+      <ObjectId>19670</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>1955</StateNumber>
+    </table>
+    <table id="48" parent="16" name="writes">
+      <ObjectId>19706</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>1977</StateNumber>
+    </table>
+    <column id="49" parent="36" name="author_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1961</StateNumber>
+      <DefaultExpression>nextval(&apos;authors_author_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="50" parent="36" name="a_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1961</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="51" parent="36" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1961</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="52" parent="36" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1961</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="53" parent="36" name="authors_pkey">
+      <ObjectId>19702</ObjectId>
+      <StateNumber>1961</StateNumber>
+      <ColNames>author_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="54" parent="36" name="authors_pkey">
+      <ObjectId>19703</ObjectId>
+      <StateNumber>1961</StateNumber>
+      <ColNames>author_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>authors_pkey</UnderlyingIndexName>
+    </key>
+    <column id="55" parent="37" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1965</StateNumber>
+      <DefaultExpression>nextval(&apos;books_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="56" parent="37" name="document_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1965</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="57" parent="37" name="isbn">
+      <Position>3</Position>
+      <DataType>char(13)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1965</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="58" parent="37" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1965</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="59" parent="37" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1965</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="60" parent="37" name="books_pkey">
+      <ObjectId>19723</ObjectId>
+      <StateNumber>1965</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <index id="61" parent="37" name="books_document_id_unique">
+      <ObjectId>19730</ObjectId>
+      <StateNumber>1965</StateNumber>
+      <ColNames>document_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="37" name="books_pkey">
+      <ObjectId>19724</ObjectId>
+      <StateNumber>1965</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>books_pkey</UnderlyingIndexName>
+    </key>
+    <key id="63" parent="37" name="books_document_id_unique">
+      <ObjectId>19731</ObjectId>
+      <StateNumber>1965</StateNumber>
+      <ColNames>document_id</ColNames>
+      <UnderlyingIndexName>books_document_id_unique</UnderlyingIndexName>
+    </key>
+    <foreign-key id="64" parent="37" name="books_document_id_foreign">
+      <ObjectId>19725</ObjectId>
+      <StateNumber>1965</StateNumber>
+      <ColNames>document_id</ColNames>
+      <RefTableId>19690</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>documents</RefTableName>
+      <RefKeyName>documents_pkey</RefKeyName>
+      <RefColNames>document_id</RefColNames>
+    </foreign-key>
+    <column id="65" parent="38" name="editor_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1971</StateNumber>
+      <DefaultExpression>nextval(&apos;chief_editors_editor_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="66" parent="38" name="e_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1971</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="67" parent="38" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1971</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="68" parent="38" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1971</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="69" parent="38" name="chief_editors_pkey">
+      <ObjectId>19769</ObjectId>
+      <StateNumber>1971</StateNumber>
+      <ColNames>editor_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="70" parent="38" name="chief_editors_pkey">
+      <ObjectId>19770</ObjectId>
+      <StateNumber>1971</StateNumber>
+      <ColNames>editor_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>chief_editors_pkey</UnderlyingIndexName>
+    </key>
+    <column id="71" parent="39" name="document_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1959</StateNumber>
+      <DefaultExpression>nextval(&apos;documents_document_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="72" parent="39" name="title">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1959</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="73" parent="39" name="p_date">
+      <Position>3</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1959</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="74" parent="39" name="publisher_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1959</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="75" parent="39" name="created_at">
+      <Position>5</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1959</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="76" parent="39" name="updated_at">
+      <Position>6</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1959</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="77" parent="39" name="documents_pkey">
+      <ObjectId>19694</ObjectId>
+      <StateNumber>1959</StateNumber>
+      <ColNames>document_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="78" parent="39" name="documents_pkey">
+      <ObjectId>19695</ObjectId>
+      <StateNumber>1959</StateNumber>
+      <ColNames>document_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>documents_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="79" parent="39" name="documents_publisher_id_foreign">
+      <ObjectId>19821</ObjectId>
+      <StateNumber>1983</StateNumber>
+      <ColNames>publisher_id</ColNames>
+      <RefTableId>19812</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>publishers</RefTableName>
+      <RefKeyName>publishers_pkey</RefKeyName>
+      <RefColNames>publisher_id</RefColNames>
+    </foreign-key>
+    <column id="80" parent="40" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1973</StateNumber>
+      <DefaultExpression>nextval(&apos;inv_editors_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="81" parent="40" name="document_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1973</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="82" parent="40" name="issue_no">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1973</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="83" parent="40" name="ie_name">
+      <Position>4</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1973</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="84" parent="40" name="created_at">
+      <Position>5</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1973</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="85" parent="40" name="updated_at">
+      <Position>6</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1973</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="86" parent="40" name="inv_editors_pkey">
+      <ObjectId>19777</ObjectId>
+      <StateNumber>1973</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="87" parent="40" name="inv_editors_pkey">
+      <ObjectId>19778</ObjectId>
+      <StateNumber>1973</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>inv_editors_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="88" parent="40" name="inv_editors_document_id_issue_no_foreign">
+      <ObjectId>19779</ObjectId>
+      <StateNumber>1973</StateNumber>
+      <ColNames>document_id
+issue_no</ColNames>
+      <RefTableId>19747</RefTableId>
+      <RefColPositions>2,3</RefColPositions>
+      <RefTableName>journal_issues</RefTableName>
+      <RefKeyName>journal_issues_document_id_issue_no_unique</RefKeyName>
+      <RefColNames>document_id
+issue_no</RefColNames>
+    </foreign-key>
+    <column id="89" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1969</StateNumber>
+      <DefaultExpression>nextval(&apos;journal_issues_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="90" parent="41" name="document_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1969</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="91" parent="41" name="issue_no">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1969</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="92" parent="41" name="Scope">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1969</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="93" parent="41" name="created_at">
+      <Position>5</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1969</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="94" parent="41" name="updated_at">
+      <Position>6</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1969</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="95" parent="41" name="journal_issues_pkey">
+      <ObjectId>19754</ObjectId>
+      <StateNumber>1969</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <index id="96" parent="41" name="journal_issues_document_id_issue_no_unique">
+      <ObjectId>19761</ObjectId>
+      <StateNumber>1969</StateNumber>
+      <ColNames>document_id
+issue_no</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="97" parent="41" name="journal_issues_pkey">
+      <ObjectId>19755</ObjectId>
+      <StateNumber>1969</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>journal_issues_pkey</UnderlyingIndexName>
+    </key>
+    <key id="98" parent="41" name="journal_issues_document_id_issue_no_unique">
+      <ObjectId>19762</ObjectId>
+      <StateNumber>1969</StateNumber>
+      <ColNames>document_id
+issue_no</ColNames>
+      <UnderlyingIndexName>journal_issues_document_id_issue_no_unique</UnderlyingIndexName>
+    </key>
+    <foreign-key id="99" parent="41" name="journal_issues_document_id_foreign">
+      <ObjectId>19756</ObjectId>
+      <StateNumber>1969</StateNumber>
+      <ColNames>document_id</ColNames>
+      <RefTableId>19690</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>documents</RefTableName>
+      <RefKeyName>documents_pkey</RefKeyName>
+      <RefColNames>document_id</RefColNames>
+    </foreign-key>
+    <column id="100" parent="42" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1967</StateNumber>
+      <DefaultExpression>nextval(&apos;journal_volumes_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="101" parent="42" name="document_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1967</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="102" parent="42" name="j_volume">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1967</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="103" parent="42" name="editor_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1967</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="104" parent="42" name="created_at">
+      <Position>5</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1967</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="105" parent="42" name="updated_at">
+      <Position>6</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1967</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="106" parent="42" name="journal_volumes_pkey">
+      <ObjectId>19738</ObjectId>
+      <StateNumber>1967</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="107" parent="42" name="journal_volumes_pkey">
+      <ObjectId>19739</ObjectId>
+      <StateNumber>1967</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>journal_volumes_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="108" parent="42" name="journal_volumes_document_id_foreign">
+      <ObjectId>19740</ObjectId>
+      <StateNumber>1967</StateNumber>
+      <ColNames>document_id</ColNames>
+      <RefTableId>19690</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>documents</RefTableName>
+      <RefKeyName>documents_pkey</RefKeyName>
+      <RefColNames>document_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="109" parent="42" name="journal_volumes_editor_id_foreign">
+      <ObjectId>19805</ObjectId>
+      <StateNumber>1979</StateNumber>
+      <ColNames>editor_id</ColNames>
+      <RefTableId>19765</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>chief_editors</RefTableName>
+      <RefKeyName>chief_editors_pkey</RefKeyName>
+      <RefColNames>editor_id</RefColNames>
+    </foreign-key>
+    <column id="110" parent="43" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -194,137 +772,325 @@ sequence|table|16394|16396|1
       <DefaultExpression>nextval(&apos;migrations_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="30" parent="26" name="migration">
+    <column id="111" parent="43" name="migration">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>558</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="31" parent="26" name="batch">
+    <column id="112" parent="43" name="batch">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>558</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="32" parent="26" name="migrations_pkey">
+    <index id="113" parent="43" name="migrations_pkey">
       <ObjectId>16392</ObjectId>
       <StateNumber>558</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="33" parent="26" name="migrations_pkey">
+    <key id="114" parent="43" name="migrations_pkey">
       <ObjectId>16393</ObjectId>
       <StateNumber>558</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>migrations_pkey</UnderlyingIndexName>
     </key>
-    <column id="34" parent="27" name="email">
+    <column id="115" parent="44" name="email">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>563</StateNumber>
+      <StateNumber>1957</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="35" parent="27" name="token">
+    <column id="116" parent="44" name="token">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>563</StateNumber>
+      <StateNumber>1957</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="36" parent="27" name="created_at">
+    <column id="117" parent="44" name="created_at">
       <Position>3</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>563</StateNumber>
+      <StateNumber>1957</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="37" parent="27" name="password_resets_email_index">
-      <ObjectId>16413</ObjectId>
-      <StateNumber>563</StateNumber>
+    <index id="118" parent="44" name="password_resets_email_index">
+      <ObjectId>19687</ObjectId>
+      <StateNumber>1957</StateNumber>
       <ColNames>email</ColNames>
     </index>
-    <column id="38" parent="28" name="id">
+    <column id="119" parent="45" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>561</StateNumber>
-      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+      <StateNumber>1975</StateNumber>
+      <DefaultExpression>nextval(&apos;proceedings_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="39" parent="28" name="name">
+    <column id="120" parent="45" name="document_id">
       <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>561</StateNumber>
-      <TypeId>1043</TypeId>
+      <StateNumber>1975</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="40" parent="28" name="email">
+    <column id="121" parent="45" name="c_date">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>561</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="41" parent="28" name="email_verified_at">
-      <Position>4</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>561</StateNumber>
+      <NotNull>1</NotNull>
+      <StateNumber>1975</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="42" parent="28" name="password">
+    <column id="122" parent="45" name="c_location">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1975</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="123" parent="45" name="c_editor">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>561</StateNumber>
+      <StateNumber>1975</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="43" parent="28" name="remember_token">
+    <column id="124" parent="45" name="created_at">
       <Position>6</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <StateNumber>561</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1975</StateNumber>
+      <TypeId>1114</TypeId>
     </column>
-    <column id="44" parent="28" name="created_at">
+    <column id="125" parent="45" name="updated_at">
       <Position>7</Position>
       <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>561</StateNumber>
+      <StateNumber>1975</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="45" parent="28" name="updated_at">
-      <Position>8</Position>
-      <DataType>timestamp(0)|0s</DataType>
-      <StateNumber>561</StateNumber>
-      <TypeId>1114</TypeId>
-    </column>
-    <index id="46" parent="28" name="users_pkey">
-      <ObjectId>16403</ObjectId>
-      <StateNumber>561</StateNumber>
+    <index id="126" parent="45" name="proceedings_pkey">
+      <ObjectId>19793</ObjectId>
+      <StateNumber>1975</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="47" parent="28" name="users_email_unique">
-      <ObjectId>16405</ObjectId>
-      <StateNumber>561</StateNumber>
+    <key id="127" parent="45" name="proceedings_pkey">
+      <ObjectId>19794</ObjectId>
+      <StateNumber>1975</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>proceedings_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="128" parent="45" name="proceedings_document_id_foreign">
+      <ObjectId>19795</ObjectId>
+      <StateNumber>1975</StateNumber>
+      <ColNames>document_id</ColNames>
+      <RefTableId>19690</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>documents</RefTableName>
+      <RefKeyName>documents_pkey</RefKeyName>
+      <RefColNames>document_id</RefColNames>
+    </foreign-key>
+    <column id="129" parent="46" name="publisher_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1981</StateNumber>
+      <DefaultExpression>nextval(&apos;publishers_publisher_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="130" parent="46" name="pub_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1981</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="131" parent="46" name="address">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1981</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="132" parent="46" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1981</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="133" parent="46" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1981</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="134" parent="46" name="publishers_pkey">
+      <ObjectId>19819</ObjectId>
+      <StateNumber>1981</StateNumber>
+      <ColNames>publisher_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="135" parent="46" name="publishers_pkey">
+      <ObjectId>19820</ObjectId>
+      <StateNumber>1981</StateNumber>
+      <ColNames>publisher_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>publishers_pkey</UnderlyingIndexName>
+    </key>
+    <column id="136" parent="47" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1955</StateNumber>
+      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="137" parent="47" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1955</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="138" parent="47" name="email">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1955</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="139" parent="47" name="email_verified_at">
+      <Position>4</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1955</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="140" parent="47" name="password">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1955</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="141" parent="47" name="remember_token">
+      <Position>6</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <StateNumber>1955</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="142" parent="47" name="created_at">
+      <Position>7</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1955</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="143" parent="47" name="updated_at">
+      <Position>8</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1955</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="144" parent="47" name="users_pkey">
+      <ObjectId>19677</ObjectId>
+      <StateNumber>1955</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <index id="145" parent="47" name="users_email_unique">
+      <ObjectId>19679</ObjectId>
+      <StateNumber>1955</StateNumber>
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="48" parent="28" name="users_pkey">
-      <ObjectId>16404</ObjectId>
-      <StateNumber>561</StateNumber>
+    <key id="146" parent="47" name="users_pkey">
+      <ObjectId>19678</ObjectId>
+      <StateNumber>1955</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
     </key>
-    <key id="49" parent="28" name="users_email_unique">
-      <ObjectId>16406</ObjectId>
-      <StateNumber>561</StateNumber>
+    <key id="147" parent="47" name="users_email_unique">
+      <ObjectId>19680</ObjectId>
+      <StateNumber>1955</StateNumber>
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>
+    <column id="148" parent="48" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1963</StateNumber>
+      <DefaultExpression>nextval(&apos;writes_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="149" parent="48" name="author_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1963</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="150" parent="48" name="document_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1963</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="151" parent="48" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1963</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="152" parent="48" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp(0)|0s</DataType>
+      <StateNumber>1963</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="153" parent="48" name="writes_pkey">
+      <ObjectId>19710</ObjectId>
+      <StateNumber>1963</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="154" parent="48" name="writes_pkey">
+      <ObjectId>19711</ObjectId>
+      <StateNumber>1963</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>writes_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="155" parent="48" name="writes_author_id_foreign">
+      <ObjectId>19712</ObjectId>
+      <StateNumber>1963</StateNumber>
+      <ColNames>author_id</ColNames>
+      <RefTableId>19698</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>authors</RefTableName>
+      <RefKeyName>authors_pkey</RefKeyName>
+      <RefColNames>author_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="156" parent="48" name="writes_document_id_foreign">
+      <ObjectId>19800</ObjectId>
+      <StateNumber>1977</StateNumber>
+      <ColNames>document_id</ColNames>
+      <RefTableId>19719</RefTableId>
+      <RefColPositions>2</RefColPositions>
+      <RefTableName>books</RefTableName>
+      <RefKeyName>books_document_id_unique</RefKeyName>
+      <RefColNames>document_id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

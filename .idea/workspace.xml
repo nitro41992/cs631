@@ -359,8 +359,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="PHP Script.cs631 - Laravel" />
       <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="PHP Script.cs631 - Laravel" />
     </list>
   </component>
   <component name="SvnConfiguration">

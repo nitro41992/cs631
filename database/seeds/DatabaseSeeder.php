@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CopiesTableSeeder::class);
         $this->call(ReadersTableSeeder::class);
         $this->call(ReservesTableSeeder::class);
+        $this->call(BorrowsTableSeeder::class);
     }
 }

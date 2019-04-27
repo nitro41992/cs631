@@ -2,24 +2,30 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\Reserves;
+use App\Borrows;
 use App\Copy;
 use App\Reader;
 use Faker\Generator as Faker;
+use Carbon\Carbon;
 
-$factory->define(Reserves::class, function (Faker $faker) {
+$factory->define(Borrows::class, function (Faker $faker) {
 
     $compkeys = Copy::select('document_id', 'copy_no' , 'lib_id')->get()->toArray();
     $compkey = $faker->randomElement($compkeys);
 
     $readers = Reader::all()->pluck('reader_id')->toArray();
 
+    $date = Carbon::create(2019, 5, 28, 0, 0, 0);
+
 
     return [
+
         'reader_id' => $faker->randomElement($readers),
         'document_id' => $compkey['document_id'],
         'copy_no' => $compkey['copy_no'],
         'lib_id' => $compkey['lib_id'],
-        'd_time' => $faker->date($format = 'Y-m-d', $max = 'now'),
+        'bd_time'  => $date->format('Y-m-d H:i:s'),
+        'rd_time'  => $date->addWeeks(rand(1, 52))->format('Y-m-d H:i:s')
+
     ];
 });

@@ -19,6 +19,7 @@ class CreateReservesTable extends Migration
             $table->integer('document_id');
             $table->integer('copy_no');
             $table->integer('lib_id');
+            $table->dateTime('d_time');
             $table->timestamps();
 
             $table->foreign('reader_id')->references('reader_id')->on('readers');

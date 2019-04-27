@@ -15,7 +15,7 @@ $factory->define(Borrows::class, function (Faker $faker) {
 
     $readers = Reader::all()->pluck('reader_id')->toArray();
 
-    $date = Carbon::create(2019, 5, 28, 0, 0, 0);
+    $date = Carbon::now();
 
 
     return [

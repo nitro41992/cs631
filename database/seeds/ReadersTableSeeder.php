@@ -1,10 +1,8 @@
 <?php
 
-use App\Document;
-use App\Publisher;
 use Illuminate\Database\Seeder;
 
-class DocumentsTableSeeder extends Seeder
+class ReadersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,7 +11,7 @@ class DocumentsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Document::class, 50)->create()->each(function ($documents) {
+        factory(App\Reader::class, 50)->create()->each(function ($reader) {
         });
     }
 }

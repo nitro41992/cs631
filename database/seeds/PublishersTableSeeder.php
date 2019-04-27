@@ -13,7 +13,6 @@ class PublishersTableSeeder extends Seeder
     public function run()
     {
         factory(App\Publisher::class, 50)->create()->each(function ($publisher) {
-            //factory(Document::class, 50)->create(['publisher_id'=>$publisher->id]);
         });
 
     }

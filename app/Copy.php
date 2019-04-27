@@ -17,4 +17,12 @@ class Copy extends Model
         return $this->belongsTo('App\Branch');
 
     }
+
+    public function document() {
+
+        return $this->belongsTo('App\Document');
+
+    }
+
+
 }

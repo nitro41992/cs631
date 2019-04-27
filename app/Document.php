@@ -18,4 +18,10 @@ class Document extends Model
 
     }
 
+    public function copy() {
+
+        return $this->hasMany('App\Copy');
+
+    }
+
 }

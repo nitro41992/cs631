@@ -11,7 +11,7 @@ class BranchesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Branch::class, 50)->create()->each(function ($branch) {
+        factory(App\Branch::class, 5)->create()->each(function ($branch) {
         });
     }
 }

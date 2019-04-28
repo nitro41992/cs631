@@ -12,7 +12,7 @@ class JournalIssue extends Model
         'scope', 
     ];
 
-    public function invEditors() {
+    public function invEditor() {
 
         return $this->hasMany('App\InvEditors');
 

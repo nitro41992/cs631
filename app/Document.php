@@ -24,4 +24,22 @@ class Document extends Model
 
     }
 
+    public function journalVolume() {
+
+        return $this->hasMany('App\JournalVolume');
+
+    }
+
+    public function proceeding() {
+
+        return $this->hasMany('App\Copy');
+
+    }
+
+    public function book() {
+
+        return $this->hasMany('App\Book');
+
+    }
+
 }

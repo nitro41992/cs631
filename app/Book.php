@@ -17,4 +17,10 @@ class Book extends Model
         return $this->belongsTo('App\Document');
 
     }
+
+    public function writes() {
+
+        return $this->hasMany('App\Writes');
+
+    }
 }

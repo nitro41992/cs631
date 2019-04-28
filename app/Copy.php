@@ -24,5 +24,18 @@ class Copy extends Model
 
     }
 
+    public function reserves() {
+
+        return $this->hasMany('App\Reserves');
+
+    }
+
+    public function borrows() {
+
+        return $this->hasMany('App\Borrows');
+
+    }
+
+
 
 }

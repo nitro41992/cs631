@@ -20,6 +20,8 @@ class CreateWritesTable extends Migration
             $table->timestamps();
 
             $table->foreign('author_id')->references('author_id')->on('authors');
+            $table->unique(['document_id', 'author_id']);
+   
         });
     }
 

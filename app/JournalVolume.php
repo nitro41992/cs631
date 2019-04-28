@@ -12,7 +12,7 @@ class JournalVolume extends Model
         'j_volume', 
     ];
 
-    public function journal_issue() {
+    public function journalIssue() {
 
         return $this->hasMany('App\JournalIssue');
 

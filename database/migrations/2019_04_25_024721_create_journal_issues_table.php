@@ -17,7 +17,7 @@ class CreateJournalIssuesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('document_id');
             $table->integer('issue_no');
-            $table->longText('Scope');
+            $table->longText('scope');
             $table->timestamps();
 
             $table->foreign('document_id')->references('document_id')->on('documents');

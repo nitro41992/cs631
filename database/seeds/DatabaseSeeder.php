@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ProceedingsTableSeeder::class);
         $this->call(ChiefEditorsTableSeeder::class);
         $this->call(JournalVolumesTableSeeder::class);
+        $this->call(JournalIssuesTableSeeder::class);
     }
 }

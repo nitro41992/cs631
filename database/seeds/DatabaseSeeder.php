@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
         $this->call(BorrowsTableSeeder::class);
         $this->call(ProceedingsTableSeeder::class);
         $this->call(ChiefEditorsTableSeeder::class);
+        $this->call(JournalVolumesTableSeeder::class);
     }
 }

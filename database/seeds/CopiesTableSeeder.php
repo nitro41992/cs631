@@ -11,7 +11,7 @@ class CopiesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Copy::class, 50)->create()->each(function ($copy) {
+        factory(App\Copy::class, 200)->create()->each(function ($copy) {
         });
     }
 }

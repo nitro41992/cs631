@@ -9,14 +9,12 @@ use Faker\Generator as Faker;
 use Illuminate\Support\Facades\DB;
 
 $factory->define(JournalIssue::class, function (Faker $faker) {
-    $journalVolumes = JournalVolume::all()->pluck('document_id')->toArray();
 
-    
-    $compkeys = JournalVolume::select('document_id')->get()->toArray();
+    $compkeys = JournalVolume::all()->pluck('document_id')->toArray();
     
     $newKeys = array();
     for ($i=0; $i<500; $i++) {
-        $compkey['document_id'] = $faker->randomElement($journalVolumes);
+        $compkey['document_id'] = $faker->randomElement($compkeys);
         $compkey['issue_no'] = $faker->numberBetween($min = 1, $max = 10);
         $newKeys[] = $compkey;
     }

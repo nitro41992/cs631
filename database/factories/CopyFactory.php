@@ -22,9 +22,6 @@ $factory->define(Copy::class, function (Faker $faker) {
     $newKeys = array_unique($newKeys, SORT_REGULAR);
     $compkey = $faker->unique()->randomElement($newKeys);
 
-
-    //$documents = Document::all()->pluck('document_id')->toArray();
-    //$branches = Branch::all()->pluck('lib_id')->toArray();
     return [
         'document_id' => $compkey['document_id'],
         'copy_no' => $compkey['copy_no'],

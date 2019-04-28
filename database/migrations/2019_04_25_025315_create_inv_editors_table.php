@@ -22,6 +22,7 @@ class CreateInvEditorsTable extends Migration
 
             $table->foreign(['document_id','issue_no'])->references(['document_id','issue_no'])
                 ->on('journal_issues');
+            $table->unique(['document_id', 'issue_no', 'ie_name']);
         });
     }
 

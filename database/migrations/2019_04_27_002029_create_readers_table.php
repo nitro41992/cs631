@@ -18,6 +18,7 @@ class CreateReadersTable extends Migration
             $table->string('r_type');
             $table->string('r_name');
             $table->string('address');
+            $table->integer('card_num');
             $table->timestamps();
         });
     }

@@ -10,5 +10,6 @@ $factory->define(Reader::class, function (Faker $faker) {
         'r_type' => $faker->randomElement(['student', 'senior citizen', 'staff' , 'other']),
         'r_name' => $faker->firstName($gender = 'null').' '.$faker->lastName,
         'address' => $faker->address,
+        'card_num' => $faker->ean8,
     ];
 });

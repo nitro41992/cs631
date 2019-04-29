@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/document', 'DocumentController@index')->name('document');
+Route::post('/', 'WelcomeController@getReaderByCardNumber')->name('getReaderByCardNumber');

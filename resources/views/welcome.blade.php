@@ -17,7 +17,7 @@
                 name="card_num" 
                 id="card_number" 
                 aria-describedby="libraryCardNumber" 
-                placeholder="01234567" 
+                placeholder="" 
                 max="99999999"
                >
                 <small id="libraryCardNumber" class="form-text text-muted">Enter your Library Card Number to continue.</small>

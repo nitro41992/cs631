@@ -21,8 +21,8 @@ class WelcomeController extends Controller
 
           ]);
           
-          $result = Reader::where('card_num', $card_num['card_num'])->first();
-          if ( $result != null) {
+          $selReader = Reader::where('card_num', $card_num['card_num'])->first();
+          if ( $selReader != null) {
             return redirect('/document')->with('success', 'You\'re in!');
           } else {
             return redirect('/')->with('error', 'We couldn\'t find you.');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use \App\Reader;
 
@@ -19,7 +20,13 @@ class WelcomeController extends Controller
             'card_num'=> $request->get('card_num')
 
           ]);
+          
+          $result = Reader::where('card_num', $card_num['card_num'])->first();
+          if ( $result != null) {
+            return redirect('/document')->with('success', 'You\'re in!');
+          } else {
+            return redirect('/')->with('error', 'We couldn\'t find you.');
+          }
 
-          return redirect('/document')->with('success', 'Stock has been added');
     }
 }

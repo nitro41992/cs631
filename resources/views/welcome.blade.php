@@ -3,6 +3,11 @@
 
 @section('content')
     <div class="container">
+        @if(session()->get('error'))
+            <div class="alert alert-danger">
+            {{ session()->get('error') }}  
+            </div><br />
+        @endif
         <form class="mt-5" method="post" action="{{ route('getReaderByCardNumber') }}">
             <div class="form-group">
                 @csrf

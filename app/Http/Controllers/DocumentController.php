@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Document;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DocumentController extends Controller
 {
@@ -14,7 +15,9 @@ class DocumentController extends Controller
      */
     public function index()
     {
-        $documents = Document::all();
+
+        //$documents = Document::all();
+        $documents = DB::table('documents')->paginate(15);
         return view('document', compact('documents'));
         //return view ('document');
     }

@@ -2,14 +2,22 @@
 @extends('layouts.app')
 
 @section('content')
-    @foreach($documents as $document)
-    <table class="table table-striped">
-    <thead>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{{$document->title}}</td>
-        </tr>
-    </tbody>
+    <div class = "container">
+        <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Document Title</td>
+            </tr>
+        </thead>
+        @foreach($documents as $document)
+        <tbody>
+            <tr>
+                <td>{{$document->title}}</td>
+            </tr>
+        </tbody>
         @endforeach
+    </div>
+    <div class = "container">
+        <?php echo $documents->render(); ?>
+    </div>
 @endsection

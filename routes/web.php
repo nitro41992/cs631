@@ -21,4 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/document', 'DocumentController@index')->name('document');
 Route::post('/', 'WelcomeController@getReaderByCardNumber')->name('getReaderByCardNumber');
 
-Route::post('/document','DocumentController@filterById')->name('filterById');
+Route::get('/document/id','DocumentController@filterId')->name('document.filterId');
+Route::get('/document/title','DocumentController@filterTitle')->name('document.filterTitle');
+Route::get('/document/pubName','DocumentController@filterPubName')->name('document.filterPubName');
+

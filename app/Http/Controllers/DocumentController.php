@@ -92,7 +92,8 @@ class DocumentController extends Controller
         //
     }
 
-    public function filterById(Request $request) {
+    public function filterId(Request $request) {
+        //dd($request->name);
         $documents = Document::where('document_id','LIKE','%'.$request->get('doc_id_search').'%')->paginate(15);
         if(count($documents) > 0)
             return view('document', compact('documents'));
@@ -102,6 +103,37 @@ class DocumentController extends Controller
             ->paginate(15);
             
             return redirect('document')->with('error', 'We could not find any documents with the given id.');
+        } 
+    }
+
+    public function filterTitle(Request $request) {
+        //dd($request->name);
+        $documents = Document::where('title','LIKE','%'.$request->get('doc_title_search').'%')->paginate(15);
+        if(count($documents) > 0)
+            return view('document', compact('documents'));
+        else{
+            $documents = DB::table('documents')
+            ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
+            ->paginate(15);
+            
+            return redirect('document')->with('error', 'We could not find any documents with the given title.');
+        } 
+    }
+
+    public function filterPubName(Request $request) {
+        //dd($request->name);
+        $documents = DB::table('documents')
+            ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
+            ->where('pub_name','LIKE','%'.$request->get('pub_name_search').'%')
+            ->paginate(15);
+        if(count($documents) > 0)
+            return view('document', compact('documents'));
+        else{
+            $documents = DB::table('documents')
+            ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
+            ->paginate(15);
+            
+            return redirect('document')->with('error', 'We could not find any documents with the given publisher name.');
         } 
     }
 }

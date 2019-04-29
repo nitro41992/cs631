@@ -16,7 +16,7 @@
         <div class="container mb-3">
             <div class="row">
                 <div class="col-sm">
-                    <form class="navbar-form" action="{{ route('filterById') }}" method="POST" role="search">
+                    <form class="navbar-form" action="{{ route('document.filterId') }}" method="GET" role="search">
                         @csrf
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search by Document Id" name="doc_id_search">
@@ -27,7 +27,7 @@
                     </form>
                 </div>
                 <div class="col-sm">
-                    <form class="navbar-form" role="search">
+                    <form class="navbar-form" action="{{ route('document.filterTitle') }}" method="GET" role="search">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search by Document Title" name="doc_title_search">
                             <div class="input-group-btn">
@@ -37,7 +37,7 @@
                     </form>
                 </div>
                 <div class="col-sm">
-                    <form class="navbar-form" role="search">
+                    <form class="navbar-form" action="{{ route('document.filterPubName') }}" method="GET" role="search">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search by Publisher Name" name="pub_name_search">
                             <div class="input-group-btn">

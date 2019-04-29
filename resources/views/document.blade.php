@@ -8,7 +8,47 @@
         {{ session()->get('success') }}  
         </div><br />
         @endif
-        <table class="table table-striped">
+        @if(session()->get('error'))
+        <div class="alert alert-danger">
+        {{ session()->get('error') }}  
+        </div><br />
+        @endif
+        <div class="container mb-3">
+            <div class="row">
+                <div class="col-sm">
+                    <form class="navbar-form" action="{{ route('filterById') }}" method="POST" role="search">
+                        @csrf
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search by Document Id" name="doc_id_search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm">
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search by Document Title" name="doc_title_search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm">
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search by Publisher Name" name="pub_name_search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Document Id</th>

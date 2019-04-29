@@ -8,7 +8,7 @@
             {{ session()->get('error') }}  
             </div><br />
         @endif
-        <form class="mt-5" method="post" action="{{ route('getReaderByCardNumber') }}">
+        <form class="mt-5" method="POST" action="{{ route('getReaderByCardNumber') }}">
             <div class="form-group">
                 @csrf
                 <label for="card_number">Library Card Number</label>

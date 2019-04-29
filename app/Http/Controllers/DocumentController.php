@@ -91,4 +91,17 @@ class DocumentController extends Controller
     {
         //
     }
+
+    public function filterById(Request $request) {
+        $documents = Document::where('document_id','LIKE','%'.$request->get('doc_id_search').'%')->paginate(15);
+        if(count($documents) > 0)
+            return view('document', compact('documents'));
+        else{
+            $documents = DB::table('documents')
+            ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
+            ->paginate(15);
+            
+            return redirect('document')->with('error', 'We could not find any documents with the given id.');
+        } 
+    }
 }

@@ -2,7 +2,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>
-        <h1>success</h1>
-    </div>
+    @foreach($documents as $document)
+    <table class="table table-striped">
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{$document->title}}</td>
+        </tr>
+    </tbody>
+        @endforeach
 @endsection

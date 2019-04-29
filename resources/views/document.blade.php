@@ -48,6 +48,11 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-2 center-block">
+                    <a type="button" href="{{ route('document') }}" class="btn btn-primary">Clear Search</a>
+            </div>
+        </div>
         <table class="table">
             <thead>
                 <tr>

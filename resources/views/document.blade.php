@@ -21,7 +21,7 @@
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search by Document Id" name="doc_id_search">
                             <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                <button class="btn btn-primary" type="submit">Search</button>
                             </div>
                         </div>
                     </form>
@@ -31,7 +31,7 @@
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search by Document Title" name="doc_title_search">
                             <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                <button class="btn btn-primary" type="submit">Search</button>
                             </div>
                         </div>
                     </form>
@@ -41,7 +41,7 @@
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search by Publisher Name" name="pub_name_search">
                             <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                <button class="btn btn-primary" type="submit">Search</button>
                             </div>
                         </div>
                     </form>
@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2 center-block">
+            <div class="ccenter mx-auto mb-3">
                     <a type="button" href="{{ route('document') }}" class="btn btn-primary">Clear Search</a>
             </div>
         </div>

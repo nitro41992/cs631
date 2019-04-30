@@ -50,7 +50,7 @@
         </div>
         <div class="row">
             <div class="ccenter mx-auto mb-3">
-                    <a href="{{ route('document') }}" class="btn btn-primary">Clear Search</a>
+                    <a href="{{ route('document', ['id' => $id]) }}" class="btn btn-primary">Clear Search</a>
             </div>
         </div>
         <table class="table">

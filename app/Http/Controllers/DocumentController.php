@@ -13,9 +13,17 @@ class DocumentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
+        $documents = DB::table('documents')
+        ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
+        ->get();
 
+        //$obj['card_num'] = $card_num;
+        $obj['documents'] = $documents;
+        $id = $id;
+        return view('document')
+        ->with(compact('obj','id'));
 
     }
 
@@ -48,7 +56,7 @@ class DocumentController extends Controller
      */
     public function show(Document $document)
     {
-        //
+
     }
 
     /**

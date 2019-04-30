@@ -52,13 +52,12 @@ class CopyController extends Controller
         }
 
         $obj = array();
-        $obj['card_num'] = $cid;
         $obj['copies'] = $copies;
         $obj['copy_status'] = $copy_status;
 
         //dd($obj);
 
-        return view('copy', compact('obj'));
+        return view('copy', compact('obj', 'cid'));
     }
 
     /**

@@ -15,7 +15,7 @@
         @endif
         <div class="container">
             <a  name="doc_select" 
-                href="{{ route('document') }}"
+                href="{{ route('document', ['id' => $cid]) }}"
                 class="btn btn-outline-secondary btn-sm">Back
             </a>
             @if ($obj['copies']->count() > 0 )

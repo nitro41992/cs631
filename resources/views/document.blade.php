@@ -63,18 +63,17 @@
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
-            @foreach($documents as $document)
-            <tbody>
-                <tr>
-                    <td>{{$document->document_id}}</td>
-                    <td>{{$document->title}}</td>
-                    <td>{{$document->p_date}}</td>
-                    <td>{{$document->pub_name}}</td>
-                    <td> <a name="doc_select" href="{{ route('copy.index', $document->document_id) }}" class="btn btn-outline-primary btn-sm">Select</a></td>
-                </tr>
-            </tbody>
+            @foreach($obj['documents'] as $document)
+                <tbody>
+                    <tr>
+                        <td>{{$document->document_id}}</td>
+                        <td>{{$document->title}}</td>
+                        <td>{{$document->p_date}}</td>
+                        <td>{{$document->pub_name}}</td>
+                        <td> <a name="doc_select" href="{{ route('copy.index', $document->document_id) }}" class="btn btn-outline-primary btn-sm">Select</a></td>
+                    </tr>
+                </tbody>
             @endforeach
         </table>
-        {{ $documents->links() }}
     </div>
 @endsection

@@ -16,13 +16,6 @@ class DocumentController extends Controller
     public function index()
     {
 
-        //$documents = DB::table('documents')->paginate(15);
-        $documents = DB::table('documents')
-                        ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
-                        ->paginate(15);
-    
-        //dd($documents);
-        return view('document', compact('documents'));
 
     }
 

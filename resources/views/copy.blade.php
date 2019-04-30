@@ -51,7 +51,6 @@
                     </tbody>
                     @endforeach
                 </table>
-                    {{ $copies->links() }}
                 </div>
             @else
                 <h1>

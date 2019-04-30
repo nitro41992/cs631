@@ -21,9 +21,22 @@ class WelcomeController extends Controller
 
           ]);
           
-          $selReader = Reader::where('card_num', $card_num['card_num'])->first();
-          if ( $selReader != null) {
-            return redirect('/document')->with('success', 'You\'re in!');
+          $obj = array();
+
+          $reader = Reader::where('card_num', $card_num['card_num'])->first();
+
+          if ( $reader != null) {
+                $documents = DB::table('documents')
+                ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
+                ->get();
+
+                $obj['card_num'] = $card_num;
+                $obj['documents'] = $documents;
+
+
+                return view('document', compact('obj'));
+
+
           } else {
             return redirect('/')->with('error', 'We couldn\'t find you.');
           }

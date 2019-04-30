@@ -20,7 +20,7 @@ class CopyController extends Controller
         ->join('documents', 'copies.document_id', '=', 'documents.document_id')
         ->join('branches', 'branches.lib_id', '=', 'copies.lib_id')
         ->where('copies.document_id', '=', $id)
-        ->paginate(15);
+        ->get();
         //dd($copies);
         return view('copy', compact('copies'));
     }

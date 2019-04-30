@@ -17,11 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/document', 'DocumentController@index')->name('document');
 Route::post('/', 'WelcomeController@getReaderByCardNumber')->name('getReaderByCardNumber');
 
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/document', 'DocumentController@index')->name('document');
 Route::get('/document/id','DocumentController@filterId')->name('document.filterId');
 Route::get('/document/title','DocumentController@filterTitle')->name('document.filterTitle');
 Route::get('/document/pubName','DocumentController@filterPubName')->name('document.filterPubName');
 
+Route::get('/copy', 'CopyController@index')->name('copy.index');

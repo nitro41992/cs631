@@ -16,7 +16,11 @@
         <div class="container mb-3">
             <div class="row">
                 <div class="col-sm">
-                    <form class="navbar-form" action="{{ route('document.filterId') }}" method="GET" role="search">
+                    <form class="navbar-form" action="{{ route('document.filterId',
+                                                            [
+                                                                'cid' => $obj['card_num']->card_num
+                                                            ]
+                                                        ) }}" method="GET" role="search">
                         @csrf
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search by Document Id" name="doc_id_search">

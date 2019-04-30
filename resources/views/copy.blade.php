@@ -18,10 +18,10 @@
                 href="{{ route('document') }}"
                 class="btn btn-outline-secondary btn-sm">Back
             </a>
-            @if ($copies->count() > 0 )
+            @if ($obj['copies']->count() > 0 )
                 <h3>
                 <small class="text-muted">Document Title:</small>
-                    {{ $copies[0]->title }}
+                    {{ $obj['copies'][0]->title }}
                 </h3>
                 <table class="table">
                     <thead>
@@ -33,7 +33,7 @@
 
                         </tr>
                     </thead>
-                    @foreach($copies as $copy)
+                    @foreach($obj['copies'] as $copy)
                     <tbody>
                         <tr>
                             <td>{{$copy->id}}</td>

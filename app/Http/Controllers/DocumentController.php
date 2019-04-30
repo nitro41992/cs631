@@ -85,12 +85,18 @@ class DocumentController extends Controller
         //
     }
 
-    public function filterId(Request $request) {
+    public function filterId($cid, Request $request) {
         //dd($request->name);
-        $documents = Document::where('document_id','LIKE','%'.$request->get('doc_id_search').'%')->paginate(15);
-        if(count($documents) > 0)
-            return view('document', compact('documents'));
-        else{            
+        $documents = Document::where('document_id','LIKE','%'.$request->get('doc_id_search').'%')->get();
+
+        $obj = array();
+        if(count($documents) > 0){
+            $obj['card_num'] = $cid;
+            $obj['documents'] = $documents;
+            //dd($obj);
+            return view('document', compact('obj'));
+        
+        }else{            
             return redirect('document')->with('error', 'We could not find any documents with the given id.');
         } 
     }
@@ -99,7 +105,7 @@ class DocumentController extends Controller
         //dd($request->name);
         $documents = Document::where('title','LIKE','%'.$request->get('doc_title_search').'%')->paginate(15);
         if(count($documents) > 0)
-            return view('document', compact('documents'));
+            return view('document', compact('obj'));
         else{
             return redirect('document')->with('error', 'We could not find any documents with the given title.');
         } 
@@ -112,7 +118,7 @@ class DocumentController extends Controller
             ->where('pub_name','LIKE','%'.$request->get('pub_name_search').'%')
             ->paginate(15);
         if(count($documents) > 0)
-            return view('document', compact('documents'));
+            return view('document', compact('obj'));
         else{
             return redirect('document')->with('error', 'We could not find any documents with the given publisher name.');
         } 

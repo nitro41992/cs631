@@ -15,14 +15,13 @@ class CopyController extends Controller
      */
     public function index($id)
     {
-        //dd($id);
+        
         $copies = DB::table('copies')
         ->join('documents', 'copies.document_id', '=', 'documents.document_id')
         ->join('branches', 'branches.lib_id', '=', 'copies.lib_id')
         ->where('copies.document_id', '=', $id)
         ->paginate(15);
 
-        //dd($copies);
         return view('copy', compact('copies'));
     }
 

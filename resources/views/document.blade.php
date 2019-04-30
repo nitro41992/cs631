@@ -50,7 +50,7 @@
         </div>
         <div class="row">
             <div class="ccenter mx-auto mb-3">
-                    <a type="button" href="{{ route('document') }}" class="btn btn-primary">Clear Search</a>
+                    <a href="{{ route('document') }}" class="btn btn-primary">Clear Search</a>
             </div>
         </div>
         <table class="table">
@@ -70,7 +70,7 @@
                     <td>{{$document->title}}</td>
                     <td>{{$document->p_date}}</td>
                     <td>{{$document->pub_name}}</td>
-                    <td> <a type="button" name="doc_select" href="{{ route('copy.index', $document->document_id) }}" class="btn btn-outline-secondary btn-sm">Select</a></td>
+                    <td> <a name="doc_select" href="{{ route('copy.index', $document->document_id) }}" class="btn btn-outline-primary btn-sm">Select</a></td>
                 </tr>
             </tbody>
             @endforeach

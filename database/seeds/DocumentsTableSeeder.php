@@ -13,7 +13,7 @@ class DocumentsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Document::class, 50)->create()->each(function ($documents) {
+        factory(App\Document::class, 100)->create()->each(function ($documents) {
         });
     }
 }

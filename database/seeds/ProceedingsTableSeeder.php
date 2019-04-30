@@ -11,7 +11,7 @@ class ProceedingsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Proceedings::class, 5)->create()->each(function ($proceedings) {
+        factory(App\Proceedings::class, 10)->create()->each(function ($proceedings) {
         });
     }
 }

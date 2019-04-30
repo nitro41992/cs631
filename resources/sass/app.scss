@@ -1,13 +1,23 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 .navbar-laravel {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+a.btn {
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    color: #fff;
+}
+a.btn:hover {
+    border-radius: 0.25rem;
 }

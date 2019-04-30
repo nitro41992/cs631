@@ -13,15 +13,22 @@ class CopyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index($cid, $did)
     {
         
         $copies = DB::table('copies')
         ->join('documents', 'copies.document_id', '=', 'documents.document_id')
         ->join('branches', 'branches.lib_id', '=', 'copies.lib_id')
-        ->where('copies.document_id', '=', $id)
+        ->where('copies.document_id', '=', $did)
         ->get();
-        //dd($copies);
+
+
+        $obj = array();
+        $obj['card_num'] = $cid;
+        $obj['copies'] = $copies;
+
+        //dd($obj);
+
         return view('copy', compact('copies'));
     }
 

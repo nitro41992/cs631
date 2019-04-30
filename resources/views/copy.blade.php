@@ -18,39 +18,45 @@
                 href="{{ route('document') }}"
                 class="btn btn-outline-secondary btn-sm">Back
             </a>
-            <h1>
-            <small class="text-muted">Document Title:</small>
-                {{ $copies[0]->title }}
-            </h1>
-        </div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Copy Id</th>
-                    <th scope="col">Branch Name</th>
-                    <th scope="col">Branch Location</th>
-                    <th scope="col">Actions</th>
+            @if ($copies->count() > 0 )
+                <h3>
+                <small class="text-muted">Document Title:</small>
+                    {{ $copies[0]->title }}
+                </h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Copy Id</th>
+                            <th scope="col">Branch Name</th>
+                            <th scope="col">Branch Location</th>
+                            <th scope="col">Actions</th>
 
-                </tr>
-            </thead>
-            @foreach($copies as $copy)
-            <tbody>
-                <tr>
-                    <td>{{$copy->id}}</td>
-                    <td>{{$copy->l_name}}</td>
-                    <td>{{$copy->l_location}}</td>
-                    <td> 
-                        <a name="doc_select" 
-                        href="#" 
-                        class="btn btn-outline-primary btn-sm">Reserve</a>
-                        <a name="doc_select" 
-                        href="#" 
-                        class="btn btn-outline-primary btn-sm">Checkout</a>
-                    </td>
-                </tr>
-            </tbody>
-            @endforeach
-        </table>
-        {{ $copies->links() }}
-    </div>
+                        </tr>
+                    </thead>
+                    @foreach($copies as $copy)
+                    <tbody>
+                        <tr>
+                            <td>{{$copy->id}}</td>
+                            <td>{{$copy->l_name}}</td>
+                            <td>{{$copy->l_location}}</td>
+                            <td> 
+                                <a name="doc_select" 
+                                href="#" 
+                                class="btn btn-outline-primary btn-sm">Reserve</a>
+                                <a name="doc_select" 
+                                href="#" 
+                                class="btn btn-outline-primary btn-sm">Checkout</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    @endforeach
+                </table>
+                    {{ $copies->links() }}
+                </div>
+            @else
+                <h1>
+                    No copies found for this Document.
+                </h1>
+            @endif
+        </div>
 @endsection

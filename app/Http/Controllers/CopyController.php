@@ -47,6 +47,8 @@ class CopyController extends Controller
             $copy_status = 'borrowed';
         } elseif ($reserved->count() > 0) {
             $copy_status = 'reserved';
+        } else {
+            $copy_status = 'open';
         }
 
         $obj = array();

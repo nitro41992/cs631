@@ -30,11 +30,10 @@ class WelcomeController extends Controller
                 ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
                 ->get();
 
-                $obj['card_num'] = $card_num;
+                //$obj['card_num'] = $card_num;
                 $obj['documents'] = $documents;
-
-
-                return view('document', compact('obj'));
+                $id = $reader->card_num;
+                return view('document', compact('obj','id'));
 
 
           } else {

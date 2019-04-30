@@ -85,42 +85,69 @@ class DocumentController extends Controller
         //
     }
 
-    public function filterId($cid, Request $request) {
+    public function filterId($id, Request $request) {
         //dd($request->name);
         $documents = Document::where('document_id','LIKE','%'.$request->get('doc_id_search').'%')->get();
 
         $obj = array();
         if(count($documents) > 0){
-            $obj['card_num'] = $cid;
             $obj['documents'] = $documents;
             //dd($obj);
-            return view('document', compact('obj'));
+            return view('document', compact('obj', 'id'));
         
         }else{            
-            return redirect('document')->with('error', 'We could not find any documents with the given id.');
+            $documents = DB::table('documents')
+            ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
+            ->get();
+
+            //$obj['card_num'] = $card_num;
+            $obj['documents'] = $documents;
+            $id = $id;
+            return view('document')
+            ->with(compact('obj','id'));
         } 
     }
 
-    public function filterTitle(Request $request) {
+    public function filterTitle($id, Request $request) {
         //dd($request->name);
         $documents = Document::where('title','LIKE','%'.$request->get('doc_title_search').'%')->paginate(15);
-        if(count($documents) > 0)
-            return view('document', compact('obj'));
+        if(count($documents) > 0) {
+            $obj['documents'] = $documents;
+            return view('document', compact('obj', 'id'));
+        }
         else{
-            return redirect('document')->with('error', 'We could not find any documents with the given title.');
+            $documents = DB::table('documents')
+            ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
+            ->get();
+
+            //$obj['card_num'] = $card_num;
+            $obj['documents'] = $documents;
+            $id = $id;
+            return view('document')
+            ->with(compact('obj','id'));
         } 
     }
 
-    public function filterPubName(Request $request) {
+    public function filterPubName($id, Request $request) {
         //dd($request->name);
         $documents = DB::table('documents')
             ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
             ->where('pub_name','LIKE','%'.$request->get('pub_name_search').'%')
             ->paginate(15);
-        if(count($documents) > 0)
-            return view('document', compact('obj'));
+        if(count($documents) > 0){
+            $obj['documents'] = $documents;
+            return view('document', compact('obj', 'id'));
+        }
         else{
-            return redirect('document')->with('error', 'We could not find any documents with the given publisher name.');
+            $documents = DB::table('documents')
+            ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
+            ->get();
+
+            //$obj['card_num'] = $card_num;
+            $obj['documents'] = $documents;
+            $id = $id;
+            return view('document')
+            ->with(compact('obj','id'));
         } 
     }
 }

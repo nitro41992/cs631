@@ -11,7 +11,7 @@ class ReservesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Reserves::class, 50)->create()->each(function ($reserves) {
+        factory(App\Reserves::class, 30)->create()->each(function ($reserves) {
         });
     }
 }

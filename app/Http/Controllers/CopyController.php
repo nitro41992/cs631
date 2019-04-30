@@ -22,6 +22,21 @@ class CopyController extends Controller
         ->where('copies.document_id', '=', $did)
         ->get();
 
+        $copy_status;
+        $borrowed =  DB::table('copies')
+        ->join("borrows",function($join){
+            $join->on("borrows.document_id","=","copies.document_id")
+                ->on("borrows.copy_no","=","copies.copy_no");
+        })
+        ->get();
+
+        $reserved =  DB::table('reserves')
+        ->join("reserves",function($join){
+            $join->on("reserves.document_id","=","copies.document_id")
+                ->on("reserves.copy_no","=","copies.copy_no");
+        })
+        ->get();
+
 
         $obj = array();
         $obj['card_num'] = $cid;

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Copy;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CopyController extends Controller
 {
@@ -12,15 +13,16 @@ class CopyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index($id)
     {
+        //dd($id);
         $copies = DB::table('copies')
-        ->join('documents', 'copies.document_id', '=', 'document.document_id')
+        ->join('documents', 'copies.document_id', '=', 'documents.document_id')
         ->join('branches', 'branches.lib_id', '=', 'copies.lib_id')
-        ->where('copies.document_id', $request->get('doc_select'))
+        ->where('copies.document_id', '=', $id)
         ->paginate(15);
 
-        dd($copies);
+        //dd($copies);
         return view('copy', compact('copies'));
     }
 

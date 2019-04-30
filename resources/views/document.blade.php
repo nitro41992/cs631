@@ -70,7 +70,7 @@
                     <td>{{$document->title}}</td>
                     <td>{{$document->p_date}}</td>
                     <td>{{$document->pub_name}}</td>
-                    <td> <a type="button" name="doc_select" href="{{ route('copy.index') }}" class="btn btn-outline-secondary btn-sm">Select</a></td>
+                    <td> <a type="button" name="doc_select" href="{{ route('copy.index', $document->document_id) }}" class="btn btn-outline-secondary btn-sm">Select</a></td>
                 </tr>
             </tbody>
             @endforeach

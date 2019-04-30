@@ -26,4 +26,4 @@ Route::get('/document/id','DocumentController@filterId')->name('document.filterI
 Route::get('/document/title','DocumentController@filterTitle')->name('document.filterTitle');
 Route::get('/document/pubName','DocumentController@filterPubName')->name('document.filterPubName');
 
-Route::get('/copy', 'CopyController@index')->name('copy.index');
+Route::get('/copy/{id}', 'CopyController@index')->name('copy.index');

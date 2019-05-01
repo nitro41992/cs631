@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Document;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use \App\Reader;
 
 class DocumentController extends Controller
 {
@@ -91,6 +92,39 @@ class DocumentController extends Controller
     public function destroy(Document $document)
     {
         //
+    }
+
+    public function getReaderByCardNumber(Request $request){      
+        $request->validate([
+
+            'card_num'=> 'required|integer'
+
+          ]);
+          $card_num = new Reader([
+
+            'card_num'=> $request->get('card_num')
+
+          ]);
+          
+          $obj = array();
+
+          $reader = Reader::where('card_num', $card_num['card_num'])->first();
+
+          if ( $reader != null) {
+                $documents = DB::table('documents')
+                ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
+                ->get();
+
+                //$obj['card_num'] = $card_num;
+                $obj['documents'] = $documents;
+                $id = $reader->card_num;
+                return view('document', compact('obj','id'));
+
+
+          } else {
+            return redirect('/')->with('error', 'We couldn\'t find you.');
+          }
+
     }
 
     public function filterId($id, Request $request) {

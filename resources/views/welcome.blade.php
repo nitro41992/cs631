@@ -8,9 +8,9 @@
             {{ session()->get('error') }}  
             </div><br />
         @endif
-        <form class="mt-5" method="POST" action="{{ route('getReaderByCardNumber') }}">
+        <form class="mt-5" method="POST" action="{{ route('document.getReaderByCardNumber') }}">
+            @csrf
             <div class="form-group">
-                @csrf
                 <label for="card_number">Library Card Number</label>
                 <input type="number" 
                 class="form-control" 

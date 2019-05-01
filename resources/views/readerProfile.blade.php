@@ -14,6 +14,18 @@
         </div><br />
         @endif
         <div class="container">
+            <div class="col-md-4 order-md-2 mb-4">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">Fine</h6>
+                    </div>
+                    <span class="font-weight-bold text-danger">${{$fee}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
             <a  name="doc_select" 
                 href="{{ route('document', ['id' => $id]) }}"
                 class="btn btn-outline-secondary btn-sm">Back

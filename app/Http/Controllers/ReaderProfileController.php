@@ -54,7 +54,15 @@ class ReaderProfileController extends Controller
         $obj = array();
         $obj['copies'] = $copies;
 
-        return view('readerProfile', compact('obj', 'reader', 'id'));
+        $totDays = null;
+        foreach($copies as $copy){
+            if ($copy->borrow_time_left < 0)
+                $totDays = $copy->borrow_time_left + $totDays;
+        }
+        
+        $fee = number_format((float)(abs($totDays * 0.20)), 2, '.', '');
+        //dd($fee);
+        return view('readerProfile', compact('obj', 'reader', 'id', 'fee'));
     }
 
     /**

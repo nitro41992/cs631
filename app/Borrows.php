@@ -12,6 +12,8 @@ class Borrows extends Model
         'bd_time', 'rd_time'
     ];
 
+    protected $dates = ['bd_time', 'rd_time'];
+
     public function copy() {
 
         return $this->belongsTo('App\Copy');

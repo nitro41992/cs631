@@ -37,12 +37,16 @@ class CopyController extends Controller
                  'branches.l_location',
                  'borrows.bor_number',
                  'borrows.reader_id as bor_reader_id',
+                 'borrows.bd_time',
+                 'borrows.rd_time',
                  'reserves.res_number',
-                 'reserves.reader_id as res_reader_id')
+                 'reserves.reader_id as res_reader_id',
+                 'reserves.d_time',
+                 DB::raw('(NOW()::date - borrows.rd_time::date) as borrow_time_left'))
         ->where('copies.document_id', '=', $did)
         ->get();
 
-        //dd($copies);
+        dd($copies);
 
         $obj = array();
         $obj['copies'] = $copies;

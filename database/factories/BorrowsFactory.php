@@ -24,16 +24,18 @@ $factory->define(Borrows::class, function (Faker $faker) {
 
     $readers = Reader::all()->pluck('reader_id')->toArray();
 
-    $date = Carbon::now();
-
+    //$date = Carbon::now();
+    $start = Carbon::createFromTimestamp($faker->dateTimeBetween($startDate = '-30 days', $endDate = 'now', $timezone = 'EST')->getTimeStamp()) ;
+    $end= Carbon::createFromFormat('Y-m-d H:i:s', $start)->addDays(20);
+    
     return [
 
         'reader_id' => $faker->randomElement($readers),
         'document_id' => $compkey['document_id'],
         'copy_no' => $compkey['copy_no'],
         'lib_id' => $compkey['lib_id'],
-        'bd_time'  => $date->format('Y-m-d H:i:s'),
-        'rd_time'  => $date->addWeeks(rand(1, 52))->format('Y-m-d H:i:s')
+        'bd_time'  => $start,//$date->addDays(rand(-1,-35))->format('Y-m-d H:i:s'),
+        'rd_time'  => $end//$date->addDays(20)->format('Y-m-d H:i:s')
 
     ];
 });

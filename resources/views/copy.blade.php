@@ -40,42 +40,76 @@
                             <td>{{$copy->l_name}}</td>
                             <td>{{$copy->l_location}}</td>
                             <td>
-                                @if($copy->bor_reader_id === $reader->reader_id ) 
-                                    <a name="doc_select" 
-                                    href="#" 
-                                    class="btn btn-outline-warning btn-sm">Return</a>
-                                @elseif($copy->bor_reader_id != null )
-                                    <a name="doc_select" 
-                                    href="#" 
-                                    class="btn btn-outline-secondary btn-sm disabled" >Checked Out</a>
-                                @else
-                                    <form method="POST" action="{{ route('copy.checkout', 
-                                                            [   
-                                                                'cid' => $cid,
-                                                                'rid' => $reader->reader_id,
-                                                                'did' => $copy->document_id,
-                                                                'coid' => $copy->copy_no,
-                                                                'lid' => $copy->lib_id
-                                                            ]
-                                                        ) }}" accept-charset="UTF-8">
-                                        @csrf
-                                        <input name="copy_checkout" type="hidden" value="POST">
-                                        <button type= "submit" class="btn btn-outline-primary btn-sm" >Check Out</button>
-                                    </form>
-                                @endif
-                                @if($copy->res_reader_id === $reader->reader_id ) 
-                                    <a name="doc_select" 
-                                    href="#" 
-                                    class="btn btn-outline-warning btn-sm" >Cancel Reservation</a>
-                                @elseif($copy->res_reader_id != null)
-                                    <a name="doc_select" 
-                                    href="#" 
-                                    class="btn btn-outline-secondary btn-sm disabled" >Reserved</a>
-                                @else
-                                    <a name="doc_select" 
-                                    href="#" 
-                                    class="btn btn-outline-primary btn-sm" >Reserve</a>
-                                @endif
+                                <div class="row">
+                                    @if($copy->bor_reader_id === $reader->reader_id ) 
+                                    <form class="m-1" method="POST" action="{{ route('copy.return', 
+                                                                [   
+                                                                    'cid' => $cid,
+                                                                    'rid' => $reader->reader_id,
+                                                                    'did' => $copy->document_id,
+                                                                    'coid' => $copy->copy_no,
+                                                                    'lid' => $copy->lib_id
+                                                                ]
+                                                            ) }}" accept-charset="UTF-8">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input name="_method" type="hidden" value="POST">
+                                            <button type= "submit" class="btn btn-outline-warning btn-sm" >Return</button>
+                                        </form>
+                                    @elseif($copy->bor_reader_id != null )
+                                        <a name="doc_select" 
+                                        href="#" 
+                                        class="btn btn-outline-secondary btn-sm disabled" >Checked Out</a>
+                                    @else
+                                        <form class="m-1" method="POST" action="{{ route('copy.checkout', 
+                                                                [   
+                                                                    'cid' => $cid,
+                                                                    'rid' => $reader->reader_id,
+                                                                    'did' => $copy->document_id,
+                                                                    'coid' => $copy->copy_no,
+                                                                    'lid' => $copy->lib_id
+                                                                ]
+                                                            ) }}" accept-charset="UTF-8">
+                                            @csrf
+                                            <input name="_method" type="hidden" value="POST">
+                                            <button type= "submit" class="btn btn-outline-primary btn-sm" >Check Out</button>
+                                        </form>
+                                    @endif
+                                    @if($copy->res_reader_id === $reader->reader_id ) 
+                                        <form class="m-1" method="POST" action="{{ route('copy.cancelReservation', 
+                                                                [   
+                                                                    'cid' => $cid,
+                                                                    'rid' => $reader->reader_id,
+                                                                    'did' => $copy->document_id,
+                                                                    'coid' => $copy->copy_no,
+                                                                    'lid' => $copy->lib_id
+                                                                ]
+                                                            ) }}" accept-charset="UTF-8">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input name="_method" type="hidden" value="POST">
+                                            <button type= "submit" class="btn btn-outline-warning btn-sm" >Cancel Reservation</button>
+                                        </form>
+                                    @elseif($copy->res_reader_id != null)
+                                        <a name="doc_select" 
+                                        href="#" 
+                                        class="btn btn-outline-secondary btn-sm disabled" >Reserved</a>
+                                    @else
+                                        <form class="m-1" method="POST" action="{{ route('copy.reserve', 
+                                                                [   
+                                                                    'cid' => $cid,
+                                                                    'rid' => $reader->reader_id,
+                                                                    'did' => $copy->document_id,
+                                                                    'coid' => $copy->copy_no,
+                                                                    'lid' => $copy->lib_id
+                                                                ]
+                                                            ) }}" accept-charset="UTF-8">
+                                            @csrf
+                                            <input name="_method" type="hidden" value="POST">
+                                            <button type= "submit" class="btn btn-outline-primary btn-sm" >Reserve</button>
+                                        </form>
+                                    @endif
+                                </div>
                             </td>
                         </tr>
                     </tbody>

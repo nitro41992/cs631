@@ -124,8 +124,16 @@ class CopyController extends Controller
         //
     }
 
-    public function reserve() {
-
+    public function reserve(Request $request) {
+        $time = Carbon::now();
+        $id = DB::table('reserves')
+            ->insertGetId(['reader_id' => $request->rid,
+                            'document_id' => $request->did,
+                            'copy_no' => $request->coid,
+                            'lib_id' => $request->lid,
+                            'd_time' => $time,
+                            ], 'res_number');
+        return $this->index($request->cid, $request->did);
     }
 
     public function checkout(Request $request) {
@@ -139,17 +147,27 @@ class CopyController extends Controller
                             'bd_time' => $time,
                             'rd_time' => Carbon::createFromFormat('Y-m-d H:i:s', $time)->addDays(20)
                             ], 'bor_number');
-        $cid = $request->cid;
-        $did = $request->did;
-        return $this->index($cid, $did);
+        return $this->index($request->cid, $request->did);
     }
 
-    public function return() {
-
+    public function return(Request $request) {
+        DB::table('borrows')
+        ->where('reader_id', '=', $request->rid)
+        ->where('document_id', '=', $request->did)
+        ->where('copy_no', '=', $request->coid)
+        ->where('lib_id', '=', $request->lid)
+        ->delete();
+        return $this->index($request->cid, $request->did);
     }
 
-    public function cancelReservation() {
-
+    public function cancelReservation(Request $request) {
+        DB::table('reserves')
+        ->where('reader_id', '=', $request->rid)
+        ->where('document_id', '=', $request->did)
+        ->where('copy_no', '=', $request->coid)
+        ->where('lib_id', '=', $request->lid)
+        ->delete();
+        return $this->index($request->cid, $request->did);
     }
 
 }

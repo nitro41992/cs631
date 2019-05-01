@@ -27,4 +27,7 @@ Route::get('/document/title/{id}','DocumentController@filterTitle')->name('docum
 Route::get('/document/pubName/{id}','DocumentController@filterPubName')->name('document.filterPubName');
 
 Route::get('/copy/{cid}/{did}', 'CopyController@index')->name('copy.index');
-Route::post('/copy/checkout/', 'CopyController@checkout')->name('copy.checkout');
+Route::post('/copy/checkout', 'CopyController@checkout')->name('copy.checkout');
+Route::post('/copy/return', 'CopyController@return')->name('copy.return');
+Route::post('/copy/cancelRes', 'CopyController@cancelReservation')->name('copy.cancelReservation');
+Route::post('/copy/reserve', 'CopyController@reserve')->name('copy.reserve');

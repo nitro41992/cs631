@@ -42,7 +42,7 @@
                             <td>
                                 <div class="row">
                                     @if($copy->bor_reader_id === $reader->reader_id ) 
-                                    <form class="m-1" method="POST" action="{{ route('copy.return', 
+                                        <form class="m-1" method="POST" action="{{ route('copy.return', 
                                                                 [   
                                                                     'id' => $id,
                                                                     'rid' => $reader->reader_id,
@@ -56,26 +56,7 @@
                                             <input name="_method" type="hidden" value="POST">
                                             <button type= "submit" class="btn btn-outline-warning btn-sm" >Return</button>
                                         </form>
-                                    @elseif($copy->bor_reader_id != null )
-                                        <a name="doc_select" 
-                                        href="#" 
-                                        class="btn  m-1 btn-outline-secondary btn-sm disabled" >Checked Out</a>
-                                    @else
-                                        <form class="m-1" method="POST" action="{{ route('copy.checkout', 
-                                                                [   
-                                                                    'id' => $id,
-                                                                    'rid' => $reader->reader_id,
-                                                                    'did' => $copy->document_id,
-                                                                    'coid' => $copy->copy_no,
-                                                                    'lid' => $copy->lib_id
-                                                                ]
-                                                            ) }}" accept-charset="UTF-8">
-                                            @csrf
-                                            <input name="_method" type="hidden" value="POST">
-                                            <button type= "submit" class="btn btn-outline-primary btn-sm" >Check Out</button>
-                                        </form>
-                                    @endif
-                                    @if($copy->res_reader_id === $reader->reader_id ) 
+                                    @elseif($copy->res_reader_id === $reader->reader_id ) 
                                         <form class="m-1" method="POST" action="{{ route('copy.cancelReservation', 
                                                                 [   
                                                                     'id' => $id,
@@ -90,10 +71,10 @@
                                             <input name="_method" type="hidden" value="POST">
                                             <button type= "submit" class="btn btn-outline-warning btn-sm" >Cancel Reservation</button>
                                         </form>
-                                    @elseif($copy->res_reader_id != null)
+                                    @elseif($copy->bor_reader_id != null ||  $copy->res_reader_id != null)
                                         <a name="doc_select" 
                                         href="#" 
-                                        class="btn m-1 btn-outline-secondary btn-sm disabled" >Reserved</a>
+                                        class="btn  m-1 btn-outline-secondary btn-sm disabled" >Unavailable</a>
                                     @else
                                         <form class="m-1" method="POST" action="{{ route('copy.reserve', 
                                                                 [   
@@ -107,6 +88,19 @@
                                             @csrf
                                             <input name="_method" type="hidden" value="POST">
                                             <button type= "submit" class="btn btn-outline-primary btn-sm" >Reserve</button>
+                                        </form>
+                                        <form class="m-1" method="POST" action="{{ route('copy.checkout', 
+                                                                [   
+                                                                    'id' => $id,
+                                                                    'rid' => $reader->reader_id,
+                                                                    'did' => $copy->document_id,
+                                                                    'coid' => $copy->copy_no,
+                                                                    'lid' => $copy->lib_id
+                                                                ]
+                                                            ) }}" accept-charset="UTF-8">
+                                            @csrf
+                                            <input name="_method" type="hidden" value="POST">
+                                            <button type= "submit" class="btn btn-outline-primary btn-sm" >Check Out</button>
                                         </form>
                                     @endif
                                 </div>

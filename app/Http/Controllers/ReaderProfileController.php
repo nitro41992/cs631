@@ -50,11 +50,11 @@ class ReaderProfileController extends Controller
         ->orWhere('borrows.reader_id', '=', $reader->reader_id)
         ->get();
 
-        dd($copies);
+        //dd($copies);
         $obj = array();
         $obj['copies'] = $copies;
 
-        return view('readerProfile', compact('obj', 'id'));
+        return view('readerProfile', compact('obj', 'reader', 'id'));
     }
 
     /**

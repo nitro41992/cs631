@@ -36,16 +36,32 @@
                     @foreach($obj['copies'] as $copy)
                     <tbody>
                         <tr>
-                            <td>{{$copy->id}}</td>
+                            <td>{{$copy->copy_no}}</td>
                             <td>{{$copy->l_name}}</td>
                             <td>{{$copy->l_location}}</td>
-                            <td> 
-                                <a name="doc_select" 
-                                href="#" 
-                                class="btn btn-outline-primary btn-sm">Reserve</a>
-                                <a name="doc_select" 
-                                href="#" 
-                                class="btn btn-outline-primary btn-sm">Checkout</a>
+                            <td>
+                                @if($copy->bor_reader_id != null) 
+                                    <a name="doc_select" 
+                                    href="#" 
+                                    class="btn btn-outline-secondary btn-sm disabled">Reserved</a>
+                                    <a name="doc_select" 
+                                    href="#" 
+                                    class="btn btn-outline-primary btn-sm">Checkout</a>
+                                @elseif($copy->res_reader_id != null)
+                                    <a name="doc_select" 
+                                    href="#" 
+                                    class="btn btn-outline-primary btn-sm" >Reserve</a>
+                                    <a name="doc_select" 
+                                    href="#" 
+                                    class="btn btn-outline-secondary btn-sm disabled">Checked out</a>
+                                @else
+                                    <a name="doc_select" 
+                                    href="#" 
+                                    class="btn btn-outline-primary btn-sm" >Reserve</a>
+                                    <a name="doc_select" 
+                                    href="#" 
+                                    class="btn btn-outline-primary btn-sm" >Checkout</a>
+                                @endif
                             </td>
                         </tr>
                     </tbody>

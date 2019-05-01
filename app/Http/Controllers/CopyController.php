@@ -17,45 +17,35 @@ class CopyController extends Controller
     {
         
         $copies = DB::table('copies')
-        ->join('documents', 'copies.document_id', '=', 'documents.document_id')
-        ->join('branches', 'branches.lib_id', '=', 'copies.lib_id')
-        ->where('copies.document_id', '=', $did)
-        ->get();
-
-        $copy_status;
-        $borrowed =  DB::table('copies')
-        ->join("borrows",function($join){
+        ->Join('documents', 'copies.document_id', '=', 'documents.document_id')
+        ->Join('branches', 'branches.lib_id', '=', 'copies.lib_id')
+        ->leftJoin("borrows",function($join){
             $join->on("borrows.document_id","=","copies.document_id")
                 ->on("borrows.copy_no","=","copies.copy_no")
                 ->on("borrows.lib_id","=","copies.lib_id");
         })
-        ->where('copies.document_id', '=', $did)
-        ->get();
-
-        $reserved =  DB::table('copies')
-        ->join("reserves",function($join){
+        ->leftJoin("reserves",function($join){
             $join->on("reserves.document_id","=","copies.document_id")
                 ->on("reserves.copy_no","=","copies.copy_no")
                 ->on("reserves.lib_id","=","copies.lib_id");
         })
+        ->select('copies.copy_no',
+                 'copies.document_id',
+                 'documents.title',
+                 'copies.copy_no', 
+                 'branches.l_name',
+                 'branches.l_location',
+                 'borrows.bor_number',
+                 'borrows.reader_id as bor_reader_id',
+                 'reserves.res_number',
+                 'reserves.reader_id as res_reader_id')
         ->where('copies.document_id', '=', $did)
         ->get();
-        
-        //dd($borrowed);
 
-        if ($borrowed->count() > 0) {
-            $copy_status = 'borrowed';
-        } elseif ($reserved->count() > 0) {
-            $copy_status = 'reserved';
-        } else {
-            $copy_status = 'open';
-        }
+        //dd($copies);
 
         $obj = array();
         $obj['copies'] = $copies;
-        $obj['copy_status'] = $copy_status;
-
-        //dd($obj);
 
         return view('copy', compact('obj', 'cid'));
     }

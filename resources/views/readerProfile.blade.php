@@ -46,6 +46,7 @@
                                                                 [   
                                                                     'id' => $id,
                                                                     'rid' => $reader->reader_id,
+                                                                    'did' => $copy->document_id,
                                                                     'coid' => $copy->copy_no,
                                                                     'lid' => $copy->lib_id
                                                                 ]
@@ -64,6 +65,7 @@
                                                                 [   
                                                                     'id' => $id,
                                                                     'rid' => $reader->reader_id,
+                                                                    'did' => $copy->document_id,
                                                                     'coid' => $copy->copy_no,
                                                                     'lid' => $copy->lib_id
                                                                 ]
@@ -78,6 +80,7 @@
                                                                 [   
                                                                     'id' => $id,
                                                                     'rid' => $reader->reader_id,
+                                                                    'did' => $copy->document_id,
                                                                     'coid' => $copy->copy_no,
                                                                     'lid' => $copy->lib_id
                                                                 ]
@@ -96,6 +99,7 @@
                                                                 [   
                                                                     'id' => $id,
                                                                     'rid' => $reader->reader_id,
+                                                                    'did' => $copy->document_id,
                                                                     'coid' => $copy->copy_no,
                                                                     'lid' => $copy->lib_id
                                                                 ]

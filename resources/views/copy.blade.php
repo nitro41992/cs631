@@ -59,7 +59,7 @@
                                     @elseif($copy->bor_reader_id != null )
                                         <a name="doc_select" 
                                         href="#" 
-                                        class="btn btn-outline-secondary btn-sm disabled" >Checked Out</a>
+                                        class="btn  m-1 btn-outline-secondary btn-sm disabled" >Checked Out</a>
                                     @else
                                         <form class="m-1" method="POST" action="{{ route('copy.checkout', 
                                                                 [   
@@ -93,7 +93,7 @@
                                     @elseif($copy->res_reader_id != null)
                                         <a name="doc_select" 
                                         href="#" 
-                                        class="btn btn-outline-secondary btn-sm disabled" >Reserved</a>
+                                        class="btn m-1 btn-outline-secondary btn-sm disabled" >Reserved</a>
                                     @else
                                         <form class="m-1" method="POST" action="{{ route('copy.reserve', 
                                                                 [   

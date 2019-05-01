@@ -40,27 +40,31 @@
                             <td>{{$copy->l_name}}</td>
                             <td>{{$copy->l_location}}</td>
                             <td>
-                                @if($copy->bor_reader_id != null) 
+                                @if($copy->bor_reader_id === $reader->reader_id ) 
                                     <a name="doc_select" 
                                     href="#" 
-                                    class="btn btn-outline-secondary btn-sm disabled">Reserved</a>
+                                    class="btn btn-outline-warning btn-sm disabled">Return</a>
+                                @elseif($copy->bor_reader_id != null )
                                     <a name="doc_select" 
                                     href="#" 
-                                    class="btn btn-outline-primary btn-sm">Checkout</a>
+                                    class="btn btn-outline-secondary btn-sm" >Checked Out</a>
+                                @else
+                                    <a name="doc_select" 
+                                    href="#" 
+                                    class="btn btn-outline-primary btn-sm" >CheckOut</a>
+                                @endif
+                                @if($copy->res_reader_id === $reader->reader_id ) 
+                                    <a name="doc_select" 
+                                    href="#" 
+                                    class="btn btn-outline-warning btn-sm disabled" >Cancel Reservation</a>
                                 @elseif($copy->res_reader_id != null)
                                     <a name="doc_select" 
                                     href="#" 
-                                    class="btn btn-outline-primary btn-sm" >Reserve</a>
-                                    <a name="doc_select" 
-                                    href="#" 
-                                    class="btn btn-outline-secondary btn-sm disabled">Checked out</a>
+                                    class="btn btn-outline-secondary btn-sm" >Reserved</a>
                                 @else
                                     <a name="doc_select" 
                                     href="#" 
                                     class="btn btn-outline-primary btn-sm" >Reserve</a>
-                                    <a name="doc_select" 
-                                    href="#" 
-                                    class="btn btn-outline-primary btn-sm" >Checkout</a>
                                 @endif
                             </td>
                         </tr>

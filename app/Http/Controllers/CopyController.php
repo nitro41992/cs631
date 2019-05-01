@@ -17,22 +17,21 @@ class CopyController extends Controller
     {
         
         $copies = DB::table('copies')
-        ->Join('documents', 'copies.document_id', '=', 'documents.document_id')
-        ->Join('branches', 'branches.lib_id', '=', 'copies.lib_id')
+        ->rightJoin('documents', 'documents.document_id', '=', 'copies.document_id')
+        ->rightJoin('branches', 'branches.lib_id', '=', 'copies.lib_id')
         ->leftJoin("borrows",function($join){
-            $join->on("borrows.document_id","=","copies.document_id")
-                ->on("borrows.copy_no","=","copies.copy_no")
-                ->on("borrows.lib_id","=","copies.lib_id");
+            $join->on("copies.document_id","=","borrows.document_id")
+                ->on("copies.copy_no","=","borrows.copy_no")
+                ->on("copies.lib_id","=","borrows.lib_id");
         })
         ->leftJoin("reserves",function($join){
-            $join->on("reserves.document_id","=","copies.document_id")
-                ->on("reserves.copy_no","=","copies.copy_no")
-                ->on("reserves.lib_id","=","copies.lib_id");
+            $join->on("copies.document_id","=","reserves.document_id")
+                ->on("copies.copy_no","=","reserves.copy_no")
+                ->on("copies.lib_id","=","reserves.lib_id");
         })
         ->select('copies.copy_no',
-                 'copies.document_id',
-                 'documents.title',
-                 'copies.copy_no', 
+                 'documents.document_id',
+                 'documents.title', 
                  'branches.l_name',
                  'branches.l_location',
                  'borrows.bor_number',
@@ -46,12 +45,17 @@ class CopyController extends Controller
         ->where('copies.document_id', '=', $did)
         ->get();
 
-        dd($copies);
+        $reader = DB::table('readers')
+                    ->where('readers.card_num', "=", $cid)
+                    ->select('reader_id')
+                    ->first();
+
+        //dd($copies);
 
         $obj = array();
         $obj['copies'] = $copies;
 
-        return view('copy', compact('obj', 'cid'));
+        return view('copy', compact('obj', 'cid', 'reader'));
     }
 
     /**

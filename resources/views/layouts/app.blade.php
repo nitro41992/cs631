@@ -46,9 +46,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">Administrator Login</a>
                             </li>
-                            @if (request()->routeIs('document'))
+                            @if (request()->is('document/*') || request()->is('copy/*') || request()->is('document') || request()->is('copy'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Reader Profile</a>
+                                    <a class="nav-link" href="{{ route('readerProfile.index', ['id' => $id]) }}">Reader Profile</a>
                                 </li>
                             @endif
                             <!-- @if (Route::has('register'))

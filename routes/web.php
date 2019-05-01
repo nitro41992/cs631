@@ -32,3 +32,5 @@ Route::post('/copy/checkout', 'CopyController@checkout')->name('copy.checkout');
 Route::post('/copy/return', 'CopyController@return')->name('copy.return');
 Route::post('/copy/cancelRes', 'CopyController@cancelReservation')->name('copy.cancelReservation');
 Route::post('/copy/reserve', 'CopyController@reserve')->name('copy.reserve');
+
+Route::get('/readerProfile/{id}', 'ReaderProfileController@index')->name('readerProfile.index');

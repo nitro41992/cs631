@@ -15,7 +15,7 @@
         @endif
         <div class="container">
             <a  name="doc_select" 
-                href="{{ route('document', ['id' => $cid]) }}"
+                href="{{ route('document', ['id' => $id]) }}"
                 class="btn btn-outline-secondary btn-sm">Back
             </a>
             @if ($obj['copies']->count() > 0 )
@@ -44,7 +44,7 @@
                                     @if($copy->bor_reader_id === $reader->reader_id ) 
                                     <form class="m-1" method="POST" action="{{ route('copy.return', 
                                                                 [   
-                                                                    'cid' => $cid,
+                                                                    'id' => $id,
                                                                     'rid' => $reader->reader_id,
                                                                     'did' => $copy->document_id,
                                                                     'coid' => $copy->copy_no,
@@ -63,7 +63,7 @@
                                     @else
                                         <form class="m-1" method="POST" action="{{ route('copy.checkout', 
                                                                 [   
-                                                                    'cid' => $cid,
+                                                                    'id' => $id,
                                                                     'rid' => $reader->reader_id,
                                                                     'did' => $copy->document_id,
                                                                     'coid' => $copy->copy_no,
@@ -78,7 +78,7 @@
                                     @if($copy->res_reader_id === $reader->reader_id ) 
                                         <form class="m-1" method="POST" action="{{ route('copy.cancelReservation', 
                                                                 [   
-                                                                    'cid' => $cid,
+                                                                    'id' => $id,
                                                                     'rid' => $reader->reader_id,
                                                                     'did' => $copy->document_id,
                                                                     'coid' => $copy->copy_no,
@@ -97,7 +97,7 @@
                                     @else
                                         <form class="m-1" method="POST" action="{{ route('copy.reserve', 
                                                                 [   
-                                                                    'cid' => $cid,
+                                                                    'id' => $id,
                                                                     'rid' => $reader->reader_id,
                                                                     'did' => $copy->document_id,
                                                                     'coid' => $copy->copy_no,

@@ -14,7 +14,7 @@ class CopyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($cid, $did)
+    public function index($id, $did)
     {
         
         $copies = DB::table('copies')
@@ -48,14 +48,14 @@ class CopyController extends Controller
         ->get();
 
         $reader = DB::table('readers')
-                    ->where('readers.card_num', "=", $cid)
+                    ->where('readers.card_num', "=", $id)
                     ->select('reader_id')
                     ->first();
 
         $obj = array();
         $obj['copies'] = $copies;
 
-        return view('copy', compact('obj', 'cid', 'reader'));
+        return view('copy', compact('obj', 'id', 'reader'));
     }
 
     /**
@@ -133,7 +133,7 @@ class CopyController extends Controller
                             'lib_id' => $request->lid,
                             'd_time' => $time,
                             ], 'res_number');
-        return $this->index($request->cid, $request->did);
+        return $this->index($request->id, $request->did);
     }
 
     public function checkout(Request $request) {
@@ -147,7 +147,7 @@ class CopyController extends Controller
                             'bd_time' => $time,
                             'rd_time' => Carbon::createFromFormat('Y-m-d H:i:s', $time)->addDays(20)
                             ], 'bor_number');
-        return $this->index($request->cid, $request->did);
+        return $this->index($request->id, $request->did);
     }
 
     public function return(Request $request) {
@@ -157,7 +157,7 @@ class CopyController extends Controller
         ->where('copy_no', '=', $request->coid)
         ->where('lib_id', '=', $request->lid)
         ->delete();
-        return $this->index($request->cid, $request->did);
+        return $this->index($request->id, $request->did);
     }
 
     public function cancelReservation(Request $request) {
@@ -167,7 +167,7 @@ class CopyController extends Controller
         ->where('copy_no', '=', $request->coid)
         ->where('lib_id', '=', $request->lid)
         ->delete();
-        return $this->index($request->cid, $request->did);
+        return $this->index($request->id, $request->did);
     }
 
 }

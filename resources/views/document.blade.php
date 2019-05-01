@@ -74,7 +74,7 @@
                                 href="{{ route('copy.index', 
                                     [
                                         'did' => $document->document_id,
-                                        'cid' => $id
+                                        'id' => $id
                                     ]
                                 ) }}" 
                                 class="btn btn-outline-primary btn-sm">Select</a></td>

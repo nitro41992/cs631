@@ -43,24 +43,24 @@
                                 @if($copy->bor_reader_id === $reader->reader_id ) 
                                     <a name="doc_select" 
                                     href="#" 
-                                    class="btn btn-outline-warning btn-sm disabled">Return</a>
+                                    class="btn btn-outline-warning btn-sm">Return</a>
                                 @elseif($copy->bor_reader_id != null )
                                     <a name="doc_select" 
                                     href="#" 
-                                    class="btn btn-outline-secondary btn-sm" >Checked Out</a>
+                                    class="btn btn-outline-secondary btn-sm disabled" >Checked Out</a>
                                 @else
                                     <a name="doc_select" 
                                     href="#" 
-                                    class="btn btn-outline-primary btn-sm" >CheckOut</a>
+                                    class="btn btn-outline-primary btn-sm" >Check Out</a>
                                 @endif
                                 @if($copy->res_reader_id === $reader->reader_id ) 
                                     <a name="doc_select" 
                                     href="#" 
-                                    class="btn btn-outline-warning btn-sm disabled" >Cancel Reservation</a>
+                                    class="btn btn-outline-warning btn-sm" >Cancel Reservation</a>
                                 @elseif($copy->res_reader_id != null)
                                     <a name="doc_select" 
                                     href="#" 
-                                    class="btn btn-outline-secondary btn-sm" >Reserved</a>
+                                    class="btn btn-outline-secondary btn-sm disabled" >Reserved</a>
                                 @else
                                     <a name="doc_select" 
                                     href="#" 

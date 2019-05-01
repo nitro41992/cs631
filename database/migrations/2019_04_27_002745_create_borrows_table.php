@@ -26,6 +26,7 @@ class CreateBorrowsTable extends Migration
             $table->foreign('reader_id')->references('reader_id')->on('readers');
             $table->foreign(['document_id', 'copy_no', 'lib_id'])->references(['document_id', 'copy_no', 'lib_id'])
                 ->on('copies');
+            $table->unique(['document_id', 'copy_no', 'lib_id']);
         });
     }
 

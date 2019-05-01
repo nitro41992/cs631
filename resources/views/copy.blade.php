@@ -49,9 +49,19 @@
                                     href="#" 
                                     class="btn btn-outline-secondary btn-sm disabled" >Checked Out</a>
                                 @else
-                                    <a name="doc_select" 
-                                    href="#" 
-                                    class="btn btn-outline-primary btn-sm" >Check Out</a>
+                                    <form method="POST" action="{{ route('copy.checkout', 
+                                                            [   
+                                                                'cid' => $cid,
+                                                                'rid' => $reader->reader_id,
+                                                                'did' => $copy->document_id,
+                                                                'coid' => $copy->copy_no,
+                                                                'lid' => $copy->lib_id
+                                                            ]
+                                                        ) }}" accept-charset="UTF-8">
+                                        @csrf
+                                        <input name="copy_checkout" type="hidden" value="POST">
+                                        <button type= "submit" class="btn btn-outline-primary btn-sm" >Check Out</button>
+                                    </form>
                                 @endif
                                 @if($copy->res_reader_id === $reader->reader_id ) 
                                     <a name="doc_select" 

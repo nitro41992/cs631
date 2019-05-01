@@ -27,3 +27,4 @@ Route::get('/document/title/{id}','DocumentController@filterTitle')->name('docum
 Route::get('/document/pubName/{id}','DocumentController@filterPubName')->name('document.filterPubName');
 
 Route::get('/copy/{cid}/{did}', 'CopyController@index')->name('copy.index');
+Route::post('/copy/checkout/', 'CopyController@checkout')->name('copy.checkout');

@@ -20,7 +20,7 @@ $factory->define(Borrows::class, function (Faker $faker) {
                 ->get()
                 ->toArray();
 
-    $compkey = $faker->randomElement($compkeys);
+    $compkey = $faker->unique()->randomElement($compkeys);
 
     $readers = Reader::all()->pluck('reader_id')->toArray();
 

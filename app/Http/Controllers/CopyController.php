@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Copy;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class CopyController extends Controller
 {
@@ -34,6 +35,7 @@ class CopyController extends Controller
                  'documents.title', 
                  'branches.l_name',
                  'branches.l_location',
+                 'branches.lib_id',
                  'borrows.bor_number',
                  'borrows.reader_id as bor_reader_id',
                  'borrows.bd_time',
@@ -49,8 +51,6 @@ class CopyController extends Controller
                     ->where('readers.card_num', "=", $cid)
                     ->select('reader_id')
                     ->first();
-
-        //dd($copies);
 
         $obj = array();
         $obj['copies'] = $copies;
@@ -123,4 +123,33 @@ class CopyController extends Controller
     {
         //
     }
+
+    public function reserve() {
+
+    }
+
+    public function checkout(Request $request) {
+        //dd($request->rid);
+        $time = Carbon::now();
+        $id = DB::table('borrows')
+            ->insertGetId(['reader_id' => $request->rid,
+                            'document_id' => $request->did,
+                            'copy_no' => $request->coid,
+                            'lib_id' => $request->lid,
+                            'bd_time' => $time,
+                            'rd_time' => Carbon::createFromFormat('Y-m-d H:i:s', $time)->addDays(20)
+                            ], 'bor_number');
+        $cid = $request->cid;
+        $did = $request->did;
+        return $this->index($cid, $did);
+    }
+
+    public function return() {
+
+    }
+
+    public function cancelReservation() {
+
+    }
+
 }

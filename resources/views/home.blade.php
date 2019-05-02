@@ -60,24 +60,27 @@
                         <label for="title">Document Name:</label>
                         <input type="text" class="form-control" name="title" id="title" aria-describedby="title"  placeholder="" required>
                     </div>
-                    <!-- <div class="form-group">
-                        <label for="pub_name">Publisher Name:</label>
-                        <input type="text" class="form-control" name="pub_name" id="pub_name" aria-describedby="pub_name"  placeholder="" >
-                    </div> -->
                     <div class="form-group">
                         <label for="pub_date">Published Date:</label>
                         <input type="date" class="form-control" name="pub_date" id="pub_date" aria-describedby="pub_date"  placeholder="" required>
                     </div>
-                    <!-- <div class="form-group">
-                        <label for="pub_loc">Publisher Address:</label>
-                        <input type="text" class="form-control" name="pub_loc" id="pub_loc" aria-describedby="pub_loc"  placeholder="" >
-                    </div> -->
                     <div class="form-group">
                         <label for="pub_name">Select Publisher</label>
                         <select class="form-control" name='pub_name' id="pub_name">
                         @foreach($obj['publishers'] as $publisher)
                             <option>{{$publisher->publisher_id.' '.$publisher->pub_name}}</option>
                         @endforeach
+                        </select>
+                        <!-- <div class="mt-2 ml-1">
+                            <a href="#">Add New Publisher</a>
+                        </div> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="doc_type">Select Publisher</label>
+                        <select class="form-control" name='doc_type' id="doc_type">
+                            <option>Book</option>
+                            <option>Journal Volume</option>
+                            <option>Proceedings</option>
                         </select>
                         <!-- <div class="mt-2 ml-1">
                             <a href="#">Add New Publisher</a>

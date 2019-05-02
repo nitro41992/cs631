@@ -7,7 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Branch::class, function (Faker $faker) {
     return [
-        'l_name' => $faker->text($maxNbChars = 10),
+        'l_name' => $faker->company,
         'l_location' => $faker->address,
     ];
 });

@@ -56,8 +56,21 @@ class AdminCopyController extends Controller
         ->orderBy('copies.document_id', 'asc')
         ->get();
 
+        $max_of_copy = DB::table('copies')
+        ->rightJoin('documents', 'documents.document_id', '=', 'copies.document_id')
+        ->select(DB::raw('max(copy_no)'))
+        ->groupBy('copies.document_id')
+        ->where('copies.document_id', '=', $did)
+        ->first();
+
+        $branches = DB::table('branches')
+        ->get();
+
+
         $obj = array();
         $obj['copies'] = $copies;
+        $obj['max_copy']  = $max_of_copy;
+        $obj['branches']  = $branches;
 
         return view('adminCopy', compact('obj'));
     }
@@ -144,6 +157,31 @@ class AdminCopyController extends Controller
         ->where('lib_id', '=', $request->lid)
         ->delete();
         return $this->index($request->did);
+    }
+
+    public function insertCopy(Request $request) {
+        
+        $request->validate([
+
+            'copy_no'=> 'required',
+            'br_name'=> 'required',
+            'br_pos'=> 'required',
+
+        ]);
+        //dd($request);
+        $br_names = explode(' ', $request->br_name, 2);
+        $branches = DB::table('branches')
+        ->where('lib_id','=', $br_names[0])
+        ->first();
+
+        $copy_id = DB::table('copies')
+            ->insertGetId(['document_id' => $request->document_id,
+                        'copy_no' => $request->copy_no,
+                        'lib_id' => $branches->lib_id,
+                        'position' => $request->br_pos,
+                        ], 'document_id');
+
+        return $this->index($request->document_id);
     }
 
     public function delete(Request $request) {

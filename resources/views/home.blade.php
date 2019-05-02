@@ -79,6 +79,9 @@
                             <option>{{$publisher->publisher_id.' '.$publisher->pub_name}}</option>
                         @endforeach
                         </select>
+                        <!-- <div class="mt-2 ml-1">
+                            <a href="#">Add New Publisher</a>
+                        </div> -->
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>  
@@ -101,13 +104,27 @@
                         <td>{{$document->title}}</td>
                         <td>{{$document->p_date}}</td>
                         <td>{{$document->pub_name}}</td>
-                        <td> <a name="doc_select" 
+                        <td> 
+                            <div class="row">
+                                <a name="doc_select" 
                                 href="{{ route('adminCopy.index', 
                                     [
                                         'did' => $document->document_id,
                                     ]
                                 ) }}" 
-                                class="btn btn-primary btn-sm">Select</a></td>
+                                class="btn btn-primary btn-sm m-1">Select</a>
+                                <form class="m-1" method="POST" action="{{ route('home.deleteDocument', 
+                                                                [   
+                                                                    'did' => $document->document_id,
+                                                                ]
+                                                            ) }}" accept-charset="UTF-8">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input name="_method" type="hidden" value="POST">
+                                            <button type= "submit" class="btn btn-danger btn-sm" >Delete</button>
+                                </form>
+                            </div>
+                        </td>
                     </tr>
                 </tbody>
             @endforeach

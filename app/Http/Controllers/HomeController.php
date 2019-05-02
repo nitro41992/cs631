@@ -33,6 +33,10 @@ class HomeController extends Controller
         ->orderBy('publisher_id', 'asc')
         ->get();
 
+        $docCopies = DB::table('copies')
+        ->join('documents', 'documents.document_id', '=', 'copies.document_id')
+        ->get();
+
         //$obj['card_num'] = $card_num;
         $obj['documents'] = $documents;
         $obj['publishers'] = $publishers;
@@ -118,6 +122,23 @@ class HomeController extends Controller
                         ], 'document_id');
 
         return $this->index();
+    }
+
+    public function deleteDocument($did) {
+
+        $copies = DB::table('copies')
+        ->where('document_id', '=', $did)
+        ->get();
+
+
+        if ($copies->count() == 0) {
+            DB::table('documents')
+            ->where('document_id', '=', $did)
+            ->delete();
+        }
+
+        return $this->index();
+
     }
 
 }

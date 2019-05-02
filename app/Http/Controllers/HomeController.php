@@ -87,16 +87,19 @@ class HomeController extends Controller
     }
 
     public function insertDocument(Request $request) {
-        $bag = $request->all();
-        dd($request);
-        $publisher_id = DB::table('publisher')
-            ->insertGetId(['pub_name' => $request->rid,
-                            'document_id' => $request->did,
-                            'copy_no' => $request->coid,
-                            'lib_id' => $request->lid,
-                            'bd_time' => $time,
-                            'rd_time' => Carbon::createFromFormat('Y-m-d H:i:s', $time)->addDays(20)
-                            ], 'bor_number');
+        $publisher_id = DB::table('publishers')
+            ->insertGetId(['pub_name' => $request->pub_name,
+                            'address' => $request->pub_loc,
+                            ], 'publisher_id');
+
+        $document_id = DB::table('documents')
+        ->insertGetId(['title' => $request->title,
+                        'p_date' => $request->pub_date,
+                        'publisher_id' => $publisher_id,
+                        ], 'document_id');
+
+
+
         return $this->index($request->id, $request->did);
     }
 

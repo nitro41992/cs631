@@ -57,8 +57,11 @@
                                 </li>
                             @endif -->
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('home') }}">Documents</a>
+                            </li>
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="dropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 

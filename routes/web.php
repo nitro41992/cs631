@@ -20,6 +20,9 @@ Auth::routes();
 //Route::get('/', 'WelcomeController@index')->name('welcome');
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/id','HomeController@filterId')->name('home.filterId');
+Route::get('/home/title','HomeController@filterTitle')->name('home.filterTitle');
+Route::get('/home/pubName','HomeController@filterPubName')->name('home.filterPubName');
 
 Route::post('/document', 'DocumentController@getReaderByCardNumber')->name('document.getReaderByCardNumber');
 Route::get('/document/{id}', 'DocumentController@index')->name('document');
@@ -32,5 +35,11 @@ Route::post('/copy/checkout', 'CopyController@checkout')->name('copy.checkout');
 Route::post('/copy/return', 'CopyController@return')->name('copy.return');
 Route::post('/copy/cancelRes', 'CopyController@cancelReservation')->name('copy.cancelReservation');
 Route::post('/copy/reserve', 'CopyController@reserve')->name('copy.reserve');
+
+Route::get('/adminCopy/{did}', 'AdminCopyController@index')->name('adminCopy.index');
+Route::post('/adminCopy/checkout', 'AdminCopyController@checkout')->name('adminCopy.checkout');
+Route::post('/adminCopy/return', 'AdminCopyController@return')->name('adminCopy.return');
+Route::post('/adminCopy/cancelRes', 'AdminCopyController@cancelReservation')->name('adminCopy.cancelReservation');
+Route::post('/adminCopy/reserve', 'AdminCopyController@reserve')->name('adminCopy.reserve');
 
 Route::get('/readerProfile/{id}', 'ReaderProfileController@index')->name('readerProfile.index');

@@ -2,21 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Copy;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Carbon\Carbon;
 
-class CopyController extends Controller
+class AdminCopyController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id, $did)
+    public function index($did)
     {
-        
         $copies = DB::table('copies')
         ->rightJoin('documents', 'documents.document_id', '=', 'copies.document_id')
         ->rightJoin('branches', 'branches.lib_id', '=', 'copies.lib_id')
@@ -45,17 +42,13 @@ class CopyController extends Controller
                  'reserves.d_time',
                  DB::raw('(NOW()::date - borrows.rd_time::date) as borrow_time_left'))
         ->where('copies.document_id', '=', $did)
+        ->orderBy('copies.document_id', 'asc')
         ->get();
-
-        $reader = DB::table('readers')
-                    ->where('readers.card_num', "=", $id)
-                    ->select('reader_id')
-                    ->first();
 
         $obj = array();
         $obj['copies'] = $copies;
 
-        return view('copy', compact('obj', 'id', 'reader'));
+        return view('adminCopy', compact('obj'));
     }
 
     /**
@@ -82,10 +75,10 @@ class CopyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Copy  $copy
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Copy $copy)
+    public function show($id)
     {
         //
     }
@@ -93,10 +86,10 @@ class CopyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Copy  $copy
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Copy $copy)
+    public function edit($id)
     {
         //
     }
@@ -105,10 +98,10 @@ class CopyController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Copy  $copy
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Copy $copy)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -116,38 +109,29 @@ class CopyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Copy  $copy
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Copy $copy)
+    public function destroy($id)
     {
         //
     }
 
-    public function reserve(Request $request) {
-        $time = Carbon::now()->setTimezone('EST');
-        $id = DB::table('reserves')
-            ->insertGetId(['reader_id' => $request->rid,
-                            'document_id' => $request->did,
-                            'copy_no' => $request->coid,
-                            'lib_id' => $request->lid,
-                            'd_time' => $time,
-                            ], 'res_number');
-        return $this->index($request->id, $request->did);
+    public function return(Request $request) {
+        DB::table('borrows')
+        ->where('document_id', '=', $request->did)
+        ->where('copy_no', '=', $request->coid)
+        ->where('lib_id', '=', $request->lid)
+        ->delete();
+        return $this->index($request->did);
     }
 
-    public function checkout(Request $request) {
-        //dd($request->rid);
-        $time = Carbon::now()->setTimezone('EST');
-        $id = DB::table('borrows')
-            ->insertGetId(['reader_id' => $request->rid,
-                            'document_id' => $request->did,
-                            'copy_no' => $request->coid,
-                            'lib_id' => $request->lid,
-                            'bd_time' => $time,
-                            'rd_time' => Carbon::createFromFormat('Y-m-d H:i:s', $time)->addDays(20)
-                            ], 'bor_number');
-        return $this->index($request->id, $request->did);
+    public function cancelReservation(Request $request) {
+        DB::table('reserves')
+        ->where('document_id', '=', $request->did)
+        ->where('copy_no', '=', $request->coid)
+        ->where('lib_id', '=', $request->lid)
+        ->delete();
+        return $this->index($request->did);
     }
-
 }

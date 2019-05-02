@@ -87,6 +87,15 @@ class HomeController extends Controller
     }
 
     public function insertDocument(Request $request) {
+        $request->validate([
+
+            'pub_name'=> 'required|string',
+            'pub_loc'=> 'required|string',
+            'title'=> 'required|string',
+            'pub_date'=> 'required',
+
+        ]);
+
         $publisher_id = DB::table('publishers')
             ->insertGetId(['pub_name' => $request->pub_name,
                             'address' => $request->pub_loc,
@@ -98,9 +107,7 @@ class HomeController extends Controller
                         'publisher_id' => $publisher_id,
                         ], 'document_id');
 
-
-
-        return $this->index($request->id, $request->did);
+        return $this->index();
     }
 
 }

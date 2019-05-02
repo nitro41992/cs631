@@ -58,7 +58,7 @@
                     @csrf
                     <div class="form-group">
                         <label for="title">Document Name:</label>
-                        <input type="text" class="form-control" name="title" id="title" aria-describedby="title"  placeholder="" >
+                        <input type="text" class="form-control" name="title" id="title" aria-describedby="title"  placeholder="" required>
                     </div>
                     <!-- <div class="form-group">
                         <label for="pub_name">Publisher Name:</label>
@@ -66,7 +66,7 @@
                     </div> -->
                     <div class="form-group">
                         <label for="pub_date">Published Date:</label>
-                        <input type="date" class="form-control" name="pub_date" id="pub_date" aria-describedby="pub_date"  placeholder="" >
+                        <input type="date" class="form-control" name="pub_date" id="pub_date" aria-describedby="pub_date"  placeholder="" required>
                     </div>
                     <!-- <div class="form-group">
                         <label for="pub_loc">Publisher Address:</label>

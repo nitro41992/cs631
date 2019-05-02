@@ -23,6 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/id','HomeController@filterId')->name('home.filterId');
 Route::get('/home/title','HomeController@filterTitle')->name('home.filterTitle');
 Route::get('/home/pubName','HomeController@filterPubName')->name('home.filterPubName');
+Route::post('/home/insertDocument','HomeController@insertDocument')->name('home.insertDocument');
 
 Route::post('/document', 'DocumentController@getReaderByCardNumber')->name('document.getReaderByCardNumber');
 Route::get('/document/{id}', 'DocumentController@index')->name('document');

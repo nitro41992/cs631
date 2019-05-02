@@ -52,6 +52,31 @@
                     <a href="{{ route('home') }}" class="btn btn-primary">Clear Search</a>
             </div>
         </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <form method="POST" action="{{ route('home.insertDocument') }}">
+                    @csrf
+                    <div class="form-group">
+                        <label for="InputDocument">Document Name</label>
+                        <input type="text" name="doc_name" class="form-control" id="InputDocument"  placeholder="Enter Document Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputPublisher">Publisher Name</label>
+                        <input type="text" name="pub_name" class="form-control" id="InputPublisher"  placeholder="Enter Publisher Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputPublisherDate">Publisher Date</label>
+                        <input type="date" name="pub_date"  class="form-control" id="InputPublisherDate"  placeholder="Enter Published Date">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputPublisherAddress">Publisher Address</label>
+                        <input type="text" name="pub_loc"  class="form-control" id="InputPublisherAddress"  placeholder="Enter Publisher Address">
+                    </div>
+                    <input name="_method" type="hidden" value="POST">
+                    <button type="submit" class="btn btn-primary">Add Document</button>
+                </form>   
+            </div>
+        </div>   
         <table class="table">
             <thead>
                 <tr>

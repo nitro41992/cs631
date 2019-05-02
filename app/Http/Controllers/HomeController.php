@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use App\Document;
 class HomeController extends Controller
 {
     /**
@@ -84,6 +84,20 @@ class HomeController extends Controller
         else{
             return $this->index();
         } 
+    }
+
+    public function insertDocument(Request $request) {
+        $bag = $request->all();
+        dd($request);
+        $publisher_id = DB::table('publisher')
+            ->insertGetId(['pub_name' => $request->rid,
+                            'document_id' => $request->did,
+                            'copy_no' => $request->coid,
+                            'lib_id' => $request->lid,
+                            'bd_time' => $time,
+                            'rd_time' => Carbon::createFromFormat('Y-m-d H:i:s', $time)->addDays(20)
+                            ], 'bor_number');
+        return $this->index($request->id, $request->did);
     }
 
 }

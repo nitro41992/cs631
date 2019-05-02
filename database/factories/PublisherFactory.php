@@ -8,7 +8,7 @@ use Faker\Generator as Faker;
 $factory->define(Publisher::class, function (Faker $faker) {
 
     return [
-        'pub_name' => $faker->firstName($gender = 'null').' '.$faker->lastName,
-        'address' => $faker->address,
+        'pub_name' => $faker->unique()->firstName($gender = 'null').' '.$faker->unique()->lastName,
+        'address' => $faker->unique()->address,
     ];
 });

@@ -29,8 +29,13 @@ class HomeController extends Controller
         ->orderBy('document_id', 'desc')
         ->get();
 
+        $publishers = DB::table('publishers')
+        ->orderBy('publisher_id', 'asc')
+        ->get();
+
         //$obj['card_num'] = $card_num;
         $obj['documents'] = $documents;
+        $obj['publishers'] = $publishers;
 
         return view('home')
         ->with(compact('obj'));
@@ -90,19 +95,24 @@ class HomeController extends Controller
         $request->validate([
 
             'pub_name'=> 'required|string',
-            'pub_loc'=> 'required|string',
             'title'=> 'required|string',
             'pub_date'=> 'required',
 
         ]);
 
+        $pub_values = explode(' ', $request->pub_name, 2);
+            //dd($pub_values[0]);
+        $publishers = DB::table('publishers')
+        ->where('publisher_id','=', $pub_values[0])
+        ->first();
+            //dd($publishers);
         $publisher_id = DB::table('publishers')
-            ->insertGetId(['pub_name' => $request->pub_name,
-                            'address' => $request->pub_loc,
+            ->insertGetId(['pub_name' => $publishers->pub_name,
+                            'address' => $publishers->address,
                             ], 'publisher_id');
 
         $document_id = DB::table('documents')
-        ->insertGetId(['title' => $request->title,
+            ->insertGetId(['title' => $request->title,
                         'p_date' => $request->pub_date,
                         'publisher_id' => $publisher_id,
                         ], 'document_id');

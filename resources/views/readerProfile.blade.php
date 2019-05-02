@@ -20,7 +20,7 @@
                     <div>
                         <h6 class="my-0">Fine</h6>
                     </div>
-                    <span class="font-weight-bold text-danger">${{$fee}}</span>
+                    <span class="font-weight-bold {{$fee != 0.00 ? 'text-danger' : 'text-muted'}}">${{$fee}}</span>
                     </li>
                 </ul>
             </div>

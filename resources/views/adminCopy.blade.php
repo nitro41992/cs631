@@ -71,6 +71,18 @@
                                         <a name="doc_select" 
                                         href="#" 
                                         class="btn  m-1 btn-outline-secondary btn-sm disabled" >Available</a>
+                                        <form class="m-1" method="POST" action="{{ route('adminCopy.delete', 
+                                                                [   
+                                                                    'did' => $copy->document_id,
+                                                                    'coid' => $copy->copy_no,
+                                                                    'lid' => $copy->lib_id
+                                                                ]
+                                                            ) }}" accept-charset="UTF-8">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input name="_method" type="hidden" value="POST">
+                                            <button type= "submit" class="btn btn-danger btn-sm" >Delete</button>
+                                        </form>
                                     @endif
                                 </div>
                             </td>

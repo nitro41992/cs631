@@ -60,7 +60,10 @@
                             @endif -->
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('home') }}">Branches</a>
+                                <a class="nav-link" href="{{ route('home') }}">Reader</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('home') }}">Branch Info</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('home') }}">Documents</a>

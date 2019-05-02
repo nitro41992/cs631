@@ -43,5 +43,6 @@ Route::post('/adminCopy/checkout', 'AdminCopyController@checkout')->name('adminC
 Route::post('/adminCopy/return', 'AdminCopyController@return')->name('adminCopy.return');
 Route::post('/adminCopy/cancelRes', 'AdminCopyController@cancelReservation')->name('adminCopy.cancelReservation');
 Route::post('/adminCopy/reserve', 'AdminCopyController@reserve')->name('adminCopy.reserve');
+Route::post('/adminCopy/delete', 'AdminCopyController@delete')->name('adminCopy.delete');
 
 Route::get('/readerProfile/{id}', 'ReaderProfileController@index')->name('readerProfile.index');

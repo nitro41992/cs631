@@ -66,7 +66,9 @@
                                             @csrf
                                             @method('DELETE')
                                             <input name="_method" type="hidden" value="POST">
-                                            <button type= "submit" class="btn btn-outline-warning btn-sm" >Return</button>
+                                            <button type= "submit" class="btn btn-outline-warning btn-sm" 
+                                            >Return ({{ $copy->borrow_time_left > 1 ? $copy->borrow_time_left.' day left' : $copy->borrow_time_left.' days left' }})
+                                            </button>
                                         </form>
                                     @elseif($copy->res_reader_id === $reader->reader_id ) 
                                         <form class="m-1" method="POST" action="{{ route('copy.cancelReservation', 

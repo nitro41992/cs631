@@ -45,7 +45,7 @@ class ReaderProfileController extends Controller
                  'reserves.res_number',
                  'reserves.reader_id as res_reader_id',
                  'reserves.d_time',
-                 DB::raw('(NOW()::date - borrows.rd_time::date) as borrow_time_left'))
+                 DB::raw('(borrows.rd_time::date - NOW()::date) as borrow_time_left'))
         ->where('reserves.reader_id', '=', $reader->reader_id)
         ->orWhere('borrows.reader_id', '=', $reader->reader_id)
         ->get();

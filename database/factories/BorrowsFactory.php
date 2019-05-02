@@ -26,7 +26,7 @@ $factory->define(Borrows::class, function (Faker $faker) {
 
     //$date = Carbon::now();
     $start = Carbon::createFromTimestamp($faker->dateTimeBetween($startDate = '-30 days', $endDate = 'now', $timezone = 'EST')->getTimeStamp()) ;
-    $end= Carbon::createFromFormat('Y-m-d H:i:s', $start)->addDays(20);
+    $end= Carbon::createFromFormat('Y-m-d H:i:s', $start)->addDays(19);
     
     return [
 

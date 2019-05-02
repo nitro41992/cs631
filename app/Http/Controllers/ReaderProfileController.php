@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class ReaderProfileController extends Controller
 {
@@ -45,7 +46,8 @@ class ReaderProfileController extends Controller
                  'reserves.res_number',
                  'reserves.reader_id as res_reader_id',
                  'reserves.d_time',
-                 DB::raw('(borrows.rd_time::date - NOW()::date) as borrow_time_left'))
+                 DB::raw('(borrows.rd_time::date - NOW()::date) as borrow_time_left'),
+                 )
         ->where('reserves.reader_id', '=', $reader->reader_id)
         ->orWhere('borrows.reader_id', '=', $reader->reader_id)
         ->get();
@@ -61,7 +63,7 @@ class ReaderProfileController extends Controller
         }
         
         $fee = number_format((float)(abs($totDays * 0.20)), 2, '.', '');
-        //dd($fee);
+
         return view('readerProfile', compact('obj', 'reader', 'id', 'fee'));
     }
 

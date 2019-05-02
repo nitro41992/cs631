@@ -77,7 +77,7 @@
                                         'id' => $id
                                     ]
                                 ) }}" 
-                                class="btn btn-outline-primary btn-sm">Select</a></td>
+                                class="btn btn-primary btn-sm">Select</a></td>
                     </tr>
                 </tbody>
             @endforeach

@@ -125,7 +125,7 @@ class CopyController extends Controller
     }
 
     public function reserve(Request $request) {
-        $time = Carbon::now();
+        $time = Carbon::now()->setTimezone('EST');
         $id = DB::table('reserves')
             ->insertGetId(['reader_id' => $request->rid,
                             'document_id' => $request->did,
@@ -138,7 +138,7 @@ class CopyController extends Controller
 
     public function checkout(Request $request) {
         //dd($request->rid);
-        $time = Carbon::now();
+        $time = Carbon::now()->setTimezone('EST');
         $id = DB::table('borrows')
             ->insertGetId(['reader_id' => $request->rid,
                             'document_id' => $request->did,

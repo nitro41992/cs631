@@ -28,7 +28,7 @@
         <div class="container">
             <a  name="doc_select" 
                 href="{{ route('document', ['id' => $id]) }}"
-                class="btn btn-outline-secondary btn-sm">Back
+                class="btn btn-primary btn-sm">Back
             </a>
             @if ($obj['copies']->count() > 0 )
                 <h3>
@@ -52,39 +52,13 @@
                             <td>{{$copy->l_name}}</td>
                             <td>{{$copy->l_location}}</td>
                             <td>
-                                <div class="row">
+                                <div class="row text-primary">
                                     @if($copy->bor_reader_id === $reader->reader_id ) 
-                                    <form class="m-1" method="POST" action="{{ route('copy.return', 
-                                                                [   
-                                                                    'id' => $id,
-                                                                    'rid' => $reader->reader_id,
-                                                                    'did' => $copy->document_id,
-                                                                    'coid' => $copy->copy_no,
-                                                                    'lid' => $copy->lib_id
-                                                                ]
-                                                            ) }}" accept-charset="UTF-8">
-                                            @csrf
-                                            @method('DELETE')
-                                            <input name="_method" type="hidden" value="POST">
-                                            <button type= "submit" class="btn btn-outline-warning btn-sm" 
-                                            >Return ({{ $copy->borrow_time_left > 1 ? $copy->borrow_time_left.' day left' : $copy->borrow_time_left.' days left' }})
-                                            </button>
-                                        </form>
+                                        {{ $copy->borrow_time_left == 1 || $copy->borrow_time_left == -1  ? 
+                                        $copy->borrow_time_left.' day left' 
+                                        : $copy->borrow_time_left.' days left' }}
                                     @elseif($copy->res_reader_id === $reader->reader_id ) 
-                                        <form class="m-1" method="POST" action="{{ route('copy.cancelReservation', 
-                                                                [   
-                                                                    'id' => $id,
-                                                                    'rid' => $reader->reader_id,
-                                                                    'did' => $copy->document_id,
-                                                                    'coid' => $copy->copy_no,
-                                                                    'lid' => $copy->lib_id
-                                                                ]
-                                                            ) }}" accept-charset="UTF-8">
-                                            @csrf
-                                            @method('DELETE')
-                                            <input name="_method" type="hidden" value="POST">
-                                            <button type= "submit" class="btn btn-outline-warning btn-sm" >Cancel Reservation</button>
-                                        </form>
+                                        Reserved
                                     @endif
                                 </div>
                             </td>

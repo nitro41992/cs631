@@ -16,7 +16,7 @@
         <div class="container">
             <a  name="doc_select" 
                 href="{{ route('document', ['id' => $id]) }}"
-                class="btn btn-outline-secondary btn-sm">Back
+                class="btn btn-primary btn-sm">Back
             </a>
             @if ($obj['copies']->count() > 0 )
                 <h3>
@@ -42,35 +42,13 @@
                             <td>
                                 <div class="row">
                                     @if($copy->bor_reader_id === $reader->reader_id ) 
-                                        <form class="m-1" method="POST" action="{{ route('copy.return', 
-                                                                [   
-                                                                    'id' => $id,
-                                                                    'rid' => $reader->reader_id,
-                                                                    'did' => $copy->document_id,
-                                                                    'coid' => $copy->copy_no,
-                                                                    'lid' => $copy->lib_id
-                                                                ]
-                                                            ) }}" accept-charset="UTF-8">
-                                            @csrf
-                                            @method('DELETE')
-                                            <input name="_method" type="hidden" value="POST">
-                                            <button type= "submit" class="btn btn-outline-warning btn-sm" >Return</button>
-                                        </form>
+                                        <a name="doc_select" 
+                                        href="#" 
+                                        class="btn  m-1 btn-outline-warning btn-sm disabled" >Checked Out By You</a>
                                     @elseif($copy->res_reader_id === $reader->reader_id ) 
-                                        <form class="m-1" method="POST" action="{{ route('copy.cancelReservation', 
-                                                                [   
-                                                                    'id' => $id,
-                                                                    'rid' => $reader->reader_id,
-                                                                    'did' => $copy->document_id,
-                                                                    'coid' => $copy->copy_no,
-                                                                    'lid' => $copy->lib_id
-                                                                ]
-                                                            ) }}" accept-charset="UTF-8">
-                                            @csrf
-                                            @method('DELETE')
-                                            <input name="_method" type="hidden" value="POST">
-                                            <button type= "submit" class="btn btn-outline-warning btn-sm" >Cancel Reservation</button>
-                                        </form>
+                                        <a name="doc_select" 
+                                        href="#" 
+                                        class="btn  m-1 btn-outline-warning btn-sm disabled" >Reserved By You</a>
                                     @elseif($copy->bor_reader_id != null ||  $copy->res_reader_id != null)
                                         <a name="doc_select" 
                                         href="#" 
@@ -87,7 +65,7 @@
                                                             ) }}" accept-charset="UTF-8">
                                             @csrf
                                             <input name="_method" type="hidden" value="POST">
-                                            <button type= "submit" class="btn btn-outline-primary btn-sm" >Reserve</button>
+                                            <button type= "submit" class="btn btn-primary btn-sm" >Reserve</button>
                                         </form>
                                         <form class="m-1" method="POST" action="{{ route('copy.checkout', 
                                                                 [   
@@ -100,7 +78,7 @@
                                                             ) }}" accept-charset="UTF-8">
                                             @csrf
                                             <input name="_method" type="hidden" value="POST">
-                                            <button type= "submit" class="btn btn-outline-primary btn-sm" >Check Out</button>
+                                            <button type= "submit" class="btn btn-primary btn-sm" >Check Out</button>
                                         </form>
                                     @endif
                                 </div>

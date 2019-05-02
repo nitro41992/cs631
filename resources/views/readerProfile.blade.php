@@ -93,7 +93,7 @@
                 </div>
             @else
                 <h1>
-                    No copies found for this Document.
+                    You haven't borrowed or reserved anything.
                 </h1>
             @endif
         </div>

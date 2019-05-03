@@ -20,6 +20,8 @@ class CreateReadersTable extends Migration
             $table->string('address');
             $table->integer('card_num');
             $table->timestamps();
+
+            $table->unique(['card_num']);
         });
     }
 

@@ -47,3 +47,8 @@ Route::post('/adminCopy/delete', 'AdminCopyController@delete')->name('adminCopy.
 Route::post('/adminCopy/insertCopy', 'AdminCopyController@insertCopy')->name('adminCopy.insertCopy');
 
 Route::get('/readerProfile/{id}', 'ReaderProfileController@index')->name('readerProfile.index');
+
+Route::get('/reader', 'ReaderController@index')->name('reader.index');
+Route::get('/reader/name','ReaderController@filterName')->name('reader.filterName');
+Route::get('/reader/cardNum','ReaderController@filterCardNum')->name('reader.filterCardNum');
+Route::post('/reader/insertReader','ReaderController@insertReader')->name('reader.insertReader');

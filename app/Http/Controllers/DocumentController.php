@@ -18,10 +18,14 @@ class DocumentController extends Controller
     {
         $documents = DB::table('documents')
         ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
+        ->leftjoin('copies', 'documents.document_id', '=', 'copies.document_id')
+        ->select('documents.document_id', 'title', 'p_date', 'pub_name', DB::raw('count(copy_no) as copy_count'))
+        ->groupBy('documents.document_id', 'title', 'p_date', 'pub_name')
+        ->orderBy('documents.document_id', 'desc')
         ->get();
 
-        //$obj['card_num'] = $card_num;
         $obj['documents'] = $documents;
+        
         $id = $id;
         return view('document')
         ->with(compact('obj','id'));
@@ -111,14 +115,18 @@ class DocumentController extends Controller
           $reader = Reader::where('card_num', $card_num['card_num'])->first();
 
           if ( $reader != null) {
-                $documents = DB::table('documents')
-                ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
-                ->get();
+            $documents = DB::table('documents')
+            ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
+            ->leftjoin('copies', 'documents.document_id', '=', 'copies.document_id')
+            ->select('documents.document_id', 'title', 'p_date', 'pub_name', DB::raw('count(copy_no) as copy_count'))
+            ->groupBy('documents.document_id', 'title', 'p_date', 'pub_name')
+            ->orderBy('documents.document_id', 'desc')
+            ->get();
 
-                //$obj['card_num'] = $card_num;
-                $obj['documents'] = $documents;
-                $id = $reader->card_num;
-                return view('document', compact('obj','id'));
+            //$obj['card_num'] = $card_num;
+            $obj['documents'] = $documents;
+            $id = $reader->card_num;
+            return view('document', compact('obj','id'));
 
 
           } else {

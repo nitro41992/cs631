@@ -77,7 +77,7 @@
                                         'id' => $id
                                     ]
                                 ) }}" 
-                                class="btn btn-primary btn-sm">Select</a></td>
+                                class="btn btn-primary btn-sm">Select ({{$document->copy_count > 1 ? $document->copy_count.' copies' : $document->copy_count.' copy'}})</a></td>
                     </tr>
                 </tbody>
             @endforeach

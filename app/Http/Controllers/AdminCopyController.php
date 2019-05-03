@@ -189,6 +189,14 @@ class AdminCopyController extends Controller
     }
 
     public function delete(Request $request) {
+        
+        DB::table('borrows')
+        ->where('document_id', '=', $request->did)
+        ->where('copy_no', '=', $request->coid)
+        ->where('lib_id', '=', $request->lid)
+        ->delete();
+        
+        
         DB::table('copies')
         ->where('document_id', '=', $request->did)
         ->where('copy_no', '=', $request->coid)

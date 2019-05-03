@@ -31,7 +31,8 @@ class HomeController extends Controller
         ->groupBy('documents.document_id', 'title', 'p_date', 'pub_name')
         ->orderBy('documents.document_id', 'desc')
         ->get();
-        //dd($documents);
+
+
         $publishers = DB::table('publishers')
         ->orderBy('publisher_id', 'asc')
         ->get();
@@ -42,8 +43,6 @@ class HomeController extends Controller
         ->groupBy('copies.document_id')
         ->get();
 
-        //dd($docCopies);
-        //$obj['card_num'] = $card_num;
         $obj['documents'] = $documents;
         $obj['publishers'] = $publishers;
         
@@ -54,14 +53,24 @@ class HomeController extends Controller
 
     public function filterId(Request $request) {
         
+
         $documents = DB::table('documents')
         ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
-        ->where('document_id','LIKE','%'.$request->get('doc_id_search').'%')
+        ->leftjoin('copies', 'documents.document_id', '=', 'copies.document_id')
+        ->where('documents.document_id','LIKE','%'.$request->get('doc_id_search').'%')
+        ->select('documents.document_id', 'title', 'p_date', 'pub_name', DB::raw('count(copy_no) as copy_count'))
+        ->groupBy('documents.document_id', 'title', 'p_date', 'pub_name')
+        ->orderBy('documents.document_id', 'desc')
+        ->get();
+
+        $publishers = DB::table('publishers')
+        ->orderBy('publisher_id', 'asc')
         ->get();
 
         $obj = array();
         if(count($documents) > 0){
             $obj['documents'] = $documents;
+            $obj['publishers'] = $publishers;
 
             return view('home', compact('obj'));
         
@@ -72,13 +81,24 @@ class HomeController extends Controller
 
     public function filterTitle(Request $request) {
 
+        
         $documents = DB::table('documents')
         ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
-        ->where('title','LIKE','%'.$request->get('doc_title_search').'%')
+        ->leftjoin('copies', 'documents.document_id', '=', 'copies.document_id')
+        ->where('documents.title','LIKE','%'.$request->get('doc_title_search').'%')
+        ->select('documents.document_id', 'title', 'p_date', 'pub_name', DB::raw('count(copy_no) as copy_count'))
+        ->groupBy('documents.document_id', 'title', 'p_date', 'pub_name')
+        ->orderBy('documents.document_id', 'desc')
+        ->get();
+
+        $publishers = DB::table('publishers')
+        ->orderBy('publisher_id', 'asc')
         ->get();
 
         if(count($documents) > 0) {
             $obj['documents'] = $documents;
+            $obj['publishers'] = $publishers;
+
             return view('home', compact('obj'));
         }
         else{
@@ -88,13 +108,24 @@ class HomeController extends Controller
 
     public function filterPubName(Request $request) {
 
+
         $documents = DB::table('documents')
-            ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
-            ->where('pub_name','LIKE','%'.$request->get('pub_name_search').'%')
-            ->get();
+        ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
+        ->leftjoin('copies', 'documents.document_id', '=', 'copies.document_id')
+        ->where('publishers.pub_name','LIKE','%'.$request->get('pub_name_search').'%')
+        ->select('documents.document_id', 'title', 'p_date', 'pub_name', DB::raw('count(copy_no) as copy_count'))
+        ->groupBy('documents.document_id', 'title', 'p_date', 'pub_name')
+        ->orderBy('documents.document_id', 'desc')
+        ->get();
+
+        $publishers = DB::table('publishers')
+        ->orderBy('publisher_id', 'asc')
+        ->get();
 
         if(count($documents) > 0){
             $obj['documents'] = $documents;
+            $obj['publishers'] = $publishers;
+
             return view('home', compact('obj'));
         }
         else{

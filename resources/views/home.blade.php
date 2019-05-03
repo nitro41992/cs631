@@ -115,7 +115,8 @@
                                         'did' => $document->document_id,
                                     ]
                                 ) }}" 
-                                class="btn btn-primary btn-sm m-1">Select</a>
+                                class="btn btn-primary btn-sm m-1">Select</a>      
+                                @if ($document->copy_count == 0)                    
                                 <form class="m-1" method="POST" action="{{ route('home.deleteDocument', 
                                                                 [   
                                                                     'did' => $document->document_id,
@@ -126,6 +127,11 @@
                                             <input name="_method" type="hidden" value="POST">
                                             <button type= "submit" class="btn btn-danger btn-sm" >Delete</button>
                                 </form>
+                                @else
+                                <a name="doc_select" 
+                                        href="#" 
+                                        class="btn  m-1 btn-outline-secondary btn-sm disabled" >{{$document->copy_count > 1 ? $document->copy_count.' copies' : $document->copy_count.' copy'}}</a>
+                                @endif
                             </div>
                         </td>
                     </tr>

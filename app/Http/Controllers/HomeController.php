@@ -26,20 +26,27 @@ class HomeController extends Controller
     {
         $documents = DB::table('documents')
         ->join('publishers', 'documents.publisher_id', '=', 'publishers.publisher_id')
-        ->orderBy('document_id', 'desc')
+        ->leftjoin('copies', 'documents.document_id', '=', 'copies.document_id')
+        ->select('documents.document_id', 'title', 'p_date', 'pub_name', DB::raw('count(copy_no) as copy_count'))
+        ->groupBy('documents.document_id', 'title', 'p_date', 'pub_name')
+        ->orderBy('documents.document_id', 'desc')
         ->get();
-
+        //dd($documents);
         $publishers = DB::table('publishers')
         ->orderBy('publisher_id', 'asc')
         ->get();
 
         $docCopies = DB::table('copies')
         ->join('documents', 'documents.document_id', '=', 'copies.document_id')
+        ->select('copies.document_id', DB::raw('count(copy_no) as copy_count'))
+        ->groupBy('copies.document_id')
         ->get();
 
+        //dd($docCopies);
         //$obj['card_num'] = $card_num;
         $obj['documents'] = $documents;
         $obj['publishers'] = $publishers;
+        
 
         return view('home')
         ->with(compact('obj'));

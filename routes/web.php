@@ -52,3 +52,5 @@ Route::get('/reader', 'ReaderController@index')->name('reader.index');
 Route::get('/reader/name','ReaderController@filterName')->name('reader.filterName');
 Route::get('/reader/cardNum','ReaderController@filterCardNum')->name('reader.filterCardNum');
 Route::post('/reader/insertReader','ReaderController@insertReader')->name('reader.insertReader');
+
+Route::get('/branch', 'BranchController@index')->name('branch.index');

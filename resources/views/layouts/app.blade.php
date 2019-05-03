@@ -59,7 +59,7 @@
                                 <a class="nav-link" href="{{ route('reader.index') }}">Readers</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('home') }}">Branch Info</a>
+                                <a class="nav-link" href="{{ route('branch.index') }}">Branch Info</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('home') }}">Documents</a>

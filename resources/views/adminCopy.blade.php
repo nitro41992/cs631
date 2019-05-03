@@ -24,8 +24,8 @@
                     @csrf
                     <div class="form-group mb-2">
                         <label for="copy_no">Copy Number:</label>
-                        <input type="text" class="form-control-plaintext ml-3 font-weight-bold" name="copy_no" id="copy_no" value="{{(int)$obj['max_copy']->max + 1}}">
-                        <input type="hidden" class="form-control-plaintext ml-3 font-weight-bold" name="document_id" id="document_id" value="{{$obj['copies'][0]->document_id}}">
+                        <input type="text" class="form-control-plaintext ml-3 font-weight-bold" name="copy_no" id="copy_no" value="{{$obj['max_copy'] != null ? (int)$obj['max_copy']->max + 1 : 1}}">
+                        <input type="hidden" class="form-control-plaintext ml-3 font-weight-bold" name="document_id" id="document_id" value="{{$obj['did'] != null ? $obj['did'] : null}}">
                     </div>
                     <div class="form-group">
                         <label for="br_name">Select Branch</label>

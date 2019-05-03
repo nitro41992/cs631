@@ -71,6 +71,7 @@ class AdminCopyController extends Controller
         $obj['copies'] = $copies;
         $obj['max_copy']  = $max_of_copy;
         $obj['branches']  = $branches;
+        $obj['did'] = $did;
 
         return view('adminCopy', compact('obj'));
     }

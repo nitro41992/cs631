@@ -29,6 +29,7 @@
                             <th scope="col">Copy Id</th>
                             <th scope="col">Branch Name</th>
                             <th scope="col">Branch Location</th>
+                            <th scope="col">Position</th>
                             <th scope="col">Actions</th>
 
                         </tr>
@@ -39,6 +40,7 @@
                             <td>{{$copy->copy_no}}</td>
                             <td>{{$copy->l_name}}</td>
                             <td>{{$copy->l_location}}</td>
+                            <td>{{$copy->position}}</td>
                             <td>
                                 <div class="row">
                                     @if($copy->bor_reader_id === $reader->reader_id ) 

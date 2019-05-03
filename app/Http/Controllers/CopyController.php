@@ -31,6 +31,7 @@ class CopyController extends Controller
                 ->on("copies.lib_id","=","reserves.lib_id");
         })
         ->select('copies.copy_no',
+                 'copies.position',
                  'documents.document_id',
                  'documents.title', 
                  'branches.l_name',

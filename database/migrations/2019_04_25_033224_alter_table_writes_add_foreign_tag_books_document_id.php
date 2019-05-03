@@ -14,7 +14,7 @@ class AlterTableWritesAddForeignTagBooksDocumentId extends Migration
     public function up()
     {
         Schema::table('writes', function (Blueprint $table) {
-            $table->foreign('document_id')->references('document_id')->on('books');
+            $table->foreign('document_id')->references('document_id')->on('books')->onDelete('cascade');
         });
     }
 
@@ -24,7 +24,5 @@ class AlterTableWritesAddForeignTagBooksDocumentId extends Migration
      * @return void
      */
     public function down()
-    {
-
-    }
+    { }
 }

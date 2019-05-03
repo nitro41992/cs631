@@ -19,7 +19,7 @@ class CreateBooksTable extends Migration
             $table->char('isbn', 13); //ISBN can only be 13 characters long
             $table->timestamps();
 
-            $table->foreign('document_id')->references('document_id')->on('documents');
+            $table->foreign('document_id')->references('document_id')->on('documents')->onDelete('cascade');
             $table->unique('document_id');
         });
     }
@@ -35,6 +35,5 @@ class CreateBooksTable extends Migration
             $table->dropForeign(['document_id']);
         });
         Schema::dropIfExists('books');
-
     }
 }

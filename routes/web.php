@@ -20,17 +20,17 @@ Auth::routes();
 //Route::get('/', 'WelcomeController@index')->name('welcome');
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home/id','HomeController@filterId')->name('home.filterId');
-Route::get('/home/title','HomeController@filterTitle')->name('home.filterTitle');
-Route::get('/home/pubName','HomeController@filterPubName')->name('home.filterPubName');
-Route::post('/home/insertDocument','HomeController@insertDocument')->name('home.insertDocument');
+Route::get('/home/id', 'HomeController@filterId')->name('home.filterId');
+Route::get('/home/title', 'HomeController@filterTitle')->name('home.filterTitle');
+Route::get('/home/pubName', 'HomeController@filterPubName')->name('home.filterPubName');
+Route::post('/home/insertBook', 'HomeController@insertBook')->name('home.insertBook');
 Route::post('/home/deleteDocument/{id}', 'homeController@deleteDocument')->name('home.deleteDocument');
 
 Route::post('/document', 'DocumentController@getReaderByCardNumber')->name('document.getReaderByCardNumber');
 Route::get('/document/{id}', 'DocumentController@index')->name('document');
-Route::get('/document/id/{id}','DocumentController@filterId')->name('document.filterId');
-Route::get('/document/title/{id}','DocumentController@filterTitle')->name('document.filterTitle');
-Route::get('/document/pubName/{id}','DocumentController@filterPubName')->name('document.filterPubName');
+Route::get('/document/id/{id}', 'DocumentController@filterId')->name('document.filterId');
+Route::get('/document/title/{id}', 'DocumentController@filterTitle')->name('document.filterTitle');
+Route::get('/document/pubName/{id}', 'DocumentController@filterPubName')->name('document.filterPubName');
 
 Route::get('/copy/{cid}/{did}', 'CopyController@index')->name('copy.index');
 Route::post('/copy/checkout', 'CopyController@checkout')->name('copy.checkout');
@@ -49,8 +49,8 @@ Route::post('/adminCopy/insertCopy', 'AdminCopyController@insertCopy')->name('ad
 Route::get('/readerProfile/{id}', 'ReaderProfileController@index')->name('readerProfile.index');
 
 Route::get('/reader', 'ReaderController@index')->name('reader.index');
-Route::get('/reader/name','ReaderController@filterName')->name('reader.filterName');
-Route::get('/reader/cardNum','ReaderController@filterCardNum')->name('reader.filterCardNum');
-Route::post('/reader/insertReader','ReaderController@insertReader')->name('reader.insertReader');
+Route::get('/reader/name', 'ReaderController@filterName')->name('reader.filterName');
+Route::get('/reader/cardNum', 'ReaderController@filterCardNum')->name('reader.filterCardNum');
+Route::post('/reader/insertReader', 'ReaderController@insertReader')->name('reader.insertReader');
 
 Route::get('/branch', 'BranchController@index')->name('branch.index');

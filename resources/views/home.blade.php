@@ -55,44 +55,96 @@
             <a href="{{ route('home') }}" class="btn btn-primary">Clear Search</a>
         </div>
     </div>
-    <div class="card mb-3">
-        <div class="card-body">
-            <form class="mt-1" method="POST" action="{{ route('home.insertDocument') }}">
-                @csrf
-                <div class="form-group">
-                    <label for="title">Document Name:</label>
-                    <input type="text" class="form-control" name="title" id="title" aria-describedby="title"
-                        placeholder="" required>
-                </div>
-                <div class="form-group">
-                    <label for="pub_date">Published Date:</label>
-                    <input type="date" class="form-control" name="pub_date" id="pub_date" aria-describedby="pub_date"
-                        placeholder="" required>
-                </div>
-                <div class="form-group">
-                    <label for="pub_name">Select Publisher</label>
-                    <select class="form-control" name='pub_name' id="pub_name">
-                        @foreach($obj['publishers'] as $publisher)
-                        <option>{{$publisher->publisher_id.' '.$publisher->pub_name}}</option>
-                        @endforeach
-                    </select>
-                    <!-- <div class="mt-2 ml-1">
-                            <a href="#">Add New Publisher</a>
-                        </div> -->
-                </div>
-                <div class="form-group">
-                    <label for="doc_type">Select Publisher</label>
-                    <select class="form-control" name='doc_type' id="doc_type">
-                        <option>Book</option>
-                        <option>Journal Volume</option>
-                        <option>Proceedings</option>
-                    </select>
-                    <!-- <div class="mt-2 ml-1">
-                            <a href="#">Add New Publisher</a>
-                        </div> -->
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+
+    <div class="row">
+        <div class="card ml-4 mr-4 mb-3">
+            <div class="card-body">
+                <form class="mt-1" method="POST" action="{{ route('home.insertBook') }}">
+                    @csrf
+                    <div class="form-group">
+                        <label for="title">Book Name:</label>
+                        <input type="text" class="form-control" name="title" id="title" aria-describedby="title"
+                            placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pub_date">Published Date:</label>
+                        <input type="date" class="form-control" name="pub_date" id="pub_date"
+                            aria-describedby="pub_date" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="isbn">ISBN:</label>
+                        <input type="text" class="form-control" name="isbn" id="isbn" aria-describedby="isbn"
+                            placeholder="" pattern="\d*" maxlength="13" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="a_name">Author Name:</label>
+                        <input type="text" class="form-control" name="a_name" id="a_name" aria-describedby="a_name"
+                            placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pub_name">Select Publisher</label>
+                        <select class="form-control" name='pub_name' id="pub_name">
+                            @foreach($obj['publishers'] as $publisher)
+                            <option>{{$publisher->publisher_id.' '.$publisher->pub_name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="card ml-4 mr-4 mb-3">
+            <div class="card-body">
+                <form class="mt-1" method="POST" action="#">
+                    @csrf
+                    <div class="form-group">
+                        <label for="title">Document Name:</label>
+                        <input type="text" class="form-control" name="title" id="title" aria-describedby="title"
+                            placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pub_date">Published Date:</label>
+                        <input type="date" class="form-control" name="pub_date" id="pub_date"
+                            aria-describedby="pub_date" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pub_name">Select Publisher</label>
+                        <select class="form-control" name='pub_name' id="pub_name">
+                            @foreach($obj['publishers'] as $publisher)
+                            <option>{{$publisher->publisher_id.' '.$publisher->pub_name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card ml-4 mr-4 mb-3">
+            <div class="card-body">
+                <form class="mt-1" method="POST" action="#">
+                    @csrf
+                    <div class="form-group">
+                        <label for="title">Document Name:</label>
+                        <input type="text" class="form-control" name="title" id="title" aria-describedby="title"
+                            placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pub_date">Published Date:</label>
+                        <input type="date" class="form-control" name="pub_date" id="pub_date"
+                            aria-describedby="pub_date" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pub_name">Select Publisher</label>
+                        <select class="form-control" name='pub_name' id="pub_name">
+                            @foreach($obj['publishers'] as $publisher)
+                            <option>{{$publisher->publisher_id.' '.$publisher->pub_name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
     <table class="table">

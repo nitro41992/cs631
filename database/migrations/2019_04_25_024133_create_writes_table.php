@@ -19,9 +19,8 @@ class CreateWritesTable extends Migration
             $table->integer('document_id');
             $table->timestamps();
 
-            $table->foreign('author_id')->references('author_id')->on('authors');
+            $table->foreign('author_id')->references('author_id')->on('authors')->onDelete('cascade');
             $table->unique(['document_id', 'author_id']);
-   
         });
     }
 

@@ -12,6 +12,39 @@
         {{ session()->get('error') }}  
         </div><br />
         @endif
+        <div class=row>
+            <div class="card mb-3">
+                <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Borrower</th>
+                            <th scope="col">Books Borrowed</th>
+                        </tr>
+                    </thead>
+                    @foreach($obj['freqBorrowers'] as $freqBorrower)
+                        <tbody>
+                            <tr>
+                                <td>{{$freqBorrower->r_name}}</td>
+                                <td>{{$freqBorrower->count}}</td>
+
+                            </tr>
+                        </tbody>
+                    @endforeach
+                </table>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body">
+
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body">
+
+                </div>
+            </div>
+        </div>
         <table class="table">
             <thead>
                 <tr>

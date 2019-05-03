@@ -23,7 +23,18 @@ class BranchController extends Controller
         $branches = DB::table('branches')
         ->get();
 
+        $freqBorrowers = DB::table('borrows')
+        ->join('readers', 'readers.reader_id', '=', 'borrows.reader_id')
+        ->select('readers.reader_id','readers.r_name',  DB::raw('count(*) as count'))
+        ->groupBy('readers.reader_id','readers.r_name')
+        ->orderBy('count','desc')
+        ->take(10)
+        ->get();
+        
+        //dd($freqBorrowers);
+
         $obj['branches'] = $branches;
+        $obj['freqBorrowers'] = $freqBorrowers;
 
         return view('branch')
         ->with(compact('obj'));

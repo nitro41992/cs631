@@ -136,13 +136,6 @@ class HomeController extends Controller
 
     public function insertBook(Request $request)
     {
-        $request->validate([
-
-            'pub_name' => 'required|string',
-            'title' => 'required|string',
-            'pub_date' => 'required',
-
-        ]);
 
         $pub_values = explode(' ', $request->pub_name, 2);
 
@@ -182,6 +175,50 @@ class HomeController extends Controller
                 'document_id' => $document_id,
             ]);
 
+
+        return $this->index();
+    }
+
+    public function insertJournalVolume(Request $request)
+    {
+
+        $pub_values = explode(' ', $request->pub_name, 2);
+
+        $publishers = DB::table('publishers')
+            ->where('publisher_id', '=', $pub_values[0])
+            ->first();
+
+        $publisher_id = DB::table('publishers')
+            ->insertGetId([
+                'pub_name' => $publishers->pub_name,
+                'address' => $publishers->address,
+            ], 'publisher_id');
+
+        $document_id = DB::table('documents')
+            ->insertGetId([
+                'title' => $request->title,
+                'p_date' => $request->pub_date,
+                'publisher_id' => $publisher_id,
+            ], 'document_id');
+
+        $editor_id = DB::table('chief_editors')
+            ->insertGetId([
+                'e_name' => $request->e_name,
+            ], 'editor_id');
+
+        $jv_id = DB::table('journal_volumes')
+            ->insertGetId([
+                'document_id' => $document_id,
+                'j_volume' => $request->j_volume,
+                'editor_id' => $editor_id,
+            ], 'id');
+
+        DB::table('journal_issues')
+            ->insert([
+                'document_id' => $document_id,
+                'issue_no' => $request->issue_no,
+                'scope' => $request->scope,
+            ]);
 
         return $this->index();
     }

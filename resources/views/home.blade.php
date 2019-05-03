@@ -95,10 +95,10 @@
         </div>
         <div class="card ml-4 mr-4 mb-3">
             <div class="card-body">
-                <form class="mt-1" method="POST" action="#">
+                <form class="mt-1" method="POST" action="{{ route('home.insertJournalVolume') }}">
                     @csrf
                     <div class="form-group">
-                        <label for="title">Document Name:</label>
+                        <label for="title">Journal Name:</label>
                         <input type="text" class="form-control" name="title" id="title" aria-describedby="title"
                             placeholder="" required>
                     </div>
@@ -114,6 +114,25 @@
                             <option>{{$publisher->publisher_id.' '.$publisher->pub_name}}</option>
                             @endforeach
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="j_volume">Journal Volume:</label>
+                        <input type="number" class="form-control" name="j_volume" id="j_volume"
+                            aria-describedby="j_volume" placeholder="" max="99" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="issue_no">Journal Issue:</label>
+                        <input type="number" class="form-control" name="issue_no" id="issue_no"
+                            aria-describedby="issue_no" placeholder="" max="10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="e_name">Chief Editor:</label>
+                        <input type="text" class="form-control" name="e_name" id="e_name" aria-describedby="e_name"
+                            placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="scope">Scope:</label>
+                        <textarea class="form-control" id="scope" name="scope" rows="3"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

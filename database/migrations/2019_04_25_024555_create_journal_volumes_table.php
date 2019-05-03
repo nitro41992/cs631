@@ -20,7 +20,7 @@ class CreateJournalVolumesTable extends Migration
             $table->integer('editor_id');
             $table->timestamps();
 
-            $table->foreign('document_id')->references('document_id')->on('documents');
+            $table->foreign('document_id')->references('document_id')->on('documents')->onDelete('cascade');
         });
     }
 

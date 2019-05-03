@@ -14,7 +14,7 @@ class AlterTableJournalVolumesAddForeignTagChiefEditorEditorId extends Migration
     public function up()
     {
         Schema::table('journal_volumes', function (Blueprint $table) {
-            $table->foreign('editor_id')->references('editor_id')->on('chief_editors');
+            $table->foreign('editor_id')->references('editor_id')->on('chief_editors')->onDelete('cascade');
         });
     }
 
@@ -24,7 +24,5 @@ class AlterTableJournalVolumesAddForeignTagChiefEditorEditorId extends Migration
      * @return void
      */
     public function down()
-    {
-
-    }
+    { }
 }

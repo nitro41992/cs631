@@ -20,7 +20,7 @@ class CreateJournalIssuesTable extends Migration
             $table->longText('scope');
             $table->timestamps();
 
-            $table->foreign('document_id')->references('document_id')->on('documents');
+            $table->foreign('document_id')->references('document_id')->on('documents')->onDelete('cascade');
             $table->unique(['document_id', 'issue_no']);
         });
     }

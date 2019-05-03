@@ -16,7 +16,7 @@ $factory->define(Reserves::class, function (Faker $faker) {
 
     $readers = Reader::all()->pluck('reader_id')->toArray();
 
-    $time = Carbon::createFromTimestamp($faker->dateTimeBetween($startDate = '-1 days', $endDate = 'now', $timezone = 'EST')->getTimeStamp()) ;
+    $time = Carbon::createFromTimestamp($faker->dateTimeBetween($startDate = '-3 days', $endDate = 'now', $timezone = 'EDT')->getTimeStamp()) ;
     return [
         'reader_id' => $faker->randomElement($readers),
         'document_id' => $compkey['document_id'],

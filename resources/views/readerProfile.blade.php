@@ -52,9 +52,7 @@
                             <td>
                                 <div class="row text-primary">
                                     @if($copy->bor_reader_id === $reader->reader_id ) 
-                                        {{ $copy->borrow_time_left == 1 || $copy->borrow_time_left == -1  ? 
-                                        $copy->borrow_time_left.' day left' 
-                                        : $copy->borrow_time_left.' days left' }}
+                                        {{ $copy->borrow_time_left.' left' }}
                                     @elseif($copy->res_reader_id === $reader->reader_id ) 
                                         Reserved
                                     @endif

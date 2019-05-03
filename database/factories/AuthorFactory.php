@@ -7,6 +7,6 @@ use Faker\Generator as Faker;
 
 $factory->define(Author::class, function (Faker $faker) {
     return [
-        'a_name' => $faker->firstName($gender = 'null').' '.$faker->lastName(),
+        'a_name' => $faker->firstName($gender = 'null') . ' ' . $faker->lastName(),
     ];
 });

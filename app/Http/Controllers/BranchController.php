@@ -40,16 +40,31 @@ class BranchController extends Controller
             })
             ->join('documents', 'documents.document_id', '=', 'copies.document_id')
             ->join('books', 'books.document_id', '=', 'copies.document_id')
-            ->select('books.isbn','documents.title', DB::raw('count(copies.copy_no)'))
-            ->groupBy('books.isbn','documents.title')
+            ->select('books.isbn','documents.title', 'books.document_id', DB::raw('count(copies.copy_no)'))
+            ->groupBy('books.isbn','documents.title', 'books.document_id')
             ->orderBy('count','desc')
             ->take(10)
             ->get();
-        //dd($mostBorrowed);        
+
+        $mostBorrowedThisYear = DB::table('copies')
+        ->join("borrows",function($join){
+            $join->on("copies.document_id","=","borrows.document_id")
+                ->on("copies.copy_no","=","borrows.copy_no")
+                ->on("copies.lib_id","=","borrows.lib_id")
+                ->where(DB::raw('date_part(\'year\', borrows.bd_time)'), '=', DB::raw('date_part(\'year\', NOW()::date)'));
+        })
+        ->join('documents', 'documents.document_id', '=', 'copies.document_id')
+        ->join('books', 'books.document_id', '=', 'copies.document_id')
+        ->select('books.isbn','documents.title', 'books.document_id', DB::raw('count(copies.copy_no)'))
+        ->groupBy('books.isbn','documents.title', 'books.document_id')
+        ->orderBy('count','desc')
+        ->take(10)
+        ->get();       
 
         $obj['branches'] = $branches;
         $obj['freqBorrowers'] = $freqBorrowers;
         $obj['mostBorrowed'] = $mostBorrowed;
+        $obj['mostBorrowedThisYear'] = $mostBorrowedThisYear;
 
         return view('branch')
         ->with(compact('obj'));

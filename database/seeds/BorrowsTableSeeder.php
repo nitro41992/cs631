@@ -11,7 +11,7 @@ class BorrowsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Borrows::class, 50)->create()->each(function ($borrows) {
+        factory(App\Borrows::class, 100)->create()->each(function ($borrows) {
         });
     }
 }

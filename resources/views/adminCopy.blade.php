@@ -90,7 +90,6 @@
                                                             ]
                                                         ) }}" accept-charset="UTF-8">
                                         @csrf
-                                        @method('DELETE')
                                         <input name="_method" type="hidden" value="POST">
                                         <button type= "submit" class="btn btn-outline-warning btn-sm" >Return</button>
                                     </form>

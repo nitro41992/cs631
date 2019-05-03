@@ -34,8 +34,8 @@ $factory->define(Borrows::class, function (Faker $faker) {
         'document_id' => $compkey['document_id'],
         'copy_no' => $compkey['copy_no'],
         'lib_id' => $compkey['lib_id'],
-        'bd_time'  => $start,//$date->addDays(rand(-1,-35))->format('Y-m-d H:i:s'),
-        'rd_time'  => $end//$date->addDays(20)->format('Y-m-d H:i:s')
+        'bd_time'  => $start,
+        'rd_time'  => $faker->boolean(75) ? $end : null
 
     ];
 });

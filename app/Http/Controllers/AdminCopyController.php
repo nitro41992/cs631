@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class AdminCopyController extends Controller
 {
@@ -31,7 +32,8 @@ class AdminCopyController extends Controller
         ->leftJoin("borrows",function($join){
             $join->on("copies.document_id","=","borrows.document_id")
                 ->on("copies.copy_no","=","borrows.copy_no")
-                ->on("copies.lib_id","=","borrows.lib_id");
+                ->on("copies.lib_id","=","borrows.lib_id")
+                ->whereNull('borrows.rd_time');
         })
         ->leftJoin("reserves",function($join){
             $join->on("copies.document_id","=","reserves.document_id")
@@ -54,7 +56,6 @@ class AdminCopyController extends Controller
                  'reserves.d_time',
                  DB::raw('(NOW()::date - borrows.rd_time::date) as borrow_time_left'))
         ->where('copies.document_id', '=', $did)
-        ->orderBy('copies.document_id', 'asc')
         ->get();
 
         $max_of_copy = DB::table('copies')
@@ -144,11 +145,12 @@ class AdminCopyController extends Controller
     }
 
     public function return(Request $request) {
+        $time = Carbon::now()->setTimezone('EST');
         DB::table('borrows')
         ->where('document_id', '=', $request->did)
         ->where('copy_no', '=', $request->coid)
         ->where('lib_id', '=', $request->lid)
-        ->delete();
+        ->update(['rd_time' => $time]);
         return $this->index($request->did);
     }
 

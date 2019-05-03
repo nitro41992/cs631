@@ -23,7 +23,8 @@ class CopyController extends Controller
         ->leftJoin("borrows",function($join){
             $join->on("copies.document_id","=","borrows.document_id")
                 ->on("copies.copy_no","=","borrows.copy_no")
-                ->on("copies.lib_id","=","borrows.lib_id");
+                ->on("copies.lib_id","=","borrows.lib_id")
+                ->whereNull('borrows.rd_time');
         })
         ->leftJoin("reserves",function($join){
             $join->on("copies.document_id","=","reserves.document_id")
@@ -47,7 +48,8 @@ class CopyController extends Controller
                  DB::raw('(NOW()::date - borrows.rd_time::date) as borrow_time_left'))
         ->where('copies.document_id', '=', $did)
         ->get();
-
+        
+        
         $reader = DB::table('readers')
                     ->where('readers.card_num', "=", $id)
                     ->select('reader_id')
@@ -146,7 +148,7 @@ class CopyController extends Controller
                             'copy_no' => $request->coid,
                             'lib_id' => $request->lid,
                             'bd_time' => $time,
-                            'rd_time' => Carbon::createFromFormat('Y-m-d H:i:s', $time)->addDays(20)
+                            'rd_time' => null //Carbon::createFromFormat('Y-m-d H:i:s', $time)->addDays(20)
                             ], 'bor_number');
         return $this->index($request->id, $request->did);
     }

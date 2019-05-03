@@ -21,7 +21,7 @@
             @if ($obj['copies']->count() > 0 )
                 <h3>
                 <small class="text-muted">Document Title:</small>
-                    {{ $obj['copies'][0]->title }}
+                    {{ $obj['copies'][0]->title.'('. $obj['copies'][0]->document_id.')' }}
                 </h3>
                 <table class="table">
                     <thead>
@@ -43,15 +43,7 @@
                             <td>{{$copy->position}}</td>
                             <td>
                                 <div class="row">
-                                    @if($copy->bor_reader_id === $reader->reader_id ) 
-                                        <a name="doc_select" 
-                                        href="#" 
-                                        class="btn  m-1 btn-outline-warning btn-sm disabled" >Checked Out By You</a>
-                                    @elseif($copy->res_reader_id === $reader->reader_id ) 
-                                        <a name="doc_select" 
-                                        href="#" 
-                                        class="btn  m-1 btn-outline-warning btn-sm disabled" >Reserved By You</a>
-                                    @elseif($copy->bor_reader_id != null ||  $copy->res_reader_id != null)
+                                    @if(!empty($copy->res_reader_id) || (empty($copy->rd_time) && ($copy->bor_number) ))
                                         <a name="doc_select" 
                                         href="#" 
                                         class="btn  m-1 btn-outline-secondary btn-sm disabled" >Unavailable</a>

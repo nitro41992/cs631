@@ -36,7 +36,23 @@
             </div>
             <div class="card mb-3">
                 <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Book Name</th>
+                            <th scope="col">Borrow Count</th>
+                        </tr>
+                    </thead>
+                    @foreach($obj['mostBorrowed'] as $mostBorrowed)
+                        <tbody>
+                            <tr>
+                                <td>{{$mostBorrowed->title}}</td>
+                                <td>{{$mostBorrowed->count}}</td>
 
+                            </tr>
+                        </tbody>
+                    @endforeach
+                </table>
                 </div>
             </div>
             <div class="card mb-3">

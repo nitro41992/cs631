@@ -58,12 +58,12 @@ class AdminCopyController extends Controller
         ->where('copies.document_id', '=', $did)
         ->get();
 
-        $max_of_copy = DB::table('copies')
-        ->rightJoin('documents', 'documents.document_id', '=', 'copies.document_id')
-        ->select(DB::raw('max(copy_no)'))
-        ->groupBy('copies.document_id')
-        ->where('copies.document_id', '=', $did)
-        ->first();
+        // $max_of_copy = DB::table('copies')
+        // ->rightJoin('documents', 'documents.document_id', '=', 'copies.document_id')
+        // ->select(DB::raw('max(copy_no)'))
+        // ->groupBy('copies.document_id')
+        // ->where('copies.document_id', '=', $did)
+        // ->first();
 
         $branches = DB::table('branches')
         ->get();
@@ -71,7 +71,7 @@ class AdminCopyController extends Controller
 
         $obj = array();
         $obj['copies'] = $copies;
-        $obj['max_copy']  = $max_of_copy;
+        //$obj['max_copy']  = $max_of_copy;
         $obj['branches']  = $branches;
         $obj['did'] = $did;
 

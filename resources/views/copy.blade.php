@@ -21,7 +21,7 @@
             @if ($obj['copies']->count() > 0 )
                 <h3>
                 <small class="text-muted">Document Title:</small>
-                    {{ $obj['copies'][0]->title.'('. $obj['copies'][0]->document_id.')' }}
+                    {{ $obj['copies'][0]->title }}
                 </h3>
                 <table class="table">
                     <thead>

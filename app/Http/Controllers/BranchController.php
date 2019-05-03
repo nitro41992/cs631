@@ -25,16 +25,31 @@ class BranchController extends Controller
 
         $freqBorrowers = DB::table('borrows')
         ->join('readers', 'readers.reader_id', '=', 'borrows.reader_id')
+        ->join('books', 'books.document_id', '=', 'borrows.document_id')
         ->select('readers.reader_id','readers.r_name',  DB::raw('count(*) as count'))
         ->groupBy('readers.reader_id','readers.r_name')
         ->orderBy('count','desc')
         ->take(10)
         ->get();
-        
-        //dd($freqBorrowers);
+
+        $mostBorrowed = DB::table('copies')
+            ->join("borrows",function($join){
+                $join->on("copies.document_id","=","borrows.document_id")
+                    ->on("copies.copy_no","=","borrows.copy_no")
+                    ->on("copies.lib_id","=","borrows.lib_id");
+            })
+            ->join('documents', 'documents.document_id', '=', 'copies.document_id')
+            ->join('books', 'books.document_id', '=', 'copies.document_id')
+            ->select('books.isbn','documents.title', DB::raw('count(copies.copy_no)'))
+            ->groupBy('books.isbn','documents.title')
+            ->orderBy('count','desc')
+            ->take(10)
+            ->get();
+        //dd($mostBorrowed);        
 
         $obj['branches'] = $branches;
         $obj['freqBorrowers'] = $freqBorrowers;
+        $obj['mostBorrowed'] = $mostBorrowed;
 
         return view('branch')
         ->with(compact('obj'));

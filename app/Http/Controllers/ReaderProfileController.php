@@ -59,7 +59,7 @@ class ReaderProfileController extends Controller
         $totDays = null;
         foreach($copies as $copy){
             if ($copy->borrow_time_left < 0)
-                $totDays = $copy->borrow_time_left + $totDays;
+                $totDays = (int)$copy->borrow_time_left + (int)$totDays;
         }
         
         $fee = number_format((float)(abs($totDays * 0.20)), 2, '.', '');

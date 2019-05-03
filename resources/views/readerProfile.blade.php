@@ -31,23 +31,21 @@
                 class="btn btn-primary btn-sm">Back
             </a>
             @if ($obj['copies']->count() > 0 )
-                <h3>
-                <small class="text-muted">Document Title:</small>
-                    {{ $obj['copies'][0]->title }}
-                </h3>
-                <table class="table">
+                <table class="table mt-3">
                     <thead>
                         <tr>
+                        <th scope="col">Document Name</th>
                             <th scope="col">Copy Id</th>
                             <th scope="col">Branch Name</th>
                             <th scope="col">Branch Location</th>
-                            <th scope="col">Actions</th>
+                            <th scope="col">Info</th>
 
                         </tr>
                     </thead>
                     @foreach($obj['copies'] as $copy)
                     <tbody>
                         <tr>
+                            <td>{{$copy->title}}</td>
                             <td>{{$copy->copy_no}}</td>
                             <td>{{$copy->l_name}}</td>
                             <td>{{$copy->l_location}}</td>

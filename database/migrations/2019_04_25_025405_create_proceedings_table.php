@@ -21,7 +21,7 @@ class CreateProceedingsTable extends Migration
             $table->string('c_editor');
             $table->timestamps();
 
-            $table->foreign('document_id')->references('document_id')->on('documents');
+            $table->foreign('document_id')->references('document_id')->on('documents')->onDelete('cascade');
         });
     }
 

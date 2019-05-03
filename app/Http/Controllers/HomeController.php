@@ -223,6 +223,39 @@ class HomeController extends Controller
         return $this->index();
     }
 
+    public function insertProceeding(Request $request)
+    {
+
+        $pub_values = explode(' ', $request->pub_name, 2);
+
+        $publishers = DB::table('publishers')
+            ->where('publisher_id', '=', $pub_values[0])
+            ->first();
+
+        $publisher_id = DB::table('publishers')
+            ->insertGetId([
+                'pub_name' => $publishers->pub_name,
+                'address' => $publishers->address,
+            ], 'publisher_id');
+
+        $document_id = DB::table('documents')
+            ->insertGetId([
+                'title' => $request->title,
+                'p_date' => $request->pub_date,
+                'publisher_id' => $publisher_id,
+            ], 'document_id');
+
+        DB::table('proceedings')
+            ->insert([
+                'document_id' => $document_id,
+                'c_date' => $request->c_date,
+                'c_location' => $request->c_location,
+                'c_editor' => $request->c_editor,
+            ]);
+
+        return $this->index();
+    }
+
     public function deleteDocument($did)
     {
 

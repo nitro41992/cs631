@@ -25,6 +25,7 @@ Route::get('/home/title', 'HomeController@filterTitle')->name('home.filterTitle'
 Route::get('/home/pubName', 'HomeController@filterPubName')->name('home.filterPubName');
 Route::post('/home/insertBook', 'HomeController@insertBook')->name('home.insertBook');
 Route::post('/home/insertJournalVolume', 'HomeController@insertJournalVolume')->name('home.insertJournalVolume');
+Route::post('/home/insertProceeding', 'HomeController@insertProceeding')->name('home.insertProceeding');
 Route::post('/home/deleteDocument/{id}', 'homeController@deleteDocument')->name('home.deleteDocument');
 
 Route::post('/document', 'DocumentController@getReaderByCardNumber')->name('document.getReaderByCardNumber');

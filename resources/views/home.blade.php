@@ -141,10 +141,10 @@
 
         <div class="card ml-4 mr-4 mb-3">
             <div class="card-body">
-                <form class="mt-1" method="POST" action="#">
+                <form class="mt-1" method="POST" action="{{ route('home.insertProceeding') }}">
                     @csrf
                     <div class="form-group">
-                        <label for="title">Document Name:</label>
+                        <label for="title">Proceeding Name:</label>
                         <input type="text" class="form-control" name="title" id="title" aria-describedby="title"
                             placeholder="" required>
                     </div>
@@ -160,6 +160,21 @@
                             <option>{{$publisher->publisher_id.' '.$publisher->pub_name}}</option>
                             @endforeach
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="c_date">Court Date:</label>
+                        <input type="date" class="form-control" name="c_date" id="c_date" aria-describedby="c_date"
+                            placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="c_location">Court Location:</label>
+                        <input type="text" class="form-control" name="c_location" id="c_location"
+                            aria-describedby="c_location" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="c_editor">Proceedings Chair:</label>
+                        <input type="text" class="form-control" name="c_editor" id="c_editor"
+                            aria-describedby="c_editor" placeholder="" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

@@ -134,4 +134,16 @@ class ReaderProfileController extends Controller
     {
         //
     }
+
+    public function return(Request $request)
+    {
+        $time = Carbon::now()->setTimezone('EST');
+        DB::table('borrows')
+            ->where('reader_id', '=', $request->rid,)
+            ->where('document_id', '=', $request->did)
+            ->where('copy_no', '=', $request->coid)
+            ->where('lib_id', '=', $request->lid)
+            ->update(['rd_time' => $time]);
+        return $this->index($request->id, $request->did);
+    }
 }

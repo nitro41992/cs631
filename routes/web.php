@@ -49,6 +49,7 @@ Route::post('/adminCopy/delete', 'AdminCopyController@delete')->name('adminCopy.
 Route::post('/adminCopy/insertCopy', 'AdminCopyController@insertCopy')->name('adminCopy.insertCopy');
 
 Route::get('/readerProfile/{id}', 'ReaderProfileController@index')->name('readerProfile.index');
+Route::post('/readerProfile/return', 'ReaderProfileController@return')->name('readerProfile.return');
 
 Route::get('/reader', 'ReaderController@index')->name('reader.index');
 Route::get('/reader/name', 'ReaderController@filterName')->name('reader.filterName');

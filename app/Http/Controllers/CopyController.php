@@ -57,6 +57,14 @@ class CopyController extends Controller
             ->select('reader_id')
             ->first();
 
+        $readerLimit = DB::table('readers')
+            ->join('borrows', 'borrows.reader_id', '=', 'readers.reader_id')
+            ->where('readers.card_num', "=", $id)
+            ->whereNull('rd_time')
+            ->select('borrows.reader_id', DB::raw('count(*) as count'))
+            ->groupBy('borrows.reader_id')
+            ->first();
+        //dd($copies);
 
         $resToCancel =  DB::table('reserves')
             ->where('d_time', '<=', 'now()')
@@ -72,7 +80,7 @@ class CopyController extends Controller
         $obj = array();
         $obj['copies'] = $copies;
 
-        return view('copy', compact('obj', 'id', 'reader'));
+        return view('copy', compact('obj', 'id', 'reader', 'readerLimit'));
     }
 
     /**
@@ -182,6 +190,7 @@ class CopyController extends Controller
     {
         $time = Carbon::now()->setTimezone('EST');
         DB::table('borrows')
+            ->where('reader_id', '=', $request->rid,)
             ->where('document_id', '=', $request->did)
             ->where('copy_no', '=', $request->coid)
             ->where('lib_id', '=', $request->lid)

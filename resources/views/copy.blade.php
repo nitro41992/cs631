@@ -44,6 +44,7 @@
                             <form class="m-1" method="POST" action="{{ route('copy.return', 
                                                                 [    
                                                                     'id' => $id,
+                                                                    'rid' => $reader->reader_id,
                                                                     'did' => $copy->document_id,
                                                                     'coid' => $copy->copy_no,
                                                                     'lid' => $copy->lib_id
@@ -53,6 +54,8 @@
                                 <input name="_method" type="hidden" value="POST">
                                 <button type="submit" class="btn btn-outline-warning btn-sm">Return</button>
                             </form>
+                            @elseif($reader->reader_id == $readerLimit->reader_id && $readerLimit->count >= 10)
+                            <a href="#" class="btn  m-1 btn-outline-danger btn-sm disabled">Borrow Limit Reached</a>
                             @elseif(!empty($copy->res_reader_id == $reader->reader_id))
                             <a href="#" class="btn  m-1 btn-outline-warning btn-sm disabled">Reserved</a>
                             @elseif(!empty($copy->res_reader_id) || (empty($copy->rd_time) && ($copy->bor_number) ))

@@ -40,9 +40,23 @@
                     <td>{{$copy->position}}</td>
                     <td>
                         <div class="row">
-                            @if(!empty($copy->res_reader_id) || (empty($copy->rd_time) && ($copy->bor_number) ))
-                            <a name="doc_select" href="#"
-                                class="btn  m-1 btn-outline-secondary btn-sm disabled">Unavailable</a>
+                            @if($copy->bor_reader_id == $reader->reader_id && empty($copy->rd_time))
+                            <form class="m-1" method="POST" action="{{ route('copy.return', 
+                                                                [    
+                                                                    'id' => $id,
+                                                                    'did' => $copy->document_id,
+                                                                    'coid' => $copy->copy_no,
+                                                                    'lid' => $copy->lib_id
+                                                                ]
+                                                            ) }}" accept-charset="UTF-8">
+                                @csrf
+                                <input name="_method" type="hidden" value="POST">
+                                <button type="submit" class="btn btn-outline-warning btn-sm">Return</button>
+                            </form>
+                            @elseif(!empty($copy->res_reader_id == $reader->reader_id))
+                            <a href="#" class="btn  m-1 btn-outline-warning btn-sm disabled">Reserved</a>
+                            @elseif(!empty($copy->res_reader_id) || (empty($copy->rd_time) && ($copy->bor_number) ))
+                            <a href="#" class="btn  m-1 btn-outline-secondary btn-sm disabled">Unavailable</a>
                             @else
                             <form class="m-1" method="POST" action="{{ route('copy.reserve', 
                                                                 [   

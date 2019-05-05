@@ -16,202 +16,273 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: authors; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.authors VALUES (1, 'Nicklaus Fay', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (2, 'Grant Hettinger', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (3, 'Izaiah Hegmann', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (4, 'Felicita Ernser', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (5, 'Theresa Barton', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (6, 'Maribel Lind', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (7, 'Clarabelle Jacobs', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (8, 'Jedidiah Fadel', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (9, 'Quincy Mosciski', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (10, 'Daisha White', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (11, 'Bonita Hammes', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (12, 'Perry Johnston', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (13, 'Coralie Schoen', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (14, 'Diana Keebler', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (15, 'Tito Adams', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (16, 'Jimmy Gutmann', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (17, 'Agustina Ankunding', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (18, 'Jensen Swift', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (19, 'Annabelle Harvey', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (20, 'Jordy Padberg', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (21, 'Elyse Jaskolski', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (22, 'Cory Barrows', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (23, 'Ed Grady', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (24, 'Bridie Morar', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (25, 'Muhammad Cremin', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (26, 'Arturo Lubowitz', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (27, 'Marcelo Barton', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (28, 'Ashton Roob', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (29, 'Eric Dicki', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (30, 'Glenda Brakus', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (31, 'Myron Berge', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (32, 'Eliane Howe', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (33, 'Cleta Deckow', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (34, 'Chris Kshlerin', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (35, 'Carter Brown', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (36, 'Domenic Cummings', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (37, 'Hoyt Braun', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (38, 'Thelma Bogisich', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (39, 'Adaline Swaniawski', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (40, 'Cameron Runolfsdottir', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (41, 'Nettie Goldner', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (42, 'Jordi Kiehn', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (43, 'Marquis Harber', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (44, 'Flo Hermiston', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (45, 'Nyah Keeling', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (46, 'Ada Brekke', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (47, 'Marc Kautzer', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (48, 'Magdalena Haley', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (49, 'Luther Fritsch', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.authors VALUES (50, 'Magnolia Ritchie', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.users VALUES (1, 'Mrs. Lori Sporer', 'fadel.zelda@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'JjmXLVouAv', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (2, 'Ole Bartoletti DDS', 'steuber.gerardo@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '94cDKpG8CN', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (3, 'Vada Schmitt', 'fleta.bartell@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ySCXF0jxMU', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (4, 'Dr. Erick Bartell II', 'hlueilwitz@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'cjRz92122s', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (5, 'Benjamin Wiegand', 'derek.ohara@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'D21RpHbdpv', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (6, 'Colby Hilpert', 'raphaelle38@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'rPFOlhmw1w', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (7, 'Eriberto Bechtelar', 'dayna.schroeder@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ronkgqAQqo', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (8, 'Mr. Mike Larkin', 'kurt.jakubowski@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'mg5kQUi9Te', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (9, 'Elta Romaguera', 'candido.price@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'C7PwLjrncf', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (10, 'Verda Hintz', 'pearline.robel@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ESlBISGZjz', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (11, 'Shaina Huel', 'bobbie04@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'R3ymUiJ5R7', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (12, 'Leonie Hermann Jr.', 'hope.runolfsson@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'kSsf0kCY7h', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (13, 'Prof. Heath VonRueden DDS', 'rosanna.wintheiser@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'UHe6aysOlk', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (14, 'Berniece Stokes PhD', 'kunde.teagan@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'tybFbPUg3G', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (15, 'Mrs. Maggie Runolfsdottir', 'gmarvin@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '8BTamXpZ4b', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (16, 'Lera Pfannerstill Jr.', 'joy.brown@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'h0RQ2SeLEM', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (17, 'Flavie Stanton', 'alden.murazik@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'gKNRtsSCX8', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (18, 'Miss Roxanne Langosh V', 'bpaucek@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'CNuoYWTRKU', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (19, 'Juliana Thompson', 'ike01@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'xkyvUbIgBt', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (20, 'Lizzie Feeney', 'brionna.koch@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '0NtyvZ3cus', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (21, 'Coty McCullough', 'jebert@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'HiHAU2a1NZ', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (22, 'Ms. Nettie Von PhD', 'johann00@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'vkuQoirvX9', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (23, 'Miss Karlee Jacobs V', 'ctorphy@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'wTsIPh6Vg8', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (24, 'Montana Abshire', 'fredy.schaefer@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'qyWCFT4CeU', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (25, 'Sebastian Keebler', 'jones.jayden@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Rg0dNH5DWH', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (26, 'Theron Pagac', 'cskiles@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'DFNVsJoQB2', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (27, 'Emerald Boyle', 'blaze12@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ZwgSgSwJoy', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (28, 'Lucius Zboncak', 'adrian.greenfelder@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'clEadwCyfU', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (29, 'Cade Schuppe', 'krystel32@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'GJCRRzsUPZ', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (30, 'Miss Sadye Kunde', 'gilberto.upton@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'nzYZ4Qi70e', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (31, 'Raul Kerluke', 'sylvan21@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'wsmL2Eoat0', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (32, 'Bell Buckridge', 'theresia04@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Jg5oHdKKZu', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (33, 'Magdalena Renner', 'bailey.mortimer@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'RGZhwk0VAW', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (34, 'Ms. Patsy Shanahan DVM', 'kendra.shields@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'bYgCsbIYBz', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (35, 'Mr. Dewitt Orn', 'russel.aracely@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'NsPjB808wM', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (36, 'Kurt Dicki', 'jones.erling@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'hMRgYXGp0n', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (37, 'Sigrid Pouros II', 'sziemann@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'xx8QqyGxHX', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (38, 'Mrs. Krystina Kris', 'fwelch@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'i6DjnMpTNF', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (39, 'Ben Wyman', 'evalyn09@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'byw6Lfavem', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (40, 'Trinity Rohan', 'clotilde48@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2RHHVG19NW', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (41, 'Elmore Skiles', 'leta90@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'o6ltU0Zm5A', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (42, 'Mr. Lonzo Herman', 'windler.olga@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'M7hqLuWYLN', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (43, 'Macy Schneider', 'bwatsica@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'pKYqnQNPxO', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (44, 'Daron Roberts', 'iheller@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ntsjLbM9Cl', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (45, 'Matilde Powlowski PhD', 'rory50@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'CN40ANXw6q', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (46, 'Kale Morar', 'zack85@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'QZSWb20Xck', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (47, 'Miss Lessie Powlowski', 'angeline13@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'OTM5bGwne0', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (48, 'Dr. Mary Crist PhD', 'moshe60@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '18mL5OEiBA', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (49, 'Shirley Heidenreich I', 'shuel@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'unQkmdl7Ky', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.users VALUES (50, 'Georgiana Abernathy', 'price.quitzon@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'CYaUszwcP6', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
 
-
---
--- Data for Name: books; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.books VALUES (1, 55, '9783147581311', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (2, 27, '9786159788457', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (3, 56, '9792208816569', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (4, 42, '9796735035899', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (5, 6, '9781128988364', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (6, 45, '9787752480632', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (7, 48, '9795326047723', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (8, 74, '9794526896872', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (9, 53, '9795407713257', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (10, 79, '9785905747533', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (11, 92, '9797399650664', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (12, 46, '9789179890339', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (13, 12, '9796590374980', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (14, 22, '9790077456879', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (15, 60, '9791890937071', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (16, 10, '9794334820083', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (17, 75, '9795420604181', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (18, 73, '9781458514028', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (19, 11, '9786596828549', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (20, 34, '9790431733790', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (21, 82, '9780137869411', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (22, 97, '9780905992501', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (23, 9, '9781822852299', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (24, 39, '9783758213601', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (25, 49, '9795531872684', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (26, 52, '9796431561265', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (27, 58, '9790065662152', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (28, 61, '9791752502416', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (29, 87, '9786537936944', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.books VALUES (30, 72, '9799580297511', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 
 
 --
--- Data for Name: borrows; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: publishers; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.borrows VALUES (1, 35, 79, 48, 1, '2018-05-18 04:10:29', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (2, 19, 93, 65, 4, '2019-01-27 14:09:58', '2019-02-15 14:09:58', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (3, 50, 58, 24, 5, '2019-01-17 20:41:42', '2019-02-05 20:41:42', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (4, 45, 81, 32, 3, '2018-12-29 08:20:00', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (5, 23, 19, 6, 1, '2018-09-27 20:20:21', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (6, 7, 7, 34, 2, '2019-03-25 09:52:08', '2019-04-13 09:52:08', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (7, 32, 7, 75, 5, '2019-05-01 19:11:25', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (8, 19, 31, 96, 2, '2018-08-22 04:58:42', '2018-09-10 04:58:42', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (9, 32, 28, 92, 5, '2019-03-14 10:06:18', '2019-04-02 10:06:18', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (10, 47, 91, 36, 2, '2018-12-22 11:52:42', '2019-01-10 11:52:42', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (11, 12, 61, 30, 5, '2019-04-25 04:52:13', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (12, 5, 7, 91, 5, '2018-12-09 05:51:10', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (13, 26, 81, 86, 2, '2018-12-29 00:11:14', '2019-01-17 00:11:14', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (14, 22, 86, 62, 3, '2018-09-05 16:28:21', '2018-09-24 16:28:21', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (15, 16, 58, 87, 5, '2019-02-07 15:18:57', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (16, 44, 90, 33, 4, '2018-07-13 19:25:54', '2018-08-01 19:25:54', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (17, 15, 89, 97, 1, '2018-10-28 22:04:33', '2018-11-16 22:04:33', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (18, 42, 10, 18, 1, '2018-09-19 03:24:48', '2018-10-08 03:24:48', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (19, 13, 48, 9, 5, '2019-01-01 20:06:46', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (20, 50, 38, 19, 4, '2018-12-29 01:49:23', '2019-01-17 01:49:23', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (21, 36, 25, 60, 5, '2018-05-17 01:02:58', '2018-06-05 01:02:58', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (22, 40, 78, 6, 4, '2018-08-15 09:43:55', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (23, 41, 41, 56, 2, '2018-06-29 00:48:32', '2018-07-18 00:48:32', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (24, 27, 95, 26, 5, '2019-02-08 21:40:41', '2019-02-27 21:40:41', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (25, 19, 84, 98, 3, '2018-09-25 08:37:57', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (26, 20, 57, 57, 4, '2018-12-13 19:00:05', '2019-01-01 19:00:05', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (27, 25, 74, 74, 1, '2018-07-22 10:16:08', '2018-08-10 10:16:08', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (28, 49, 88, 97, 1, '2018-10-11 01:35:42', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (29, 26, 100, 49, 1, '2019-04-17 20:03:30', '2019-05-06 20:03:30', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (30, 10, 2, 47, 1, '2019-01-08 20:38:58', '2019-01-27 20:38:58', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (31, 26, 45, 59, 3, '2018-10-12 01:04:00', '2018-10-31 01:04:00', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (32, 37, 46, 49, 3, '2018-12-02 21:22:59', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (33, 31, 42, 31, 1, '2018-12-14 19:59:02', '2019-01-02 19:59:02', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (34, 29, 1, 57, 5, '2018-07-24 08:35:15', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (35, 3, 41, 61, 3, '2019-04-01 03:02:27', '2019-04-20 03:02:27', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (36, 34, 33, 63, 3, '2018-10-28 12:36:26', '2018-11-16 12:36:26', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (37, 41, 68, 90, 4, '2019-03-06 01:43:05', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (38, 16, 94, 19, 4, '2018-08-19 06:39:57', '2018-09-07 06:39:57', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (39, 38, 69, 2, 2, '2018-06-06 02:58:20', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (40, 35, 34, 27, 1, '2018-12-16 08:41:28', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (41, 14, 67, 12, 5, '2018-07-14 10:31:46', '2018-08-02 10:31:46', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (42, 26, 3, 42, 4, '2019-04-14 06:37:35', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (43, 50, 82, 71, 1, '2019-01-22 09:14:19', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (44, 30, 80, 20, 3, '2018-05-14 09:18:40', '2018-06-02 09:18:40', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (45, 27, 1, 64, 5, '2019-02-28 02:19:10', '2019-03-19 02:19:10', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (46, 20, 72, 1, 3, '2018-11-02 05:35:40', '2018-11-21 05:35:40', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (47, 47, 25, 23, 1, '2018-05-09 18:43:30', '2018-05-28 18:43:30', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (48, 43, 82, 36, 2, '2018-12-11 15:51:56', '2018-12-30 15:51:56', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (49, 2, 49, 66, 4, '2018-12-17 16:00:16', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (50, 22, 16, 43, 3, '2018-12-28 06:00:49', '2019-01-16 06:00:49', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (51, 22, 41, 5, 5, '2018-06-18 04:26:20', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (52, 14, 29, 65, 5, '2018-12-05 11:55:53', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (53, 16, 55, 92, 5, '2018-06-01 18:29:56', '2018-06-20 18:29:56', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (54, 35, 19, 29, 2, '2018-09-10 23:16:10', '2018-09-29 23:16:10', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (55, 18, 74, 63, 5, '2018-07-16 09:21:32', '2018-08-04 09:21:32', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (56, 31, 98, 55, 5, '2019-01-18 05:30:43', '2019-02-06 05:30:43', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (57, 35, 57, 79, 1, '2018-08-17 18:09:49', '2018-09-05 18:09:49', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (58, 20, 12, 8, 4, '2019-01-12 11:17:09', '2019-01-31 11:17:09', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (59, 7, 66, 47, 4, '2018-06-24 15:59:14', '2018-07-13 15:59:14', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (60, 40, 96, 42, 4, '2019-03-28 13:53:07', '2019-04-16 13:53:07', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (61, 29, 70, 24, 4, '2018-09-03 22:59:51', '2018-09-22 22:59:51', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (62, 1, 86, 53, 5, '2018-05-08 13:45:20', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (63, 3, 11, 3, 5, '2019-01-16 02:44:30', '2019-02-04 02:44:30', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (64, 11, 35, 62, 4, '2018-12-04 08:56:19', '2018-12-23 08:56:19', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (65, 33, 56, 63, 1, '2019-01-04 00:39:24', '2019-01-23 00:39:24', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (66, 2, 65, 71, 2, '2018-12-21 04:24:19', '2019-01-09 04:24:19', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (67, 44, 20, 40, 3, '2018-07-14 10:17:57', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (68, 10, 7, 33, 4, '2018-05-23 22:17:34', '2018-06-11 22:17:34', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (69, 20, 51, 36, 2, '2018-12-09 13:02:09', '2018-12-28 13:02:09', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (70, 45, 45, 17, 4, '2018-09-04 21:58:16', '2018-09-23 21:58:16', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (71, 49, 17, 82, 4, '2018-07-05 03:31:33', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (72, 31, 63, 60, 4, '2018-06-11 23:09:19', '2018-06-30 23:09:19', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (73, 37, 27, 4, 1, '2018-11-19 17:38:39', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (74, 35, 44, 51, 5, '2018-08-16 06:44:33', '2018-09-04 06:44:33', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (75, 19, 65, 48, 1, '2018-09-10 04:06:59', '2018-09-29 04:06:59', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (76, 35, 51, 85, 4, '2018-07-03 20:45:03', '2018-07-22 20:45:03', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (77, 33, 91, 14, 4, '2018-05-16 08:19:33', '2018-06-04 08:19:33', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (78, 30, 90, 13, 4, '2018-11-22 00:32:00', '2018-12-11 00:32:00', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (79, 45, 35, 42, 2, '2018-10-10 08:09:48', '2018-10-29 08:09:48', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (80, 25, 27, 100, 5, '2018-07-27 21:15:50', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (81, 29, 69, 67, 1, '2019-02-05 03:25:33', '2019-02-24 03:25:33', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (82, 14, 32, 86, 4, '2018-09-30 07:44:53', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (83, 22, 97, 53, 3, '2019-03-14 06:59:47', '2019-04-02 06:59:47', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (84, 20, 68, 20, 5, '2019-04-07 08:09:33', '2019-04-26 08:09:33', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (85, 38, 30, 55, 1, '2018-09-15 21:48:08', '2018-10-04 21:48:08', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (86, 3, 5, 52, 4, '2018-12-06 10:43:21', '2018-12-25 10:43:21', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (87, 35, 94, 77, 2, '2019-02-16 00:04:08', '2019-03-07 00:04:08', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (88, 42, 3, 24, 2, '2019-04-04 15:10:06', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (89, 27, 51, 13, 4, '2019-04-19 18:57:15', '2019-05-08 18:57:15', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (90, 2, 100, 67, 3, '2018-09-15 00:12:44', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (91, 6, 52, 33, 5, '2019-03-09 03:04:20', '2019-03-28 03:04:20', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (92, 22, 60, 82, 1, '2019-03-18 04:33:24', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (93, 4, 35, 69, 3, '2018-07-10 17:20:26', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (94, 3, 29, 84, 2, '2019-02-17 09:51:53', '2019-03-08 09:51:53', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (95, 34, 83, 7, 3, '2018-06-21 04:19:00', '2018-07-10 04:19:00', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (96, 38, 84, 64, 5, '2019-01-06 03:06:10', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (97, 32, 55, 84, 3, '2019-02-20 01:54:04', '2019-03-11 01:54:04', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (98, 38, 88, 82, 4, '2019-02-28 07:35:09', '2019-03-19 07:35:09', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (99, 27, 20, 37, 3, '2018-09-04 15:39:30', '2018-09-23 15:39:30', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.borrows VALUES (100, 31, 10, 96, 3, '2018-12-16 04:44:00', '2019-01-04 04:44:00', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.publishers VALUES (1, 'Garth Willms', '64191 Moore Circles
+Port Monserrate, CT 02877', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (2, 'Vidal Jones', '880 Darrin Street Suite 978
+Felipachester, IN 97822', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (3, 'Santiago Koss', '120 Adriel Orchard
+North Gina, MS 17065', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (4, 'Stan Zulauf', '3962 Hettinger Gateway Apt. 556
+South Lenny, UT 36725-9416', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (5, 'Gianni Heaney', '931 Alize Union
+Mitchellmouth, NH 23291', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (6, 'Abdullah Doyle', '502 Esmeralda Summit Apt. 410
+Daniellamouth, NE 83998', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (7, 'Sierra Eichmann', '933 Mills Roads
+Casperchester, VA 08111', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (8, 'Janick Jast', '435 Herminio Wells
+New Genesis, FL 36593-2153', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (9, 'Letitia Wilkinson', '720 Medhurst Pine Suite 367
+Gunnerchester, OH 49220-8890', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (10, 'Xzavier Kuvalis', '8745 Dakota Gardens Suite 501
+Wymanmouth, NE 32584-4067', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (11, 'Paul Ratke', '4302 Kris Highway
+Fayfurt, KY 12249-2927', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (12, 'Pasquale Cartwright', '2457 Kutch Mount Apt. 862
+Roselynmouth, DC 18371-7827', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (13, 'Shannon Haley', '9501 Name Gateway
+Lake Kailee, MD 25022', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (14, 'Hanna Bahringer', '6466 Eudora Radial
+North Micheal, ME 07164', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (15, 'Guido Towne', '11479 Konopelski Locks Apt. 260
+Willhaven, NY 80399-0716', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (16, 'Malvina Rohan', '468 Bradtke Coves Apt. 863
+Herzogtown, ID 26155', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (17, 'Paige Lakin', '1236 Presley Ridges
+Armaniville, MO 99593', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (18, 'Rosemarie Rath', '54333 Mikel Common Apt. 567
+West Athenamouth, MO 19351', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (19, 'Ardith Lebsack', '2276 Murphy Parkways
+Bruenland, CA 29991-8208', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (20, 'Sage Torphy', '798 Evert Meadow
+Moenton, NV 39061', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (21, 'Ryley Franecki', '80450 Forrest Union Suite 959
+North Aiden, CO 96263', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (22, 'George Ledner', '8898 Kessler Village
+New Raina, NC 85280-0091', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (23, 'Amina Baumbach', '879 Jacklyn Cliffs
+Kennystad, KY 99291', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (24, 'Anjali Hirthe', '517 Turcotte Extensions
+O''Haraland, OH 68324-5073', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (25, 'Tabitha Kling', '835 Cummings Causeway
+Euniceport, IN 03220', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (26, 'Travis Bogan', '2946 Carmel Court
+North Shana, MI 32079', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (27, 'Frank O''Keefe', '8025 Kennedi Valleys Suite 135
+Runolfsdottirfort, SC 95241-5970', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (28, 'Louvenia Wiza', '778 Stark Burg
+Skylarland, ME 26068-2771', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (29, 'Santa Ryan', '1123 Fredy Ridges
+Santiagotown, MO 58656', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (30, 'Sabina Adams', '663 Blanda Centers
+Amanimouth, WY 53024', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (31, 'Blake Bartoletti', '662 Elisa Key Apt. 088
+Chandlerstad, CT 85560-9244', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (32, 'Elliott Shields', '2366 Jaskolski Highway
+North Sigmund, WA 23397', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (33, 'Adah Leffler', '9704 Rosenbaum Plaza
+Parisianton, IN 87428-3331', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (34, 'Theodora Green', '59953 Fritsch Via
+Murazikland, MI 99835-4581', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (35, 'Josiah Walker', '7097 Ahmed Track
+North Madysonborough, MD 59494-5331', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (36, 'Kimberly Reilly', '7111 Electa Fall
+Lake Carley, NE 03926-8168', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (37, 'Kathlyn Hammes', '20295 Schinner Ferry Suite 544
+Kaseyfort, FL 84128', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (38, 'Maurice Heller', '445 Angelica Gateway Suite 522
+Krystinafurt, AZ 79037', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (39, 'Miguel Smith', '7124 Reilly Bridge Suite 912
+Ezequielborough, VT 63871', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (40, 'Vivienne Stracke', '52277 Woodrow Park
+Pacochafurt, ME 97351-9551', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (41, 'Angus Altenwerth', '159 Kelsie Hill Suite 517
+Craigberg, MS 26297-1387', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (42, 'Margaretta Okuneva', '2774 Edwardo Spring
+Kertzmanntown, AL 09190', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (43, 'Hadley Ziemann', '213 Christop Plains Apt. 634
+Haagfurt, IL 91760', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (44, 'Brandy Maggio', '51186 Nitzsche Summit
+North Liza, TN 63170-4678', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (45, 'Ashton Harber', '112 Kshlerin Isle Apt. 947
+Brianaburgh, NV 42420-9388', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (46, 'Makayla Hyatt', '7176 Mckayla Forges Apt. 167
+Leannberg, NV 22276-0703', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (47, 'Colton Yost', '839 Parker Points
+Lake Oswaldoland, WY 71195-7358', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (48, 'Johnathan Wisoky', '961 Wilfredo Mill Suite 562
+Jesusport, SD 20090-0674', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (49, 'Bernice Kozey', '82186 Adrienne Street Apt. 012
+Kenborough, ME 15422', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.publishers VALUES (50, 'Meta Hahn', '6901 Brakus Stream
+Port Vellaville, SD 37338-2746', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
 
+
+
+--
+-- Data for Name: documents; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.documents VALUES (1, 'Dolorem eaque ratione inventore voluptas.', '2014-03-14 10:41:37', 6, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (2, 'Autem voluptatem tenetur dolore fugit vel.', '1970-02-09 14:00:58', 22, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (3, 'Quia eveniet dolor eum nobis ipsum deleniti.', '1989-09-22 14:37:55', 33, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (4, 'Tenetur atque ut nulla quo soluta molestiae.', '1994-05-17 20:32:00', 35, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (5, 'Aspernatur commodi ad rerum.', '2003-01-18 11:14:49', 8, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (6, 'Voluptatem fugiat similique ducimus ea.', '2006-06-23 05:26:34', 32, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (7, 'Amet quidem illo optio eveniet.', '1988-02-03 17:39:42', 18, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (8, 'Dicta repudiandae aut aliquid et recusandae.', '1981-11-19 07:39:51', 18, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (9, 'Saepe voluptatum non ut enim sit.', '1985-12-26 04:55:55', 30, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (10, 'Fugit sint voluptatem magni qui sed et labore.', '2003-04-24 08:02:06', 11, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (11, 'Autem blanditiis maiores ratione.', '2000-10-18 18:29:07', 4, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (12, 'Magni occaecati libero fugiat rem ea est.', '1991-05-26 11:45:03', 39, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (13, 'Occaecati et laborum tempora voluptatem non sunt.', '1997-09-22 13:46:22', 40, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (14, 'Sunt molestiae dolorem officiis qui.', '1999-04-05 05:31:15', 37, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (15, 'Qui qui cumque asperiores eveniet quas.', '1994-01-07 06:24:16', 6, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (16, 'Eos dolorum molestiae ut odit culpa.', '1970-03-17 03:16:35', 34, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (17, 'Molestiae et voluptatem unde.', '1995-02-20 22:03:03', 35, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (18, 'Aliquid non debitis reprehenderit eaque.', '1994-01-18 22:19:36', 29, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (19, 'Qui ea dolor omnis explicabo non.', '2010-01-16 09:35:42', 19, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (20, 'Fuga maxime optio dolorem.', '2007-05-06 14:40:43', 38, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (21, 'Amet quis excepturi debitis et.', '1982-05-28 19:06:56', 2, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (22, 'Ut sed praesentium iusto cumque explicabo.', '2006-01-02 16:38:30', 35, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (23, 'Omnis iure consequuntur temporibus cupiditate.', '2009-01-25 16:04:00', 8, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (24, 'Accusantium illo placeat quia sint.', '1976-09-26 13:40:02', 45, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (25, 'Repellendus sint reiciendis id et.', '1977-06-04 16:43:09', 18, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (26, 'Sint atque ut rerum.', '2019-03-18 03:26:11', 23, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (27, 'Placeat et magni omnis est animi.', '2015-05-09 07:57:30', 13, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (28, 'Provident adipisci in reiciendis praesentium.', '1982-04-22 17:36:52', 35, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (29, 'Magni id blanditiis atque aut.', '2000-03-06 22:33:25', 43, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (30, 'Rem quae voluptatum eum incidunt ad debitis.', '1970-07-27 08:28:14', 23, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (31, 'Et nisi eos excepturi fugit.', '1999-11-08 03:36:32', 5, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (32, 'Consequatur velit autem veritatis beatae labore.', '1988-05-19 08:24:17', 37, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (33, 'Iste blanditiis et impedit nobis quidem.', '1986-07-28 08:12:03', 1, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (34, 'Rerum modi totam ex ad fuga minima.', '1971-10-20 16:25:18', 37, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (35, 'Voluptatibus expedita est aut quia hic.', '1977-11-01 19:31:39', 23, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (36, 'Sunt quaerat ducimus voluptatem reiciendis.', '1970-11-09 21:10:33', 15, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (37, 'Sed autem soluta repellendus earum sit.', '1998-11-14 23:50:29', 43, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (38, 'Eum esse a quis suscipit amet omnis.', '1997-11-12 22:48:55', 31, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (39, 'Repellendus sequi voluptatum ad ullam vel.', '1985-06-23 10:01:37', 50, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (40, 'Vel et atque animi distinctio molestiae mollitia.', '2001-12-21 08:40:27', 23, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (41, 'Est repellendus eaque autem voluptates.', '2012-05-31 18:07:25', 22, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (42, 'Ut et dolorem ut distinctio ut temporibus.', '1977-03-08 17:55:19', 23, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (43, 'In ut aut maiores consequatur saepe.', '1989-09-05 14:36:12', 49, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (44, 'Tempora libero odit qui minus magni modi.', '1978-01-03 01:29:03', 9, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (45, 'Aut dolor vel minus ex fugiat.', '1980-03-29 19:39:29', 44, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (46, 'Saepe laborum suscipit illo cum enim qui.', '1987-08-15 07:12:34', 20, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (47, 'Voluptatem voluptatem atque quo praesentium.', '1971-01-18 05:21:37', 7, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (48, 'Eaque ut vitae autem.', '1979-04-16 23:55:24', 22, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (49, 'Sit nihil delectus at eaque neque.', '2018-08-16 02:16:36', 23, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (50, 'Voluptas eos repudiandae velit quia cumque.', '1978-08-21 15:24:51', 20, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (51, 'Non nihil saepe autem eius iste quia rerum velit.', '1978-12-24 08:50:16', 41, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (52, 'Dolorem quasi qui sit reiciendis voluptatem.', '1981-06-21 14:49:21', 44, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (53, 'Quae voluptas sint tenetur recusandae.', '2018-01-23 13:23:16', 37, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (54, 'Itaque maxime aut cupiditate.', '1973-12-01 04:33:41', 32, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (55, 'Minus eum doloribus corrupti dolorem.', '1990-02-11 02:05:00', 42, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (56, 'Dignissimos eum quo ea nihil hic.', '1984-02-19 17:22:56', 34, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (57, 'Quia sequi et accusantium qui.', '1987-11-25 07:03:58', 31, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (58, 'Porro quisquam tempore ab.', '2008-01-11 15:55:15', 13, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (59, 'A et rerum voluptates animi.', '2010-02-08 08:44:44', 8, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (60, 'Id dolores velit qui maiores et.', '1975-09-24 07:12:46', 16, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (61, 'Provident vitae error voluptatem voluptatibus.', '1986-08-11 01:07:31', 29, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (62, 'Perspiciatis facere maxime quis pariatur et.', '2002-05-15 10:40:42', 36, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (63, 'Quidem velit aut asperiores corporis dolorem.', '1987-06-04 14:57:02', 49, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (64, 'Est harum suscipit ipsam qui ipsum saepe omnis.', '1990-08-13 15:21:13', 37, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (65, 'Aut praesentium pariatur sapiente dolores quam.', '1971-09-21 05:23:36', 25, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (66, 'Et sit eum qui nemo sed et.', '2012-06-26 18:13:25', 2, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (67, 'Non laborum et fugit sint et et incidunt et.', '1997-11-03 02:38:07', 14, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (68, 'Sit dolore itaque aut. Et deleniti et enim.', '1980-05-02 00:20:06', 16, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (69, 'Sint iure omnis debitis autem odio nam.', '1991-05-15 02:14:36', 30, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (70, 'Sint voluptatem blanditiis aut.', '1986-12-05 05:34:41', 36, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (71, 'Necessitatibus praesentium commodi aut veniam.', '2018-05-23 08:19:33', 34, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (72, 'Et ipsum id pariatur nesciunt quaerat aut.', '1992-07-07 20:34:13', 1, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (73, 'Accusamus quis sed earum veniam nobis inventore.', '1992-12-15 01:41:56', 29, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (74, 'Et deleniti itaque maiores qui aperiam nulla.', '1981-03-13 02:44:36', 5, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (75, 'Sed omnis temporibus dolorum.', '1990-06-02 10:15:16', 3, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (76, 'In praesentium quo ut sit et.', '2017-09-30 01:26:07', 32, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (77, 'Aut commodi suscipit inventore sunt incidunt ad.', '1974-08-03 04:48:34', 44, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (78, 'Necessitatibus maiores ullam dolorum ex numquam.', '1993-01-20 02:29:58', 12, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (79, 'Qui aut hic commodi vero laudantium.', '2017-07-21 14:30:05', 37, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (80, 'Asperiores deserunt quod qui temporibus.', '1993-10-02 10:05:51', 7, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (81, 'Similique optio ea totam illo.', '1986-01-15 09:35:18', 3, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (82, 'Minus magni dolor veniam.', '2001-05-02 11:22:10', 49, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (83, 'Ex est enim similique possimus iste molestiae.', '1974-06-19 20:57:07', 30, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (84, 'Est dolores qui illo a ea.', '1992-01-06 19:46:29', 38, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (85, 'Quia aperiam tempora sapiente quia.', '2007-07-21 09:10:06', 3, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (86, 'Nostrum architecto sit fuga repellat enim.', '1982-12-29 00:36:58', 46, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (87, 'Harum repudiandae debitis velit nam.', '2016-04-02 07:51:33', 13, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (88, 'Ducimus non laudantium ea quaerat.', '2004-08-23 15:55:30', 30, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (89, 'At qui suscipit et magnam.', '2013-08-24 23:31:03', 47, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (90, 'Impedit ex et sunt nemo maiores sed.', '2014-01-11 11:30:33', 15, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (91, 'Ab perspiciatis itaque unde beatae.', '1978-02-04 09:47:51', 15, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (92, 'Est a exercitationem voluptatum asperiores.', '2007-03-06 15:09:36', 29, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (93, 'Dolorem ea doloribus provident enim et enim.', '1979-03-04 13:50:13', 12, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (94, 'Sit nam maxime praesentium quaerat.', '2015-12-04 05:25:56', 18, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (95, 'Est ut voluptatum aspernatur.', '1976-05-05 07:44:56', 22, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (96, 'Et dolores doloremque harum veniam culpa.', '2008-02-21 15:12:00', 1, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (97, 'Fuga repudiandae expedita suscipit est.', '1971-04-15 08:58:01', 26, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (98, 'Nulla iusto tempore id omnis est sunt nihil.', '1979-11-03 14:44:40', 42, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (99, 'Voluptas in itaque dolores ea.', '2010-08-27 05:01:49', 12, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
+INSERT INTO public.documents VALUES (100, 'Nihil nulla a voluptas vero est aut.', '1987-11-01 22:35:39', 11, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
 
 --
 -- Data for Name: branches; Type: TABLE DATA; Schema: public; Owner: postgres
@@ -228,16 +299,6 @@ Mosciskifort, CA 55602-0687', '2019-05-05 18:39:47', '2019-05-05 18:39:47');
 INSERT INTO public.branches VALUES (5, 'Block, Dickinson and Dibbert', '677 Schamberger Plains Suite 231
 Erinfurt, DE 37507', '2019-05-05 18:39:47', '2019-05-05 18:39:47');
 
-
---
--- Data for Name: chief_editors; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.chief_editors VALUES (1, 'Clark', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.chief_editors VALUES (2, 'Margret', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.chief_editors VALUES (3, 'Nathanial', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.chief_editors VALUES (4, 'Camryn', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.chief_editors VALUES (5, 'Dakota', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 
 
 --
@@ -746,402 +807,6 @@ INSERT INTO public.copies VALUES (499, 66, 96, 1, '102M70', '2019-05-05 18:39:48
 INSERT INTO public.copies VALUES (500, 100, 85, 4, '029S54', '2019-05-05 18:39:48', '2019-05-05 18:39:48');
 
 
---
--- Data for Name: documents; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.documents VALUES (1, 'Dolorem eaque ratione inventore voluptas.', '2014-03-14 10:41:37', 6, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (2, 'Autem voluptatem tenetur dolore fugit vel.', '1970-02-09 14:00:58', 22, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (3, 'Quia eveniet dolor eum nobis ipsum deleniti.', '1989-09-22 14:37:55', 33, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (4, 'Tenetur atque ut nulla quo soluta molestiae.', '1994-05-17 20:32:00', 35, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (5, 'Aspernatur commodi ad rerum.', '2003-01-18 11:14:49', 8, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (6, 'Voluptatem fugiat similique ducimus ea.', '2006-06-23 05:26:34', 32, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (7, 'Amet quidem illo optio eveniet.', '1988-02-03 17:39:42', 18, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (8, 'Dicta repudiandae aut aliquid et recusandae.', '1981-11-19 07:39:51', 18, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (9, 'Saepe voluptatum non ut enim sit.', '1985-12-26 04:55:55', 30, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (10, 'Fugit sint voluptatem magni qui sed et labore.', '2003-04-24 08:02:06', 11, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (11, 'Autem blanditiis maiores ratione.', '2000-10-18 18:29:07', 4, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (12, 'Magni occaecati libero fugiat rem ea est.', '1991-05-26 11:45:03', 39, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (13, 'Occaecati et laborum tempora voluptatem non sunt.', '1997-09-22 13:46:22', 40, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (14, 'Sunt molestiae dolorem officiis qui.', '1999-04-05 05:31:15', 37, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (15, 'Qui qui cumque asperiores eveniet quas.', '1994-01-07 06:24:16', 6, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (16, 'Eos dolorum molestiae ut odit culpa.', '1970-03-17 03:16:35', 34, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (17, 'Molestiae et voluptatem unde.', '1995-02-20 22:03:03', 35, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (18, 'Aliquid non debitis reprehenderit eaque.', '1994-01-18 22:19:36', 29, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (19, 'Qui ea dolor omnis explicabo non.', '2010-01-16 09:35:42', 19, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (20, 'Fuga maxime optio dolorem.', '2007-05-06 14:40:43', 38, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (21, 'Amet quis excepturi debitis et.', '1982-05-28 19:06:56', 2, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (22, 'Ut sed praesentium iusto cumque explicabo.', '2006-01-02 16:38:30', 35, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (23, 'Omnis iure consequuntur temporibus cupiditate.', '2009-01-25 16:04:00', 8, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (24, 'Accusantium illo placeat quia sint.', '1976-09-26 13:40:02', 45, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (25, 'Repellendus sint reiciendis id et.', '1977-06-04 16:43:09', 18, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (26, 'Sint atque ut rerum.', '2019-03-18 03:26:11', 23, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (27, 'Placeat et magni omnis est animi.', '2015-05-09 07:57:30', 13, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (28, 'Provident adipisci in reiciendis praesentium.', '1982-04-22 17:36:52', 35, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (29, 'Magni id blanditiis atque aut.', '2000-03-06 22:33:25', 43, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (30, 'Rem quae voluptatum eum incidunt ad debitis.', '1970-07-27 08:28:14', 23, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (31, 'Et nisi eos excepturi fugit.', '1999-11-08 03:36:32', 5, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (32, 'Consequatur velit autem veritatis beatae labore.', '1988-05-19 08:24:17', 37, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (33, 'Iste blanditiis et impedit nobis quidem.', '1986-07-28 08:12:03', 1, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (34, 'Rerum modi totam ex ad fuga minima.', '1971-10-20 16:25:18', 37, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (35, 'Voluptatibus expedita est aut quia hic.', '1977-11-01 19:31:39', 23, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (36, 'Sunt quaerat ducimus voluptatem reiciendis.', '1970-11-09 21:10:33', 15, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (37, 'Sed autem soluta repellendus earum sit.', '1998-11-14 23:50:29', 43, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (38, 'Eum esse a quis suscipit amet omnis.', '1997-11-12 22:48:55', 31, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (39, 'Repellendus sequi voluptatum ad ullam vel.', '1985-06-23 10:01:37', 50, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (40, 'Vel et atque animi distinctio molestiae mollitia.', '2001-12-21 08:40:27', 23, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (41, 'Est repellendus eaque autem voluptates.', '2012-05-31 18:07:25', 22, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (42, 'Ut et dolorem ut distinctio ut temporibus.', '1977-03-08 17:55:19', 23, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (43, 'In ut aut maiores consequatur saepe.', '1989-09-05 14:36:12', 49, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (44, 'Tempora libero odit qui minus magni modi.', '1978-01-03 01:29:03', 9, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (45, 'Aut dolor vel minus ex fugiat.', '1980-03-29 19:39:29', 44, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (46, 'Saepe laborum suscipit illo cum enim qui.', '1987-08-15 07:12:34', 20, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (47, 'Voluptatem voluptatem atque quo praesentium.', '1971-01-18 05:21:37', 7, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (48, 'Eaque ut vitae autem.', '1979-04-16 23:55:24', 22, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (49, 'Sit nihil delectus at eaque neque.', '2018-08-16 02:16:36', 23, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (50, 'Voluptas eos repudiandae velit quia cumque.', '1978-08-21 15:24:51', 20, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (51, 'Non nihil saepe autem eius iste quia rerum velit.', '1978-12-24 08:50:16', 41, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (52, 'Dolorem quasi qui sit reiciendis voluptatem.', '1981-06-21 14:49:21', 44, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (53, 'Quae voluptas sint tenetur recusandae.', '2018-01-23 13:23:16', 37, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (54, 'Itaque maxime aut cupiditate.', '1973-12-01 04:33:41', 32, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (55, 'Minus eum doloribus corrupti dolorem.', '1990-02-11 02:05:00', 42, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (56, 'Dignissimos eum quo ea nihil hic.', '1984-02-19 17:22:56', 34, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (57, 'Quia sequi et accusantium qui.', '1987-11-25 07:03:58', 31, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (58, 'Porro quisquam tempore ab.', '2008-01-11 15:55:15', 13, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (59, 'A et rerum voluptates animi.', '2010-02-08 08:44:44', 8, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (60, 'Id dolores velit qui maiores et.', '1975-09-24 07:12:46', 16, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (61, 'Provident vitae error voluptatem voluptatibus.', '1986-08-11 01:07:31', 29, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (62, 'Perspiciatis facere maxime quis pariatur et.', '2002-05-15 10:40:42', 36, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (63, 'Quidem velit aut asperiores corporis dolorem.', '1987-06-04 14:57:02', 49, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (64, 'Est harum suscipit ipsam qui ipsum saepe omnis.', '1990-08-13 15:21:13', 37, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (65, 'Aut praesentium pariatur sapiente dolores quam.', '1971-09-21 05:23:36', 25, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (66, 'Et sit eum qui nemo sed et.', '2012-06-26 18:13:25', 2, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (67, 'Non laborum et fugit sint et et incidunt et.', '1997-11-03 02:38:07', 14, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (68, 'Sit dolore itaque aut. Et deleniti et enim.', '1980-05-02 00:20:06', 16, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (69, 'Sint iure omnis debitis autem odio nam.', '1991-05-15 02:14:36', 30, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (70, 'Sint voluptatem blanditiis aut.', '1986-12-05 05:34:41', 36, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (71, 'Necessitatibus praesentium commodi aut veniam.', '2018-05-23 08:19:33', 34, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (72, 'Et ipsum id pariatur nesciunt quaerat aut.', '1992-07-07 20:34:13', 1, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (73, 'Accusamus quis sed earum veniam nobis inventore.', '1992-12-15 01:41:56', 29, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (74, 'Et deleniti itaque maiores qui aperiam nulla.', '1981-03-13 02:44:36', 5, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (75, 'Sed omnis temporibus dolorum.', '1990-06-02 10:15:16', 3, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (76, 'In praesentium quo ut sit et.', '2017-09-30 01:26:07', 32, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (77, 'Aut commodi suscipit inventore sunt incidunt ad.', '1974-08-03 04:48:34', 44, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (78, 'Necessitatibus maiores ullam dolorum ex numquam.', '1993-01-20 02:29:58', 12, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (79, 'Qui aut hic commodi vero laudantium.', '2017-07-21 14:30:05', 37, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (80, 'Asperiores deserunt quod qui temporibus.', '1993-10-02 10:05:51', 7, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (81, 'Similique optio ea totam illo.', '1986-01-15 09:35:18', 3, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (82, 'Minus magni dolor veniam.', '2001-05-02 11:22:10', 49, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (83, 'Ex est enim similique possimus iste molestiae.', '1974-06-19 20:57:07', 30, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (84, 'Est dolores qui illo a ea.', '1992-01-06 19:46:29', 38, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (85, 'Quia aperiam tempora sapiente quia.', '2007-07-21 09:10:06', 3, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (86, 'Nostrum architecto sit fuga repellat enim.', '1982-12-29 00:36:58', 46, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (87, 'Harum repudiandae debitis velit nam.', '2016-04-02 07:51:33', 13, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (88, 'Ducimus non laudantium ea quaerat.', '2004-08-23 15:55:30', 30, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (89, 'At qui suscipit et magnam.', '2013-08-24 23:31:03', 47, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (90, 'Impedit ex et sunt nemo maiores sed.', '2014-01-11 11:30:33', 15, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (91, 'Ab perspiciatis itaque unde beatae.', '1978-02-04 09:47:51', 15, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (92, 'Est a exercitationem voluptatum asperiores.', '2007-03-06 15:09:36', 29, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (93, 'Dolorem ea doloribus provident enim et enim.', '1979-03-04 13:50:13', 12, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (94, 'Sit nam maxime praesentium quaerat.', '2015-12-04 05:25:56', 18, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (95, 'Est ut voluptatum aspernatur.', '1976-05-05 07:44:56', 22, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (96, 'Et dolores doloremque harum veniam culpa.', '2008-02-21 15:12:00', 1, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (97, 'Fuga repudiandae expedita suscipit est.', '1971-04-15 08:58:01', 26, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (98, 'Nulla iusto tempore id omnis est sunt nihil.', '1979-11-03 14:44:40', 42, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (99, 'Voluptas in itaque dolores ea.', '2010-08-27 05:01:49', 12, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-INSERT INTO public.documents VALUES (100, 'Nihil nulla a voluptas vero est aut.', '1987-11-01 22:35:39', 11, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
-
-
---
--- Data for Name: inv_editors; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.inv_editors VALUES (1, 80, 6, 'Tremayne Douglas', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (2, 5, 9, 'Natalia Bode', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (3, 15, 3, 'Janie Jacobs', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (4, 15, 6, 'Skye Ernser', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (5, 7, 3, 'Allan Marquardt', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (6, 89, 9, 'Blaze O''Connell', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (7, 4, 9, 'Nicklaus Hudson', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (8, 89, 1, 'Shawn Reinger', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (9, 4, 1, 'Olga Hintz', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (10, 70, 6, 'Ezekiel Bogisich', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (11, 88, 9, 'Vern Jenkins', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (12, 5, 7, 'Tomas Torp', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (13, 4, 1, 'Paul Tillman', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (14, 4, 8, 'Edmund Brakus', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (15, 5, 2, 'Elvis Ledner', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (16, 88, 9, 'Melody Zulauf', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (17, 5, 9, 'Ramiro Turner', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (18, 80, 7, 'Cathrine Lind', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (19, 7, 2, 'Adele Lueilwitz', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (20, 4, 4, 'Petra Gusikowski', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (21, 16, 4, 'Sam Emard', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (22, 57, 10, 'Marian Treutel', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (23, 89, 5, 'Abdiel Homenick', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (24, 57, 9, 'Loy Champlin', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (25, 4, 10, 'Gina Connelly', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (26, 88, 7, 'Yoshiko Greenfelder', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (27, 5, 9, 'August Weissnat', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (28, 80, 1, 'Lewis Weissnat', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (29, 16, 4, 'Alanna Hermiston', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (30, 88, 3, 'Darby Johnston', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (31, 70, 4, 'Shanel Koss', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (32, 89, 1, 'Nettie Wunsch', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (33, 16, 1, 'Evan Sauer', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (34, 80, 1, 'Nick Koelpin', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (35, 4, 9, 'Maia Adams', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (36, 15, 3, 'Shaniya Stark', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (37, 70, 8, 'Rodrigo Kassulke', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (38, 89, 9, 'Sabina Schmeler', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (39, 70, 3, 'Kaylee Goodwin', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (40, 7, 6, 'Catherine Monahan', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (41, 4, 9, 'Koby Stoltenberg', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (42, 89, 9, 'Mia Kuhic', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (43, 4, 4, 'Rolando Grimes', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (44, 57, 8, 'Spencer Nienow', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (45, 7, 6, 'Johan Goyette', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (46, 57, 3, 'Javon Hermiston', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (47, 70, 4, 'Orin Prosacco', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (48, 7, 6, 'Quinn Lesch', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (49, 89, 8, 'Juliana Kling', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.inv_editors VALUES (50, 15, 6, 'Kay Stehr', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-
-
---
--- Data for Name: journal_issues; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.journal_issues VALUES (1, 70, 3, 'Laudantium iste ut qui ab atque. Quasi tempore sed tempora veniam fugit omnis exercitationem. Rerum veniam ut ab eos corporis placeat cum. Debitis facere nam quo nihil. Et amet saepe voluptate optio iusto accusantium harum id. Minima animi placeat non. Similique odio dolorem distinctio laboriosam culpa totam aut. Praesentium omnis consequuntur dicta labore. Odio vel quis saepe quae repudiandae ut. Et et voluptatem provident sed quisquam qui. Hic voluptatibus nam deleniti.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (2, 57, 9, 'Iste accusamus eligendi sint aut. Possimus facere numquam et id atque asperiores numquam. Consequuntur nam quos cum hic dolorem doloremque expedita. Omnis deleniti pariatur quisquam molestiae ipsum. Est modi corporis voluptatem. Et quae repellendus incidunt quidem eveniet. Voluptatibus veritatis consequatur adipisci dolore voluptas architecto doloribus.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (3, 57, 3, 'Nulla deleniti id in laudantium. Qui omnis iusto saepe cupiditate. Aliquam repellat voluptates dicta praesentium. Rerum occaecati illum in cumque a delectus. Eaque aut sint voluptatibus dicta. Veritatis ut fugit praesentium rerum laudantium quod. Est maxime minus consequatur ullam velit ea non. Accusantium consequuntur occaecati odio eligendi earum eum quibusdam.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (4, 5, 8, 'Et asperiores hic reprehenderit. Iusto sed aliquam sapiente et sint. Rerum eveniet doloribus culpa reiciendis quia hic voluptas voluptatum. Voluptate nobis molestiae tempora beatae labore. Vel aut omnis tenetur enim aut commodi. Quia praesentium consequatur nemo voluptate. Optio asperiores ex sint autem iure. Omnis sunt voluptatem inventore ea.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (5, 7, 10, 'Quia facilis dolorum autem et. Ut iure nihil beatae dolorem ipsum dolor qui cupiditate. Voluptate eos id rerum aliquam dicta. Voluptate rerum aut aperiam laborum at repudiandae. Voluptas corrupti aut non impedit facilis fugit eos. Corporis molestiae pariatur ullam. Non assumenda id est harum debitis consequatur. Et sint eligendi earum iusto non numquam. Dolorum perspiciatis esse qui quam ipsa cumque. Tempora dolor et id quia ut et.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (6, 4, 9, 'Illo perspiciatis sunt dignissimos. Ipsum ut et molestiae ipsam qui ipsa. Voluptatem cum iusto non. Modi nemo nobis rerum omnis libero est. Occaecati recusandae dicta esse ratione dolorem ipsa cum. Possimus quia nesciunt odit magnam consequuntur sunt fugit. Et autem vel impedit soluta maxime sit aut. Reprehenderit sapiente consequatur omnis et. Quia tempora laborum nostrum consequatur quia. Quam excepturi id eum.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (7, 88, 7, 'At esse illo qui suscipit quis quasi harum. Odio perferendis quibusdam rerum ut ea quia. Atque ut vitae suscipit praesentium ipsum ipsam vitae. Quis corporis tenetur eum quo quia consequatur dolor. Assumenda odit deserunt et ex. Expedita quam autem voluptatem voluptatibus consectetur est. Maxime est quia distinctio praesentium rem suscipit in iste. Voluptatibus consequatur autem et rerum iure non impedit. In iusto soluta omnis. Atque ut aliquam ut suscipit suscipit. Suscipit qui ab voluptates.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (8, 4, 8, 'Facilis ex in quo et sunt est facilis. Sunt ea vel molestias voluptate aut ipsum. Sequi nemo voluptatem quis vitae excepturi nam. Veritatis distinctio at officia eligendi molestias quo. Mollitia quas voluptatem tempore. Consequatur rerum et id vero. Earum numquam vitae necessitatibus itaque iusto harum eaque quam. Aut omnis doloremque dolorem consequatur iusto.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (9, 16, 4, 'Possimus qui culpa sed nemo ducimus voluptates. Nostrum accusamus deserunt consequatur est ducimus ut. Quaerat illo qui sed ea vero delectus et. Doloribus debitis dolor perspiciatis explicabo dignissimos. Illum consectetur vel omnis voluptates repudiandae ex. Voluptates facere iure odit esse. Quis magnam ut ad debitis error placeat dolorem ea. Occaecati quisquam est architecto quas deleniti. Commodi voluptas voluptatem adipisci. Exercitationem incidunt facilis qui architecto et.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (10, 5, 2, 'Veritatis doloremque nam distinctio quae nam aut voluptate. Iure earum consequatur repellendus harum quae. Et possimus magnam et quia perspiciatis enim. Sed unde occaecati nobis dicta illum dolore id in. Consectetur sit est qui nemo nam quis occaecati. Vitae nisi quod corrupti rerum aut magni quam sit. Maxime aut occaecati libero perferendis quis asperiores. Ipsam repellat suscipit ut tenetur aliquid veniam.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (11, 7, 2, 'Quidem vel quis vel quos deserunt corporis. Totam facilis porro consequatur occaecati sint voluptatem velit. Iste expedita delectus deleniti quas sint consequatur harum. Voluptatibus fuga sunt vel amet ut temporibus. Qui sit in eum excepturi vel voluptatem fugit. Quia eligendi et voluptatem molestiae vitae dolores amet. Facere unde aperiam voluptates vero. Necessitatibus nemo doloremque est voluptatem consequuntur. Tempore sed laborum molestias.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (12, 89, 9, 'Id aliquid eum fugiat unde vel eius. Dolor saepe consectetur qui itaque ad. Sit ea vitae perspiciatis ipsam distinctio. Delectus laboriosam dolores nisi vel quis. Omnis amet quas deleniti nihil dolores hic voluptas ut. Est et necessitatibus consequatur laborum labore aperiam quos. Nihil voluptas error nihil soluta amet quia. Qui quos tenetur et. Ut voluptatem eum consequuntur quisquam. Sunt repellat cupiditate deleniti iure error.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (13, 80, 1, 'In distinctio enim exercitationem labore mollitia. Nobis repellendus exercitationem omnis sint autem accusantium qui. Suscipit corrupti officiis et nemo eum est natus. Cumque similique laudantium consequatur maiores. Eos ullam consectetur enim quae odit quasi quia quis. Doloremque at suscipit deserunt occaecati quae. Sit doloribus velit sunt sequi tempora ex aut. Sapiente est alias nihil excepturi est mollitia possimus.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (14, 15, 2, 'Voluptas ut maiores accusantium similique omnis officia. Recusandae assumenda sit modi quasi est placeat minima. Unde praesentium facilis sed. Quo eius libero ducimus voluptatem praesentium maiores. Voluptas explicabo voluptatum dicta culpa et at dolorum adipisci. Dicta provident aut molestias consequuntur dicta. Enim modi dolorem quidem officia et. Natus vero mollitia et et. Debitis eos eaque qui officia ex officiis accusantium quaerat. Et quia commodi quia earum minima qui enim.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (15, 16, 6, 'Doloremque id voluptatem eligendi reprehenderit hic omnis et. Nemo dicta blanditiis ab exercitationem ducimus hic rerum. Est necessitatibus aperiam illo. Cum officia amet amet et. Aut aut magni deserunt deserunt eaque. Incidunt et praesentium porro. Necessitatibus temporibus autem alias animi. Doloremque quo totam eos itaque. In eos accusamus fugit placeat atque est. Doloribus tenetur eligendi accusantium id iusto. Aut veniam labore nostrum aperiam.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (16, 7, 3, 'Nulla earum qui itaque non et. Saepe vel odit illum et dolores accusantium et. Architecto dolor nulla est modi. Velit aut ut at amet voluptatem hic. Non inventore et culpa doloribus. Corrupti hic aspernatur rerum veniam tempore. Porro assumenda dolore exercitationem accusamus provident in maiores.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (17, 88, 9, 'Aut sunt aut autem est. Voluptatem veritatis odio delectus. Quo ipsum at optio possimus deleniti. Dolorem voluptate animi inventore perferendis sed qui. Et aut debitis itaque et repudiandae maiores quia. Deleniti omnis et labore et. Dolorem aut voluptatem totam qui et enim veritatis. Laboriosam autem perferendis voluptatem non quis. Harum praesentium libero eveniet quidem et. Molestiae eligendi quasi est aut. Delectus enim molestiae in quisquam.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (18, 80, 6, 'Ut et saepe impedit in. Ullam et molestiae sed ea ut debitis. Alias sapiente ratione veniam qui quidem repellat sapiente. Libero nihil repudiandae adipisci doloribus tempora voluptatibus dolorem dolore. Quaerat corporis omnis impedit minus sunt. Nisi cum neque officia et vero. Sunt molestiae alias ratione nesciunt maxime modi. Id aut hic possimus et molestias. Hic recusandae accusamus eum molestiae. Occaecati numquam repellendus quisquam sed est. Ullam inventore ullam doloremque enim est esse.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (19, 57, 10, 'Porro et rerum harum ut aut placeat. Sed alias unde alias harum. Libero et voluptas ea eum. Libero architecto fugit aliquam dignissimos omnis est. Dolor dolorem molestias magni quia illo voluptatum. Officiis omnis nesciunt reprehenderit libero et aspernatur quis. Consectetur dolores sit saepe reprehenderit ea repellat. Explicabo quidem ut distinctio aliquid est occaecati et.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (20, 15, 6, 'Temporibus ex cupiditate facere eos iste voluptas magni. Velit in amet beatae. Rerum aut est eum voluptate qui cum temporibus. Eligendi voluptas omnis quae dolorum vel eos asperiores. Facilis atque eos deserunt rem consectetur eligendi est. Modi reprehenderit ut ducimus nostrum ut laboriosam molestias. Corrupti fugiat necessitatibus impedit vel dolore totam. Suscipit ad similique voluptas dolores sint.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (21, 89, 10, 'Rerum quia nemo aut minima non. Autem eius qui quia est. Repudiandae non facilis earum est. Ut deleniti cum est natus aut placeat. Voluptas vero laudantium commodi qui. Perferendis voluptas accusamus consectetur distinctio incidunt repellendus vero. Ipsam eligendi voluptas mollitia sed. Dolor ipsum fuga non temporibus. Ullam cum libero dolorum harum omnis.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (22, 70, 6, 'Quam nostrum et delectus nam animi. Reprehenderit minima voluptatem omnis voluptatem. Dicta omnis deleniti maiores autem labore sed. Ipsa consequatur molestiae reiciendis facilis. Nisi ut occaecati cum dolores ipsam voluptas ex. Quia odit molestiae recusandae est. Ea omnis id qui eum reprehenderit quos magnam. Dolorum quia odit ut rem harum et possimus. Nostrum incidunt dignissimos aut in blanditiis possimus. Corporis nihil enim autem. Nihil aut quo inventore alias unde.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (23, 80, 5, 'Hic sed ut nulla. Quia dolor soluta laborum aliquam nihil provident rerum. Impedit quis itaque inventore nobis excepturi autem. Ut laborum aut autem nisi rem. Culpa doloremque animi nulla rerum. Aut blanditiis enim dolores qui soluta iusto et laudantium. Doloremque consectetur maxime pariatur nihil in qui. Dolor aliquam laudantium nisi doloremque. Minima explicabo suscipit enim nam ratione et officiis. Itaque quae dolorum et aut consequatur incidunt. Distinctio officia qui natus.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (24, 80, 2, 'Dolorum maiores temporibus vel at harum nihil. Doloremque ut quaerat aut sit iusto rerum vitae. Accusantium voluptatem quia et in. Vitae corrupti ipsum fugiat id fugit quisquam. Beatae et nostrum et rerum rerum. Vitae adipisci et ut alias. Quam commodi possimus enim nemo.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (25, 57, 8, 'Optio praesentium mollitia quia enim. Quasi tenetur sint nisi rerum ut. Maxime quia aspernatur quidem nisi qui. Porro eveniet illum unde dolor. Expedita cum aspernatur amet ut tempore nostrum. Natus est quis et et et maxime voluptatem. Ad dolor tempore nulla et dolores quas dolorem. Corrupti nam quis optio quisquam. Perferendis laboriosam voluptatibus nihil.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (26, 4, 1, 'Quia in neque provident et. Illum et voluptatem et quidem adipisci facere ab. Autem inventore laborum totam hic cumque distinctio. Suscipit est consequuntur accusamus quo id. Quaerat pariatur quia distinctio repellendus. Eius neque incidunt recusandae quaerat et sed. Ut rerum id eos vero exercitationem consequatur dolor. Vel sunt cumque aut ut aut quas rerum quia. Quia in voluptas possimus quia. Ratione voluptatum delectus ipsa et reprehenderit. Cumque sit harum aliquid eaque.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (27, 70, 10, 'Provident quas autem rerum ratione et voluptate et deleniti. Placeat odit a ut laborum fugit. Molestias deleniti aut molestiae nihil. Rerum autem similique accusamus minima fuga. Minus delectus dolores maxime et ut sequi. Voluptatum minus adipisci animi qui suscipit et sed. Provident vel architecto vel qui quia. Explicabo voluptas eaque repellat deserunt quaerat. Autem ipsa sit ratione ex esse.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (28, 4, 10, 'Aut labore libero esse animi fuga id corrupti. Facere dolorem sed mollitia ipsa culpa. Quis ea doloremque commodi atque aliquam. A dolorem quasi iusto et aut distinctio. Et alias eum facere. Ipsa aut dicta ducimus pariatur voluptas qui molestiae. Necessitatibus numquam corrupti et porro. Et quae amet voluptatibus eveniet pariatur voluptas consequatur. Officiis eos qui et harum doloremque qui minus quod. Sed amet harum corrupti in commodi.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (29, 89, 4, 'Laudantium nisi natus ut eius architecto porro. Qui repellat est hic occaecati nobis. Consequuntur quibusdam amet nesciunt sapiente sapiente eum est. Labore reprehenderit autem dolorem perferendis ea. Accusantium voluptates dolorum quo in ratione iusto. Aspernatur recusandae delectus assumenda et. Qui adipisci aut illo accusantium aut fugit.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (30, 5, 9, 'Accusamus et eveniet consequatur adipisci itaque quia veritatis. Iure suscipit neque et necessitatibus cupiditate reiciendis unde. Sed dignissimos doloribus iure sunt. Incidunt voluptatum laborum distinctio nesciunt praesentium. Aut soluta vel quibusdam ut modi facilis ut. Tempora dolores cupiditate et sed est. Ut ratione ipsum omnis id nihil id recusandae nulla.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (31, 89, 5, 'Consequatur voluptas mollitia consectetur minus illo velit facere. Mollitia expedita nesciunt beatae velit recusandae. Blanditiis a facilis sint quo porro velit. Nam non quisquam sint perferendis voluptatem nemo. Eum repellendus est omnis sapiente eligendi sint voluptatem dolorem. Et beatae optio nam voluptas. Nobis et atque dolores omnis eius facere dolor. Laboriosam molestiae rerum quam consequatur ex libero quia.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (32, 70, 4, 'Dolore debitis veritatis impedit quisquam quos. Velit ipsam rerum quia velit facere quaerat voluptatum. Fugiat voluptate itaque sint ut. Recusandae voluptatum nisi nam laboriosam voluptatem inventore et. Qui et nihil laboriosam ducimus ipsa qui nam ducimus. Ipsum ut dolorum recusandae ut numquam. Et sunt culpa cupiditate voluptates facilis quo. Dolores quos voluptatem nostrum et harum nobis. Illo aliquam vel quidem. Sunt praesentium sit maiores consectetur accusantium voluptatem quae.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (33, 80, 7, 'Dicta possimus incidunt animi ut rem assumenda. Aut itaque sunt error consequatur impedit ipsa non quas. Velit maxime voluptatem et et vel. Nesciunt quia laboriosam excepturi corrupti et debitis. Et et sit omnis sint rerum sunt. Qui eaque debitis porro consequatur id debitis et. Aut qui cum et magnam aspernatur magni. Qui sit ab quas fugiat. Tenetur est quisquam aliquid fuga eum officiis quod.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (34, 5, 7, 'Id facilis quisquam corporis iure voluptatem. Aut ducimus aut et. Ut inventore quo sit omnis expedita facere consequatur. Expedita illum dolorum architecto est quae. Sapiente illo totam qui quaerat. Ut eaque et nobis rem aut porro. Rerum asperiores cumque ratione magni repellat. Incidunt eveniet aut aut unde occaecati voluptas veniam. Alias qui qui quasi illum. Doloribus ipsa possimus dolorem et. Sint pariatur fuga error et.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (35, 7, 6, 'Omnis dolore repudiandae dolores laborum aperiam cum repellendus. Et voluptas sit iste voluptates et aut quia. Placeat possimus fugit ab non asperiores. Nobis quaerat sed eum ratione inventore et sunt. Excepturi quo cum corrupti soluta sed eum. Officia occaecati iste autem quis dolorem numquam rem earum. Consequatur id dolore deserunt doloribus laborum vel vel quam. Velit hic sunt error laboriosam itaque maiores voluptate.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (36, 88, 3, 'Voluptatem magni aperiam a quia odit id. Necessitatibus nam quas nemo esse vero. Qui quia nihil doloremque assumenda voluptatem tempora necessitatibus. Sunt porro sed aut qui magnam. Expedita laboriosam nisi delectus eius et occaecati. Sunt quidem cumque aspernatur quas. Voluptatem quo asperiores molestiae animi consequuntur consequatur illo molestias.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (37, 89, 2, 'Ab rerum rem ut qui accusamus. Quis cum est repellat quasi aut. Dignissimos fuga voluptatem eligendi. Officia labore atque provident quam. Ad temporibus debitis adipisci doloribus illo asperiores. Est necessitatibus quo voluptas qui quae eos. Qui aut rem dolores quam est. Laudantium quisquam dolorem tempora est in magni consequatur. Et voluptatem sequi autem ut. Possimus aut ut earum et qui ut nihil. Rem excepturi culpa ipsa libero rerum nobis a.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (38, 70, 1, 'Porro est ab molestiae in architecto alias nihil beatae. Quam debitis eum consequatur minus qui maxime. Saepe alias ut iusto perspiciatis ut. Ad voluptatem sint fuga numquam. Totam dignissimos deleniti aliquid officia ducimus occaecati quia. Fugiat incidunt rerum quibusdam repudiandae aut. Aspernatur suscipit tempore qui aut unde vel et. Perferendis in numquam quisquam accusantium aut eos.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (39, 15, 3, 'Et temporibus at voluptas laboriosam molestiae ea. Debitis est provident soluta esse ipsum itaque. Molestias odio ea sed voluptatum nemo. Pariatur et voluptatem provident qui magnam iste ex. Unde natus nulla id voluptate nobis odit cum. Aut eaque aut est ad et. Dolorem reiciendis odio aut omnis consequuntur. Dolor consequatur voluptas sequi numquam molestiae sapiente. Aspernatur et reiciendis sint accusantium.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (40, 16, 9, 'Autem eveniet non neque velit iste. Voluptatem consequatur amet vero voluptas. Perspiciatis enim et voluptas. Perferendis ipsum ipsam nisi non. Aut nihil quisquam dolorem aperiam ipsum vero velit omnis. Officia quisquam eos vel maxime velit. Qui animi soluta numquam eos. Et omnis deserunt id. Quaerat adipisci quis tempore dolore rerum sint et.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (41, 16, 2, 'Fuga quia aut quis aspernatur quas ut enim. Impedit et accusamus omnis fuga magnam eligendi hic accusamus. Recusandae nesciunt deleniti rerum amet possimus. Rem doloremque architecto qui iure excepturi et. Architecto aut sunt itaque iure nesciunt fugiat. Qui minus sunt voluptatem voluptas omnis et quia. Temporibus possimus tempore corporis nisi totam commodi. Temporibus quaerat sint enim libero id.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (42, 80, 10, 'Sapiente ad numquam totam iure. Aut consectetur perferendis impedit ratione molestiae ratione. Et incidunt delectus eaque maxime rem sunt et. Neque excepturi sit placeat saepe cupiditate. At architecto ut voluptas magni nobis enim ut. Alias nihil laboriosam sapiente rerum eaque. Aliquid molestiae ad voluptas nam cumque atque nam. Est in ea inventore autem. Omnis eligendi similique saepe vel eum minima. Quia debitis ratione iste dignissimos. Error id aliquam est voluptate velit.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (43, 16, 1, 'Totam omnis nostrum voluptate nulla at dolorum. Corrupti ducimus aut enim sequi. Expedita minima est odit id necessitatibus sequi sequi. Fuga nostrum est veniam minus repudiandae et. Perferendis perferendis alias et et. Itaque error porro dolor. Neque consequuntur voluptate aut facere eveniet dolore officia exercitationem. Dolore porro cum non. Ut laborum debitis magnam maiores officia animi.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (44, 16, 3, 'Nostrum ratione quis cupiditate voluptates est. Sed dolores nam illo tempore quia. Ratione ut ratione praesentium omnis non. Architecto omnis saepe placeat tempore velit vero mollitia. Quia similique perferendis officia distinctio. Est quos quod et accusamus ut. Dignissimos nulla culpa nulla ad dolore sunt. Vel vel quia illum qui sed ab qui. Sed quam pariatur et. Occaecati delectus provident exercitationem facilis in.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (45, 89, 1, 'Quaerat placeat quia maxime asperiores. Inventore ratione quis est. Ipsam molestiae deserunt assumenda. Veniam quidem ut facilis quae sed doloribus iste. Sed perferendis ullam est quia natus odio quasi. Deserunt accusamus omnis distinctio voluptatibus dolorum nobis veniam. Aperiam sed reprehenderit sit aut aut.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (46, 70, 8, 'Voluptatem eos et voluptatem dicta doloribus facilis. Impedit dolor esse similique inventore delectus enim. Nemo reprehenderit voluptatem et voluptatem nulla quas dolorum. Et praesentium ut et animi dolorum beatae accusamus. Et ut asperiores qui exercitationem accusantium. Accusantium voluptas sit totam distinctio vitae explicabo incidunt libero. Magnam distinctio eum velit quia molestiae.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (47, 80, 8, 'Odit officiis assumenda beatae et. Magnam ut alias fugiat dolorum. Enim quo molestiae illo sit molestiae soluta ut. Consectetur saepe amet veritatis architecto quibusdam. Et reiciendis repudiandae sit blanditiis autem placeat laudantium. Corrupti omnis suscipit officiis. Libero aperiam et voluptates voluptas perferendis quo. Maxime ea dolor quae libero iure. Et tempora excepturi velit tempora voluptatum. Deleniti earum magni harum quos totam praesentium.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (48, 4, 4, 'Ut consequatur beatae atque repudiandae veritatis et. Explicabo voluptatem minima minus amet esse. Aut ut et illo amet quis ut. Odit itaque explicabo nam et nesciunt qui. Id temporibus tempora quaerat perferendis. Ea provident et asperiores quas velit ut sed officiis. Eligendi et ea qui magnam. Ipsam numquam molestias qui consequatur asperiores dignissimos repellat. Vel repellat dicta laboriosam similique dolores enim corporis natus.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (49, 89, 8, 'Aut commodi recusandae doloribus dicta. Labore dolores voluptates ratione similique autem et. Corporis occaecati illum cumque doloremque quia explicabo sint. Ut qui qui in eius in nostrum. Praesentium qui possimus tenetur ut. Omnis tenetur voluptatum quae aspernatur aut quod. Iste doloribus dolore cum. Cum officia ut pariatur illum accusamus. Eos molestias doloribus minus recusandae qui. Voluptatem magni consequatur nam tempore sequi ullam repellat eum. Consectetur autem est ut at eligendi.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_issues VALUES (50, 7, 5, 'Aut occaecati odit iste. Quidem veniam autem fugit aut expedita. A non qui sit et. Est non commodi quidem delectus numquam maxime ut. Aut ducimus eaque iure ut optio distinctio sed. Aut modi dolorum nobis exercitationem libero et. Suscipit debitis dolorem dolor. Quae sit dolore quia laborum ea facere rerum. Ea deleniti magni eum fugiat qui. Non qui ut dignissimos qui recusandae.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-
-
---
--- Data for Name: journal_volumes; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.journal_volumes VALUES (1, 88, 11, 2, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_volumes VALUES (2, 70, 13, 3, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_volumes VALUES (3, 16, 8, 1, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_volumes VALUES (4, 5, 14, 1, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_volumes VALUES (5, 57, 16, 1, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_volumes VALUES (6, 7, 16, 2, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_volumes VALUES (7, 89, 1, 3, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_volumes VALUES (8, 15, 14, 1, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_volumes VALUES (9, 4, 6, 4, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.journal_volumes VALUES (10, 80, 3, 1, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-
-
---
--- Data for Name: migrations; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.migrations VALUES (3886, '2014_10_12_000000_create_users_table', 1);
-INSERT INTO public.migrations VALUES (3887, '2014_10_12_100000_create_password_resets_table', 1);
-INSERT INTO public.migrations VALUES (3888, '2019_04_25_023153_create_documents_table', 1);
-INSERT INTO public.migrations VALUES (3889, '2019_04_25_024014_create_authors_table', 1);
-INSERT INTO public.migrations VALUES (3890, '2019_04_25_024133_create_writes_table', 1);
-INSERT INTO public.migrations VALUES (3891, '2019_04_25_024232_create_books_table', 1);
-INSERT INTO public.migrations VALUES (3892, '2019_04_25_024555_create_journal_volumes_table', 1);
-INSERT INTO public.migrations VALUES (3893, '2019_04_25_024721_create_journal_issues_table', 1);
-INSERT INTO public.migrations VALUES (3894, '2019_04_25_024919_create_chief_editors_table', 1);
-INSERT INTO public.migrations VALUES (3895, '2019_04_25_025315_create_inv_editors_table', 1);
-INSERT INTO public.migrations VALUES (3896, '2019_04_25_025405_create_proceedings_table', 1);
-INSERT INTO public.migrations VALUES (3897, '2019_04_25_033224_alter_table_writes_add_foreign_tag_books_document_id', 1);
-INSERT INTO public.migrations VALUES (3898, '2019_04_25_033939_alter_table_journal_volumes_add_foreign_tag_chief_editor_editor_id', 1);
-INSERT INTO public.migrations VALUES (3899, '2019_04_25_040829_create_publishers_table', 1);
-INSERT INTO public.migrations VALUES (3900, '2019_04_25_041014_alter_table_documents_add_foreign_tag_publisher_publisher_id', 1);
-INSERT INTO public.migrations VALUES (3901, '2019_04_27_001357_create_branches_table', 1);
-INSERT INTO public.migrations VALUES (3902, '2019_04_27_001458_create_copies_table', 1);
-INSERT INTO public.migrations VALUES (3903, '2019_04_27_002029_create_readers_table', 1);
-INSERT INTO public.migrations VALUES (3904, '2019_04_27_002142_create_reserves_table', 1);
-INSERT INTO public.migrations VALUES (3905, '2019_04_27_002745_create_borrows_table', 1);
-
-
---
--- Data for Name: password_resets; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- Data for Name: proceedings; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.proceedings VALUES (1, 25, '2006-05-28 14:43:31', '4714 Theodore Hill
-West Websterbury, NE 20067', 'LouisaGlover', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.proceedings VALUES (2, 21, '2006-11-05 07:48:05', '196 Mohr Crescent
-South Ignacio, ID 93133', 'HailieOrtiz', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.proceedings VALUES (3, 90, '1979-12-25 09:28:30', '980 Christiansen Inlet Suite 688
-Eichmannborough, AK 16910-5213', 'LemuelToy', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.proceedings VALUES (4, 23, '1993-05-16 16:37:10', '920 Koss Springs
-Strackefurt, WY 28777', 'LelandPouros', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.proceedings VALUES (5, 78, '2016-03-24 12:50:10', '118 Zulauf Springs Apt. 731
-New Perrymouth, MO 82166-6664', 'JanaWatsica', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.proceedings VALUES (6, 14, '1975-03-10 08:55:50', '1248 Beatty Forges Apt. 243
-Lake Jacynthe, KS 40494-8508', 'BruceMuller', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.proceedings VALUES (7, 36, '2003-02-24 08:12:06', '237 Ayla Forge Apt. 255
-Satterfieldshire, DE 76985-1591', 'EmmettMurphy', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.proceedings VALUES (8, 44, '1976-05-02 14:31:42', '8199 Hane Dale Apt. 781
-North Cordell, GA 20482-6330', 'LoraDicki', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.proceedings VALUES (9, 85, '1980-01-16 08:00:12', '60117 Von Drives
-Jacobsmouth, NV 29896-6948', 'BreannaDaugherty', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-INSERT INTO public.proceedings VALUES (10, 31, '1998-09-05 22:21:47', '80748 Skiles Square
-Parisianhaven, HI 33135-7097', 'MichaelHermiston', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
-
-
---
--- Data for Name: publishers; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.publishers VALUES (1, 'Garth Willms', '64191 Moore Circles
-Port Monserrate, CT 02877', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (2, 'Vidal Jones', '880 Darrin Street Suite 978
-Felipachester, IN 97822', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (3, 'Santiago Koss', '120 Adriel Orchard
-North Gina, MS 17065', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (4, 'Stan Zulauf', '3962 Hettinger Gateway Apt. 556
-South Lenny, UT 36725-9416', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (5, 'Gianni Heaney', '931 Alize Union
-Mitchellmouth, NH 23291', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (6, 'Abdullah Doyle', '502 Esmeralda Summit Apt. 410
-Daniellamouth, NE 83998', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (7, 'Sierra Eichmann', '933 Mills Roads
-Casperchester, VA 08111', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (8, 'Janick Jast', '435 Herminio Wells
-New Genesis, FL 36593-2153', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (9, 'Letitia Wilkinson', '720 Medhurst Pine Suite 367
-Gunnerchester, OH 49220-8890', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (10, 'Xzavier Kuvalis', '8745 Dakota Gardens Suite 501
-Wymanmouth, NE 32584-4067', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (11, 'Paul Ratke', '4302 Kris Highway
-Fayfurt, KY 12249-2927', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (12, 'Pasquale Cartwright', '2457 Kutch Mount Apt. 862
-Roselynmouth, DC 18371-7827', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (13, 'Shannon Haley', '9501 Name Gateway
-Lake Kailee, MD 25022', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (14, 'Hanna Bahringer', '6466 Eudora Radial
-North Micheal, ME 07164', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (15, 'Guido Towne', '11479 Konopelski Locks Apt. 260
-Willhaven, NY 80399-0716', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (16, 'Malvina Rohan', '468 Bradtke Coves Apt. 863
-Herzogtown, ID 26155', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (17, 'Paige Lakin', '1236 Presley Ridges
-Armaniville, MO 99593', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (18, 'Rosemarie Rath', '54333 Mikel Common Apt. 567
-West Athenamouth, MO 19351', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (19, 'Ardith Lebsack', '2276 Murphy Parkways
-Bruenland, CA 29991-8208', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (20, 'Sage Torphy', '798 Evert Meadow
-Moenton, NV 39061', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (21, 'Ryley Franecki', '80450 Forrest Union Suite 959
-North Aiden, CO 96263', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (22, 'George Ledner', '8898 Kessler Village
-New Raina, NC 85280-0091', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (23, 'Amina Baumbach', '879 Jacklyn Cliffs
-Kennystad, KY 99291', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (24, 'Anjali Hirthe', '517 Turcotte Extensions
-O''Haraland, OH 68324-5073', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (25, 'Tabitha Kling', '835 Cummings Causeway
-Euniceport, IN 03220', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (26, 'Travis Bogan', '2946 Carmel Court
-North Shana, MI 32079', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (27, 'Frank O''Keefe', '8025 Kennedi Valleys Suite 135
-Runolfsdottirfort, SC 95241-5970', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (28, 'Louvenia Wiza', '778 Stark Burg
-Skylarland, ME 26068-2771', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (29, 'Santa Ryan', '1123 Fredy Ridges
-Santiagotown, MO 58656', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (30, 'Sabina Adams', '663 Blanda Centers
-Amanimouth, WY 53024', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (31, 'Blake Bartoletti', '662 Elisa Key Apt. 088
-Chandlerstad, CT 85560-9244', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (32, 'Elliott Shields', '2366 Jaskolski Highway
-North Sigmund, WA 23397', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (33, 'Adah Leffler', '9704 Rosenbaum Plaza
-Parisianton, IN 87428-3331', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (34, 'Theodora Green', '59953 Fritsch Via
-Murazikland, MI 99835-4581', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (35, 'Josiah Walker', '7097 Ahmed Track
-North Madysonborough, MD 59494-5331', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (36, 'Kimberly Reilly', '7111 Electa Fall
-Lake Carley, NE 03926-8168', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (37, 'Kathlyn Hammes', '20295 Schinner Ferry Suite 544
-Kaseyfort, FL 84128', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (38, 'Maurice Heller', '445 Angelica Gateway Suite 522
-Krystinafurt, AZ 79037', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (39, 'Miguel Smith', '7124 Reilly Bridge Suite 912
-Ezequielborough, VT 63871', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (40, 'Vivienne Stracke', '52277 Woodrow Park
-Pacochafurt, ME 97351-9551', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (41, 'Angus Altenwerth', '159 Kelsie Hill Suite 517
-Craigberg, MS 26297-1387', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (42, 'Margaretta Okuneva', '2774 Edwardo Spring
-Kertzmanntown, AL 09190', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (43, 'Hadley Ziemann', '213 Christop Plains Apt. 634
-Haagfurt, IL 91760', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (44, 'Brandy Maggio', '51186 Nitzsche Summit
-North Liza, TN 63170-4678', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (45, 'Ashton Harber', '112 Kshlerin Isle Apt. 947
-Brianaburgh, NV 42420-9388', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (46, 'Makayla Hyatt', '7176 Mckayla Forges Apt. 167
-Leannberg, NV 22276-0703', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (47, 'Colton Yost', '839 Parker Points
-Lake Oswaldoland, WY 71195-7358', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (48, 'Johnathan Wisoky', '961 Wilfredo Mill Suite 562
-Jesusport, SD 20090-0674', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (49, 'Bernice Kozey', '82186 Adrienne Street Apt. 012
-Kenborough, ME 15422', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.publishers VALUES (50, 'Meta Hahn', '6901 Brakus Stream
-Port Vellaville, SD 37338-2746', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
 
 
 --
@@ -1250,6 +915,7 @@ INSERT INTO public.readers VALUES (50, 'Regular', 'Delmer Lakin', '641 Alf Vista
 Rickeyshire, AL 84051-1973', 37345730, '2019-05-05 18:39:48', '2019-05-05 18:39:48');
 
 
+
 --
 -- Data for Name: reserves; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1266,67 +932,373 @@ INSERT INTO public.reserves VALUES (9, 14, 100, 47, 5, '2019-05-05 12:24:24', '2
 INSERT INTO public.reserves VALUES (10, 21, 51, 82, 3, '2019-05-05 17:55:57', '2019-05-05 18:39:48', '2019-05-05 18:39:48');
 
 
---
--- Data for Name: sessions; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
 
 --
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: borrows; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.users VALUES (1, 'Mrs. Lori Sporer', 'fadel.zelda@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'JjmXLVouAv', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (2, 'Ole Bartoletti DDS', 'steuber.gerardo@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '94cDKpG8CN', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (3, 'Vada Schmitt', 'fleta.bartell@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ySCXF0jxMU', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (4, 'Dr. Erick Bartell II', 'hlueilwitz@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'cjRz92122s', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (5, 'Benjamin Wiegand', 'derek.ohara@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'D21RpHbdpv', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (6, 'Colby Hilpert', 'raphaelle38@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'rPFOlhmw1w', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (7, 'Eriberto Bechtelar', 'dayna.schroeder@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ronkgqAQqo', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (8, 'Mr. Mike Larkin', 'kurt.jakubowski@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'mg5kQUi9Te', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (9, 'Elta Romaguera', 'candido.price@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'C7PwLjrncf', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (10, 'Verda Hintz', 'pearline.robel@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ESlBISGZjz', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (11, 'Shaina Huel', 'bobbie04@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'R3ymUiJ5R7', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (12, 'Leonie Hermann Jr.', 'hope.runolfsson@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'kSsf0kCY7h', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (13, 'Prof. Heath VonRueden DDS', 'rosanna.wintheiser@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'UHe6aysOlk', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (14, 'Berniece Stokes PhD', 'kunde.teagan@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'tybFbPUg3G', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (15, 'Mrs. Maggie Runolfsdottir', 'gmarvin@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '8BTamXpZ4b', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (16, 'Lera Pfannerstill Jr.', 'joy.brown@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'h0RQ2SeLEM', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (17, 'Flavie Stanton', 'alden.murazik@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'gKNRtsSCX8', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (18, 'Miss Roxanne Langosh V', 'bpaucek@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'CNuoYWTRKU', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (19, 'Juliana Thompson', 'ike01@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'xkyvUbIgBt', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (20, 'Lizzie Feeney', 'brionna.koch@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '0NtyvZ3cus', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (21, 'Coty McCullough', 'jebert@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'HiHAU2a1NZ', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (22, 'Ms. Nettie Von PhD', 'johann00@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'vkuQoirvX9', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (23, 'Miss Karlee Jacobs V', 'ctorphy@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'wTsIPh6Vg8', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (24, 'Montana Abshire', 'fredy.schaefer@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'qyWCFT4CeU', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (25, 'Sebastian Keebler', 'jones.jayden@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Rg0dNH5DWH', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (26, 'Theron Pagac', 'cskiles@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'DFNVsJoQB2', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (27, 'Emerald Boyle', 'blaze12@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ZwgSgSwJoy', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (28, 'Lucius Zboncak', 'adrian.greenfelder@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'clEadwCyfU', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (29, 'Cade Schuppe', 'krystel32@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'GJCRRzsUPZ', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (30, 'Miss Sadye Kunde', 'gilberto.upton@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'nzYZ4Qi70e', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (31, 'Raul Kerluke', 'sylvan21@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'wsmL2Eoat0', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (32, 'Bell Buckridge', 'theresia04@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Jg5oHdKKZu', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (33, 'Magdalena Renner', 'bailey.mortimer@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'RGZhwk0VAW', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (34, 'Ms. Patsy Shanahan DVM', 'kendra.shields@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'bYgCsbIYBz', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (35, 'Mr. Dewitt Orn', 'russel.aracely@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'NsPjB808wM', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (36, 'Kurt Dicki', 'jones.erling@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'hMRgYXGp0n', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (37, 'Sigrid Pouros II', 'sziemann@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'xx8QqyGxHX', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (38, 'Mrs. Krystina Kris', 'fwelch@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'i6DjnMpTNF', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (39, 'Ben Wyman', 'evalyn09@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'byw6Lfavem', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (40, 'Trinity Rohan', 'clotilde48@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2RHHVG19NW', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (41, 'Elmore Skiles', 'leta90@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'o6ltU0Zm5A', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (42, 'Mr. Lonzo Herman', 'windler.olga@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'M7hqLuWYLN', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (43, 'Macy Schneider', 'bwatsica@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'pKYqnQNPxO', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (44, 'Daron Roberts', 'iheller@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ntsjLbM9Cl', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (45, 'Matilde Powlowski PhD', 'rory50@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'CN40ANXw6q', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (46, 'Kale Morar', 'zack85@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'QZSWb20Xck', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (47, 'Miss Lessie Powlowski', 'angeline13@example.net', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'OTM5bGwne0', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (48, 'Dr. Mary Crist PhD', 'moshe60@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '18mL5OEiBA', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (49, 'Shirley Heidenreich I', 'shuel@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'unQkmdl7Ky', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
-INSERT INTO public.users VALUES (50, 'Georgiana Abernathy', 'price.quitzon@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'CYaUszwcP6', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
+INSERT INTO public.borrows VALUES (1, 35, 79, 48, 1, '2018-05-18 04:10:29', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (2, 19, 93, 65, 4, '2019-01-27 14:09:58', '2019-02-15 14:09:58', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (3, 50, 58, 24, 5, '2019-01-17 20:41:42', '2019-02-05 20:41:42', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (4, 45, 81, 32, 3, '2018-12-29 08:20:00', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (5, 23, 19, 6, 1, '2018-09-27 20:20:21', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (6, 7, 7, 34, 2, '2019-03-25 09:52:08', '2019-04-13 09:52:08', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (7, 32, 7, 75, 5, '2019-05-01 19:11:25', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (8, 19, 31, 96, 2, '2018-08-22 04:58:42', '2018-09-10 04:58:42', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (9, 32, 28, 92, 5, '2019-03-14 10:06:18', '2019-04-02 10:06:18', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (10, 47, 91, 36, 2, '2018-12-22 11:52:42', '2019-01-10 11:52:42', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (11, 12, 61, 30, 5, '2019-04-25 04:52:13', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (12, 5, 7, 91, 5, '2018-12-09 05:51:10', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (13, 26, 81, 86, 2, '2018-12-29 00:11:14', '2019-01-17 00:11:14', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (14, 22, 86, 62, 3, '2018-09-05 16:28:21', '2018-09-24 16:28:21', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (15, 16, 58, 87, 5, '2019-02-07 15:18:57', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (16, 44, 90, 33, 4, '2018-07-13 19:25:54', '2018-08-01 19:25:54', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (17, 15, 89, 97, 1, '2018-10-28 22:04:33', '2018-11-16 22:04:33', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (18, 42, 10, 18, 1, '2018-09-19 03:24:48', '2018-10-08 03:24:48', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (19, 13, 48, 9, 5, '2019-01-01 20:06:46', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (20, 50, 38, 19, 4, '2018-12-29 01:49:23', '2019-01-17 01:49:23', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (21, 36, 25, 60, 5, '2018-05-17 01:02:58', '2018-06-05 01:02:58', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (22, 40, 78, 6, 4, '2018-08-15 09:43:55', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (23, 41, 41, 56, 2, '2018-06-29 00:48:32', '2018-07-18 00:48:32', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (24, 27, 95, 26, 5, '2019-02-08 21:40:41', '2019-02-27 21:40:41', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (25, 19, 84, 98, 3, '2018-09-25 08:37:57', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (26, 20, 57, 57, 4, '2018-12-13 19:00:05', '2019-01-01 19:00:05', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (27, 25, 74, 74, 1, '2018-07-22 10:16:08', '2018-08-10 10:16:08', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (28, 49, 88, 97, 1, '2018-10-11 01:35:42', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (29, 26, 100, 49, 1, '2019-04-17 20:03:30', '2019-05-06 20:03:30', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (30, 10, 2, 47, 1, '2019-01-08 20:38:58', '2019-01-27 20:38:58', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (31, 26, 45, 59, 3, '2018-10-12 01:04:00', '2018-10-31 01:04:00', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (32, 37, 46, 49, 3, '2018-12-02 21:22:59', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (33, 31, 42, 31, 1, '2018-12-14 19:59:02', '2019-01-02 19:59:02', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (34, 29, 1, 57, 5, '2018-07-24 08:35:15', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (35, 3, 41, 61, 3, '2019-04-01 03:02:27', '2019-04-20 03:02:27', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (36, 34, 33, 63, 3, '2018-10-28 12:36:26', '2018-11-16 12:36:26', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (37, 41, 68, 90, 4, '2019-03-06 01:43:05', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (38, 16, 94, 19, 4, '2018-08-19 06:39:57', '2018-09-07 06:39:57', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (39, 38, 69, 2, 2, '2018-06-06 02:58:20', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (40, 35, 34, 27, 1, '2018-12-16 08:41:28', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (41, 14, 67, 12, 5, '2018-07-14 10:31:46', '2018-08-02 10:31:46', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (42, 26, 3, 42, 4, '2019-04-14 06:37:35', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (43, 50, 82, 71, 1, '2019-01-22 09:14:19', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (44, 30, 80, 20, 3, '2018-05-14 09:18:40', '2018-06-02 09:18:40', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (45, 27, 1, 64, 5, '2019-02-28 02:19:10', '2019-03-19 02:19:10', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (46, 20, 72, 1, 3, '2018-11-02 05:35:40', '2018-11-21 05:35:40', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (47, 47, 25, 23, 1, '2018-05-09 18:43:30', '2018-05-28 18:43:30', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (48, 43, 82, 36, 2, '2018-12-11 15:51:56', '2018-12-30 15:51:56', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (49, 2, 49, 66, 4, '2018-12-17 16:00:16', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (50, 22, 16, 43, 3, '2018-12-28 06:00:49', '2019-01-16 06:00:49', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (51, 22, 41, 5, 5, '2018-06-18 04:26:20', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (52, 14, 29, 65, 5, '2018-12-05 11:55:53', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (53, 16, 55, 92, 5, '2018-06-01 18:29:56', '2018-06-20 18:29:56', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (54, 35, 19, 29, 2, '2018-09-10 23:16:10', '2018-09-29 23:16:10', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (55, 18, 74, 63, 5, '2018-07-16 09:21:32', '2018-08-04 09:21:32', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (56, 31, 98, 55, 5, '2019-01-18 05:30:43', '2019-02-06 05:30:43', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (57, 35, 57, 79, 1, '2018-08-17 18:09:49', '2018-09-05 18:09:49', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (58, 20, 12, 8, 4, '2019-01-12 11:17:09', '2019-01-31 11:17:09', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (59, 7, 66, 47, 4, '2018-06-24 15:59:14', '2018-07-13 15:59:14', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (60, 40, 96, 42, 4, '2019-03-28 13:53:07', '2019-04-16 13:53:07', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (61, 29, 70, 24, 4, '2018-09-03 22:59:51', '2018-09-22 22:59:51', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (62, 1, 86, 53, 5, '2018-05-08 13:45:20', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (63, 3, 11, 3, 5, '2019-01-16 02:44:30', '2019-02-04 02:44:30', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (64, 11, 35, 62, 4, '2018-12-04 08:56:19', '2018-12-23 08:56:19', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (65, 33, 56, 63, 1, '2019-01-04 00:39:24', '2019-01-23 00:39:24', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (66, 2, 65, 71, 2, '2018-12-21 04:24:19', '2019-01-09 04:24:19', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (67, 44, 20, 40, 3, '2018-07-14 10:17:57', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (68, 10, 7, 33, 4, '2018-05-23 22:17:34', '2018-06-11 22:17:34', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (69, 20, 51, 36, 2, '2018-12-09 13:02:09', '2018-12-28 13:02:09', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (70, 45, 45, 17, 4, '2018-09-04 21:58:16', '2018-09-23 21:58:16', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (71, 49, 17, 82, 4, '2018-07-05 03:31:33', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (72, 31, 63, 60, 4, '2018-06-11 23:09:19', '2018-06-30 23:09:19', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (73, 37, 27, 4, 1, '2018-11-19 17:38:39', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (74, 35, 44, 51, 5, '2018-08-16 06:44:33', '2018-09-04 06:44:33', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (75, 19, 65, 48, 1, '2018-09-10 04:06:59', '2018-09-29 04:06:59', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (76, 35, 51, 85, 4, '2018-07-03 20:45:03', '2018-07-22 20:45:03', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (77, 33, 91, 14, 4, '2018-05-16 08:19:33', '2018-06-04 08:19:33', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (78, 30, 90, 13, 4, '2018-11-22 00:32:00', '2018-12-11 00:32:00', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (79, 45, 35, 42, 2, '2018-10-10 08:09:48', '2018-10-29 08:09:48', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (80, 25, 27, 100, 5, '2018-07-27 21:15:50', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (81, 29, 69, 67, 1, '2019-02-05 03:25:33', '2019-02-24 03:25:33', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (82, 14, 32, 86, 4, '2018-09-30 07:44:53', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (83, 22, 97, 53, 3, '2019-03-14 06:59:47', '2019-04-02 06:59:47', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (84, 20, 68, 20, 5, '2019-04-07 08:09:33', '2019-04-26 08:09:33', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (85, 38, 30, 55, 1, '2018-09-15 21:48:08', '2018-10-04 21:48:08', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (86, 3, 5, 52, 4, '2018-12-06 10:43:21', '2018-12-25 10:43:21', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (87, 35, 94, 77, 2, '2019-02-16 00:04:08', '2019-03-07 00:04:08', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (88, 42, 3, 24, 2, '2019-04-04 15:10:06', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (89, 27, 51, 13, 4, '2019-04-19 18:57:15', '2019-05-08 18:57:15', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (90, 2, 100, 67, 3, '2018-09-15 00:12:44', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (91, 6, 52, 33, 5, '2019-03-09 03:04:20', '2019-03-28 03:04:20', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (92, 22, 60, 82, 1, '2019-03-18 04:33:24', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (93, 4, 35, 69, 3, '2018-07-10 17:20:26', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (94, 3, 29, 84, 2, '2019-02-17 09:51:53', '2019-03-08 09:51:53', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (95, 34, 83, 7, 3, '2018-06-21 04:19:00', '2018-07-10 04:19:00', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (96, 38, 84, 64, 5, '2019-01-06 03:06:10', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (97, 32, 55, 84, 3, '2019-02-20 01:54:04', '2019-03-11 01:54:04', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (98, 38, 88, 82, 4, '2019-02-28 07:35:09', '2019-03-19 07:35:09', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (99, 27, 20, 37, 3, '2018-09-04 15:39:30', '2018-09-23 15:39:30', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.borrows VALUES (100, 31, 10, 96, 3, '2018-12-16 04:44:00', '2019-01-04 04:44:00', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 
+
+--
+-- Data for Name: proceedings; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.proceedings VALUES (1, 25, '2006-05-28 14:43:31', '4714 Theodore Hill
+West Websterbury, NE 20067', 'LouisaGlover', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.proceedings VALUES (2, 21, '2006-11-05 07:48:05', '196 Mohr Crescent
+South Ignacio, ID 93133', 'HailieOrtiz', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.proceedings VALUES (3, 90, '1979-12-25 09:28:30', '980 Christiansen Inlet Suite 688
+Eichmannborough, AK 16910-5213', 'LemuelToy', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.proceedings VALUES (4, 23, '1993-05-16 16:37:10', '920 Koss Springs
+Strackefurt, WY 28777', 'LelandPouros', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.proceedings VALUES (5, 78, '2016-03-24 12:50:10', '118 Zulauf Springs Apt. 731
+New Perrymouth, MO 82166-6664', 'JanaWatsica', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.proceedings VALUES (6, 14, '1975-03-10 08:55:50', '1248 Beatty Forges Apt. 243
+Lake Jacynthe, KS 40494-8508', 'BruceMuller', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.proceedings VALUES (7, 36, '2003-02-24 08:12:06', '237 Ayla Forge Apt. 255
+Satterfieldshire, DE 76985-1591', 'EmmettMurphy', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.proceedings VALUES (8, 44, '1976-05-02 14:31:42', '8199 Hane Dale Apt. 781
+North Cordell, GA 20482-6330', 'LoraDicki', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.proceedings VALUES (9, 85, '1980-01-16 08:00:12', '60117 Von Drives
+Jacobsmouth, NV 29896-6948', 'BreannaDaugherty', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.proceedings VALUES (10, 31, '1998-09-05 22:21:47', '80748 Skiles Square
+Parisianhaven, HI 33135-7097', 'MichaelHermiston', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+
+
+--
+-- Data for Name: chief_editors; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.chief_editors VALUES (1, 'Clark', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.chief_editors VALUES (2, 'Margret', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.chief_editors VALUES (3, 'Nathanial', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.chief_editors VALUES (4, 'Camryn', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.chief_editors VALUES (5, 'Dakota', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+
+
+--
+-- Data for Name: journal_volumes; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.journal_volumes VALUES (1, 88, 11, 2, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_volumes VALUES (2, 70, 13, 3, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_volumes VALUES (3, 16, 8, 1, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_volumes VALUES (4, 5, 14, 1, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_volumes VALUES (5, 57, 16, 1, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_volumes VALUES (6, 7, 16, 2, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_volumes VALUES (7, 89, 1, 3, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_volumes VALUES (8, 15, 14, 1, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_volumes VALUES (9, 4, 6, 4, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_volumes VALUES (10, 80, 3, 1, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+
+
+
+--
+-- Data for Name: journal_issues; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.journal_issues VALUES (1, 70, 3, 'Laudantium iste ut qui ab atque. Quasi tempore sed tempora veniam fugit omnis exercitationem. Rerum veniam ut ab eos corporis placeat cum. Debitis facere nam quo nihil. Et amet saepe voluptate optio iusto accusantium harum id. Minima animi placeat non. Similique odio dolorem distinctio laboriosam culpa totam aut. Praesentium omnis consequuntur dicta labore. Odio vel quis saepe quae repudiandae ut. Et et voluptatem provident sed quisquam qui. Hic voluptatibus nam deleniti.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (2, 57, 9, 'Iste accusamus eligendi sint aut. Possimus facere numquam et id atque asperiores numquam. Consequuntur nam quos cum hic dolorem doloremque expedita. Omnis deleniti pariatur quisquam molestiae ipsum. Est modi corporis voluptatem. Et quae repellendus incidunt quidem eveniet. Voluptatibus veritatis consequatur adipisci dolore voluptas architecto doloribus.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (3, 57, 3, 'Nulla deleniti id in laudantium. Qui omnis iusto saepe cupiditate. Aliquam repellat voluptates dicta praesentium. Rerum occaecati illum in cumque a delectus. Eaque aut sint voluptatibus dicta. Veritatis ut fugit praesentium rerum laudantium quod. Est maxime minus consequatur ullam velit ea non. Accusantium consequuntur occaecati odio eligendi earum eum quibusdam.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (4, 5, 8, 'Et asperiores hic reprehenderit. Iusto sed aliquam sapiente et sint. Rerum eveniet doloribus culpa reiciendis quia hic voluptas voluptatum. Voluptate nobis molestiae tempora beatae labore. Vel aut omnis tenetur enim aut commodi. Quia praesentium consequatur nemo voluptate. Optio asperiores ex sint autem iure. Omnis sunt voluptatem inventore ea.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (5, 7, 10, 'Quia facilis dolorum autem et. Ut iure nihil beatae dolorem ipsum dolor qui cupiditate. Voluptate eos id rerum aliquam dicta. Voluptate rerum aut aperiam laborum at repudiandae. Voluptas corrupti aut non impedit facilis fugit eos. Corporis molestiae pariatur ullam. Non assumenda id est harum debitis consequatur. Et sint eligendi earum iusto non numquam. Dolorum perspiciatis esse qui quam ipsa cumque. Tempora dolor et id quia ut et.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (6, 4, 9, 'Illo perspiciatis sunt dignissimos. Ipsum ut et molestiae ipsam qui ipsa. Voluptatem cum iusto non. Modi nemo nobis rerum omnis libero est. Occaecati recusandae dicta esse ratione dolorem ipsa cum. Possimus quia nesciunt odit magnam consequuntur sunt fugit. Et autem vel impedit soluta maxime sit aut. Reprehenderit sapiente consequatur omnis et. Quia tempora laborum nostrum consequatur quia. Quam excepturi id eum.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (7, 88, 7, 'At esse illo qui suscipit quis quasi harum. Odio perferendis quibusdam rerum ut ea quia. Atque ut vitae suscipit praesentium ipsum ipsam vitae. Quis corporis tenetur eum quo quia consequatur dolor. Assumenda odit deserunt et ex. Expedita quam autem voluptatem voluptatibus consectetur est. Maxime est quia distinctio praesentium rem suscipit in iste. Voluptatibus consequatur autem et rerum iure non impedit. In iusto soluta omnis. Atque ut aliquam ut suscipit suscipit. Suscipit qui ab voluptates.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (8, 4, 8, 'Facilis ex in quo et sunt est facilis. Sunt ea vel molestias voluptate aut ipsum. Sequi nemo voluptatem quis vitae excepturi nam. Veritatis distinctio at officia eligendi molestias quo. Mollitia quas voluptatem tempore. Consequatur rerum et id vero. Earum numquam vitae necessitatibus itaque iusto harum eaque quam. Aut omnis doloremque dolorem consequatur iusto.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (9, 16, 4, 'Possimus qui culpa sed nemo ducimus voluptates. Nostrum accusamus deserunt consequatur est ducimus ut. Quaerat illo qui sed ea vero delectus et. Doloribus debitis dolor perspiciatis explicabo dignissimos. Illum consectetur vel omnis voluptates repudiandae ex. Voluptates facere iure odit esse. Quis magnam ut ad debitis error placeat dolorem ea. Occaecati quisquam est architecto quas deleniti. Commodi voluptas voluptatem adipisci. Exercitationem incidunt facilis qui architecto et.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (10, 5, 2, 'Veritatis doloremque nam distinctio quae nam aut voluptate. Iure earum consequatur repellendus harum quae. Et possimus magnam et quia perspiciatis enim. Sed unde occaecati nobis dicta illum dolore id in. Consectetur sit est qui nemo nam quis occaecati. Vitae nisi quod corrupti rerum aut magni quam sit. Maxime aut occaecati libero perferendis quis asperiores. Ipsam repellat suscipit ut tenetur aliquid veniam.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (11, 7, 2, 'Quidem vel quis vel quos deserunt corporis. Totam facilis porro consequatur occaecati sint voluptatem velit. Iste expedita delectus deleniti quas sint consequatur harum. Voluptatibus fuga sunt vel amet ut temporibus. Qui sit in eum excepturi vel voluptatem fugit. Quia eligendi et voluptatem molestiae vitae dolores amet. Facere unde aperiam voluptates vero. Necessitatibus nemo doloremque est voluptatem consequuntur. Tempore sed laborum molestias.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (12, 89, 9, 'Id aliquid eum fugiat unde vel eius. Dolor saepe consectetur qui itaque ad. Sit ea vitae perspiciatis ipsam distinctio. Delectus laboriosam dolores nisi vel quis. Omnis amet quas deleniti nihil dolores hic voluptas ut. Est et necessitatibus consequatur laborum labore aperiam quos. Nihil voluptas error nihil soluta amet quia. Qui quos tenetur et. Ut voluptatem eum consequuntur quisquam. Sunt repellat cupiditate deleniti iure error.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (13, 80, 1, 'In distinctio enim exercitationem labore mollitia. Nobis repellendus exercitationem omnis sint autem accusantium qui. Suscipit corrupti officiis et nemo eum est natus. Cumque similique laudantium consequatur maiores. Eos ullam consectetur enim quae odit quasi quia quis. Doloremque at suscipit deserunt occaecati quae. Sit doloribus velit sunt sequi tempora ex aut. Sapiente est alias nihil excepturi est mollitia possimus.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (14, 15, 2, 'Voluptas ut maiores accusantium similique omnis officia. Recusandae assumenda sit modi quasi est placeat minima. Unde praesentium facilis sed. Quo eius libero ducimus voluptatem praesentium maiores. Voluptas explicabo voluptatum dicta culpa et at dolorum adipisci. Dicta provident aut molestias consequuntur dicta. Enim modi dolorem quidem officia et. Natus vero mollitia et et. Debitis eos eaque qui officia ex officiis accusantium quaerat. Et quia commodi quia earum minima qui enim.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (15, 16, 6, 'Doloremque id voluptatem eligendi reprehenderit hic omnis et. Nemo dicta blanditiis ab exercitationem ducimus hic rerum. Est necessitatibus aperiam illo. Cum officia amet amet et. Aut aut magni deserunt deserunt eaque. Incidunt et praesentium porro. Necessitatibus temporibus autem alias animi. Doloremque quo totam eos itaque. In eos accusamus fugit placeat atque est. Doloribus tenetur eligendi accusantium id iusto. Aut veniam labore nostrum aperiam.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (16, 7, 3, 'Nulla earum qui itaque non et. Saepe vel odit illum et dolores accusantium et. Architecto dolor nulla est modi. Velit aut ut at amet voluptatem hic. Non inventore et culpa doloribus. Corrupti hic aspernatur rerum veniam tempore. Porro assumenda dolore exercitationem accusamus provident in maiores.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (17, 88, 9, 'Aut sunt aut autem est. Voluptatem veritatis odio delectus. Quo ipsum at optio possimus deleniti. Dolorem voluptate animi inventore perferendis sed qui. Et aut debitis itaque et repudiandae maiores quia. Deleniti omnis et labore et. Dolorem aut voluptatem totam qui et enim veritatis. Laboriosam autem perferendis voluptatem non quis. Harum praesentium libero eveniet quidem et. Molestiae eligendi quasi est aut. Delectus enim molestiae in quisquam.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (18, 80, 6, 'Ut et saepe impedit in. Ullam et molestiae sed ea ut debitis. Alias sapiente ratione veniam qui quidem repellat sapiente. Libero nihil repudiandae adipisci doloribus tempora voluptatibus dolorem dolore. Quaerat corporis omnis impedit minus sunt. Nisi cum neque officia et vero. Sunt molestiae alias ratione nesciunt maxime modi. Id aut hic possimus et molestias. Hic recusandae accusamus eum molestiae. Occaecati numquam repellendus quisquam sed est. Ullam inventore ullam doloremque enim est esse.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (19, 57, 10, 'Porro et rerum harum ut aut placeat. Sed alias unde alias harum. Libero et voluptas ea eum. Libero architecto fugit aliquam dignissimos omnis est. Dolor dolorem molestias magni quia illo voluptatum. Officiis omnis nesciunt reprehenderit libero et aspernatur quis. Consectetur dolores sit saepe reprehenderit ea repellat. Explicabo quidem ut distinctio aliquid est occaecati et.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (20, 15, 6, 'Temporibus ex cupiditate facere eos iste voluptas magni. Velit in amet beatae. Rerum aut est eum voluptate qui cum temporibus. Eligendi voluptas omnis quae dolorum vel eos asperiores. Facilis atque eos deserunt rem consectetur eligendi est. Modi reprehenderit ut ducimus nostrum ut laboriosam molestias. Corrupti fugiat necessitatibus impedit vel dolore totam. Suscipit ad similique voluptas dolores sint.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (21, 89, 10, 'Rerum quia nemo aut minima non. Autem eius qui quia est. Repudiandae non facilis earum est. Ut deleniti cum est natus aut placeat. Voluptas vero laudantium commodi qui. Perferendis voluptas accusamus consectetur distinctio incidunt repellendus vero. Ipsam eligendi voluptas mollitia sed. Dolor ipsum fuga non temporibus. Ullam cum libero dolorum harum omnis.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (22, 70, 6, 'Quam nostrum et delectus nam animi. Reprehenderit minima voluptatem omnis voluptatem. Dicta omnis deleniti maiores autem labore sed. Ipsa consequatur molestiae reiciendis facilis. Nisi ut occaecati cum dolores ipsam voluptas ex. Quia odit molestiae recusandae est. Ea omnis id qui eum reprehenderit quos magnam. Dolorum quia odit ut rem harum et possimus. Nostrum incidunt dignissimos aut in blanditiis possimus. Corporis nihil enim autem. Nihil aut quo inventore alias unde.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (23, 80, 5, 'Hic sed ut nulla. Quia dolor soluta laborum aliquam nihil provident rerum. Impedit quis itaque inventore nobis excepturi autem. Ut laborum aut autem nisi rem. Culpa doloremque animi nulla rerum. Aut blanditiis enim dolores qui soluta iusto et laudantium. Doloremque consectetur maxime pariatur nihil in qui. Dolor aliquam laudantium nisi doloremque. Minima explicabo suscipit enim nam ratione et officiis. Itaque quae dolorum et aut consequatur incidunt. Distinctio officia qui natus.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (24, 80, 2, 'Dolorum maiores temporibus vel at harum nihil. Doloremque ut quaerat aut sit iusto rerum vitae. Accusantium voluptatem quia et in. Vitae corrupti ipsum fugiat id fugit quisquam. Beatae et nostrum et rerum rerum. Vitae adipisci et ut alias. Quam commodi possimus enim nemo.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (25, 57, 8, 'Optio praesentium mollitia quia enim. Quasi tenetur sint nisi rerum ut. Maxime quia aspernatur quidem nisi qui. Porro eveniet illum unde dolor. Expedita cum aspernatur amet ut tempore nostrum. Natus est quis et et et maxime voluptatem. Ad dolor tempore nulla et dolores quas dolorem. Corrupti nam quis optio quisquam. Perferendis laboriosam voluptatibus nihil.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (26, 4, 1, 'Quia in neque provident et. Illum et voluptatem et quidem adipisci facere ab. Autem inventore laborum totam hic cumque distinctio. Suscipit est consequuntur accusamus quo id. Quaerat pariatur quia distinctio repellendus. Eius neque incidunt recusandae quaerat et sed. Ut rerum id eos vero exercitationem consequatur dolor. Vel sunt cumque aut ut aut quas rerum quia. Quia in voluptas possimus quia. Ratione voluptatum delectus ipsa et reprehenderit. Cumque sit harum aliquid eaque.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (27, 70, 10, 'Provident quas autem rerum ratione et voluptate et deleniti. Placeat odit a ut laborum fugit. Molestias deleniti aut molestiae nihil. Rerum autem similique accusamus minima fuga. Minus delectus dolores maxime et ut sequi. Voluptatum minus adipisci animi qui suscipit et sed. Provident vel architecto vel qui quia. Explicabo voluptas eaque repellat deserunt quaerat. Autem ipsa sit ratione ex esse.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (28, 4, 10, 'Aut labore libero esse animi fuga id corrupti. Facere dolorem sed mollitia ipsa culpa. Quis ea doloremque commodi atque aliquam. A dolorem quasi iusto et aut distinctio. Et alias eum facere. Ipsa aut dicta ducimus pariatur voluptas qui molestiae. Necessitatibus numquam corrupti et porro. Et quae amet voluptatibus eveniet pariatur voluptas consequatur. Officiis eos qui et harum doloremque qui minus quod. Sed amet harum corrupti in commodi.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (29, 89, 4, 'Laudantium nisi natus ut eius architecto porro. Qui repellat est hic occaecati nobis. Consequuntur quibusdam amet nesciunt sapiente sapiente eum est. Labore reprehenderit autem dolorem perferendis ea. Accusantium voluptates dolorum quo in ratione iusto. Aspernatur recusandae delectus assumenda et. Qui adipisci aut illo accusantium aut fugit.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (30, 5, 9, 'Accusamus et eveniet consequatur adipisci itaque quia veritatis. Iure suscipit neque et necessitatibus cupiditate reiciendis unde. Sed dignissimos doloribus iure sunt. Incidunt voluptatum laborum distinctio nesciunt praesentium. Aut soluta vel quibusdam ut modi facilis ut. Tempora dolores cupiditate et sed est. Ut ratione ipsum omnis id nihil id recusandae nulla.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (31, 89, 5, 'Consequatur voluptas mollitia consectetur minus illo velit facere. Mollitia expedita nesciunt beatae velit recusandae. Blanditiis a facilis sint quo porro velit. Nam non quisquam sint perferendis voluptatem nemo. Eum repellendus est omnis sapiente eligendi sint voluptatem dolorem. Et beatae optio nam voluptas. Nobis et atque dolores omnis eius facere dolor. Laboriosam molestiae rerum quam consequatur ex libero quia.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (32, 70, 4, 'Dolore debitis veritatis impedit quisquam quos. Velit ipsam rerum quia velit facere quaerat voluptatum. Fugiat voluptate itaque sint ut. Recusandae voluptatum nisi nam laboriosam voluptatem inventore et. Qui et nihil laboriosam ducimus ipsa qui nam ducimus. Ipsum ut dolorum recusandae ut numquam. Et sunt culpa cupiditate voluptates facilis quo. Dolores quos voluptatem nostrum et harum nobis. Illo aliquam vel quidem. Sunt praesentium sit maiores consectetur accusantium voluptatem quae.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (33, 80, 7, 'Dicta possimus incidunt animi ut rem assumenda. Aut itaque sunt error consequatur impedit ipsa non quas. Velit maxime voluptatem et et vel. Nesciunt quia laboriosam excepturi corrupti et debitis. Et et sit omnis sint rerum sunt. Qui eaque debitis porro consequatur id debitis et. Aut qui cum et magnam aspernatur magni. Qui sit ab quas fugiat. Tenetur est quisquam aliquid fuga eum officiis quod.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (34, 5, 7, 'Id facilis quisquam corporis iure voluptatem. Aut ducimus aut et. Ut inventore quo sit omnis expedita facere consequatur. Expedita illum dolorum architecto est quae. Sapiente illo totam qui quaerat. Ut eaque et nobis rem aut porro. Rerum asperiores cumque ratione magni repellat. Incidunt eveniet aut aut unde occaecati voluptas veniam. Alias qui qui quasi illum. Doloribus ipsa possimus dolorem et. Sint pariatur fuga error et.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (35, 7, 6, 'Omnis dolore repudiandae dolores laborum aperiam cum repellendus. Et voluptas sit iste voluptates et aut quia. Placeat possimus fugit ab non asperiores. Nobis quaerat sed eum ratione inventore et sunt. Excepturi quo cum corrupti soluta sed eum. Officia occaecati iste autem quis dolorem numquam rem earum. Consequatur id dolore deserunt doloribus laborum vel vel quam. Velit hic sunt error laboriosam itaque maiores voluptate.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (36, 88, 3, 'Voluptatem magni aperiam a quia odit id. Necessitatibus nam quas nemo esse vero. Qui quia nihil doloremque assumenda voluptatem tempora necessitatibus. Sunt porro sed aut qui magnam. Expedita laboriosam nisi delectus eius et occaecati. Sunt quidem cumque aspernatur quas. Voluptatem quo asperiores molestiae animi consequuntur consequatur illo molestias.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (37, 89, 2, 'Ab rerum rem ut qui accusamus. Quis cum est repellat quasi aut. Dignissimos fuga voluptatem eligendi. Officia labore atque provident quam. Ad temporibus debitis adipisci doloribus illo asperiores. Est necessitatibus quo voluptas qui quae eos. Qui aut rem dolores quam est. Laudantium quisquam dolorem tempora est in magni consequatur. Et voluptatem sequi autem ut. Possimus aut ut earum et qui ut nihil. Rem excepturi culpa ipsa libero rerum nobis a.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (38, 70, 1, 'Porro est ab molestiae in architecto alias nihil beatae. Quam debitis eum consequatur minus qui maxime. Saepe alias ut iusto perspiciatis ut. Ad voluptatem sint fuga numquam. Totam dignissimos deleniti aliquid officia ducimus occaecati quia. Fugiat incidunt rerum quibusdam repudiandae aut. Aspernatur suscipit tempore qui aut unde vel et. Perferendis in numquam quisquam accusantium aut eos.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (39, 15, 3, 'Et temporibus at voluptas laboriosam molestiae ea. Debitis est provident soluta esse ipsum itaque. Molestias odio ea sed voluptatum nemo. Pariatur et voluptatem provident qui magnam iste ex. Unde natus nulla id voluptate nobis odit cum. Aut eaque aut est ad et. Dolorem reiciendis odio aut omnis consequuntur. Dolor consequatur voluptas sequi numquam molestiae sapiente. Aspernatur et reiciendis sint accusantium.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (40, 16, 9, 'Autem eveniet non neque velit iste. Voluptatem consequatur amet vero voluptas. Perspiciatis enim et voluptas. Perferendis ipsum ipsam nisi non. Aut nihil quisquam dolorem aperiam ipsum vero velit omnis. Officia quisquam eos vel maxime velit. Qui animi soluta numquam eos. Et omnis deserunt id. Quaerat adipisci quis tempore dolore rerum sint et.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (41, 16, 2, 'Fuga quia aut quis aspernatur quas ut enim. Impedit et accusamus omnis fuga magnam eligendi hic accusamus. Recusandae nesciunt deleniti rerum amet possimus. Rem doloremque architecto qui iure excepturi et. Architecto aut sunt itaque iure nesciunt fugiat. Qui minus sunt voluptatem voluptas omnis et quia. Temporibus possimus tempore corporis nisi totam commodi. Temporibus quaerat sint enim libero id.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (42, 80, 10, 'Sapiente ad numquam totam iure. Aut consectetur perferendis impedit ratione molestiae ratione. Et incidunt delectus eaque maxime rem sunt et. Neque excepturi sit placeat saepe cupiditate. At architecto ut voluptas magni nobis enim ut. Alias nihil laboriosam sapiente rerum eaque. Aliquid molestiae ad voluptas nam cumque atque nam. Est in ea inventore autem. Omnis eligendi similique saepe vel eum minima. Quia debitis ratione iste dignissimos. Error id aliquam est voluptate velit.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (43, 16, 1, 'Totam omnis nostrum voluptate nulla at dolorum. Corrupti ducimus aut enim sequi. Expedita minima est odit id necessitatibus sequi sequi. Fuga nostrum est veniam minus repudiandae et. Perferendis perferendis alias et et. Itaque error porro dolor. Neque consequuntur voluptate aut facere eveniet dolore officia exercitationem. Dolore porro cum non. Ut laborum debitis magnam maiores officia animi.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (44, 16, 3, 'Nostrum ratione quis cupiditate voluptates est. Sed dolores nam illo tempore quia. Ratione ut ratione praesentium omnis non. Architecto omnis saepe placeat tempore velit vero mollitia. Quia similique perferendis officia distinctio. Est quos quod et accusamus ut. Dignissimos nulla culpa nulla ad dolore sunt. Vel vel quia illum qui sed ab qui. Sed quam pariatur et. Occaecati delectus provident exercitationem facilis in.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (45, 89, 1, 'Quaerat placeat quia maxime asperiores. Inventore ratione quis est. Ipsam molestiae deserunt assumenda. Veniam quidem ut facilis quae sed doloribus iste. Sed perferendis ullam est quia natus odio quasi. Deserunt accusamus omnis distinctio voluptatibus dolorum nobis veniam. Aperiam sed reprehenderit sit aut aut.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (46, 70, 8, 'Voluptatem eos et voluptatem dicta doloribus facilis. Impedit dolor esse similique inventore delectus enim. Nemo reprehenderit voluptatem et voluptatem nulla quas dolorum. Et praesentium ut et animi dolorum beatae accusamus. Et ut asperiores qui exercitationem accusantium. Accusantium voluptas sit totam distinctio vitae explicabo incidunt libero. Magnam distinctio eum velit quia molestiae.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (47, 80, 8, 'Odit officiis assumenda beatae et. Magnam ut alias fugiat dolorum. Enim quo molestiae illo sit molestiae soluta ut. Consectetur saepe amet veritatis architecto quibusdam. Et reiciendis repudiandae sit blanditiis autem placeat laudantium. Corrupti omnis suscipit officiis. Libero aperiam et voluptates voluptas perferendis quo. Maxime ea dolor quae libero iure. Et tempora excepturi velit tempora voluptatum. Deleniti earum magni harum quos totam praesentium.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (48, 4, 4, 'Ut consequatur beatae atque repudiandae veritatis et. Explicabo voluptatem minima minus amet esse. Aut ut et illo amet quis ut. Odit itaque explicabo nam et nesciunt qui. Id temporibus tempora quaerat perferendis. Ea provident et asperiores quas velit ut sed officiis. Eligendi et ea qui magnam. Ipsam numquam molestias qui consequatur asperiores dignissimos repellat. Vel repellat dicta laboriosam similique dolores enim corporis natus.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (49, 89, 8, 'Aut commodi recusandae doloribus dicta. Labore dolores voluptates ratione similique autem et. Corporis occaecati illum cumque doloremque quia explicabo sint. Ut qui qui in eius in nostrum. Praesentium qui possimus tenetur ut. Omnis tenetur voluptatum quae aspernatur aut quod. Iste doloribus dolore cum. Cum officia ut pariatur illum accusamus. Eos molestias doloribus minus recusandae qui. Voluptatem magni consequatur nam tempore sequi ullam repellat eum. Consectetur autem est ut at eligendi.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.journal_issues VALUES (50, 7, 5, 'Aut occaecati odit iste. Quidem veniam autem fugit aut expedita. A non qui sit et. Est non commodi quidem delectus numquam maxime ut. Aut ducimus eaque iure ut optio distinctio sed. Aut modi dolorum nobis exercitationem libero et. Suscipit debitis dolorem dolor. Quae sit dolore quia laborum ea facere rerum. Ea deleniti magni eum fugiat qui. Non qui ut dignissimos qui recusandae.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+
+
+
+
+--
+-- Data for Name: inv_editors; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.inv_editors VALUES (1, 80, 6, 'Tremayne Douglas', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (2, 5, 9, 'Natalia Bode', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (3, 15, 3, 'Janie Jacobs', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (4, 15, 6, 'Skye Ernser', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (5, 7, 3, 'Allan Marquardt', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (6, 89, 9, 'Blaze O''Connell', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (7, 4, 9, 'Nicklaus Hudson', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (8, 89, 1, 'Shawn Reinger', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (9, 4, 1, 'Olga Hintz', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (10, 70, 6, 'Ezekiel Bogisich', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (11, 88, 9, 'Vern Jenkins', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (12, 5, 7, 'Tomas Torp', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (13, 4, 1, 'Paul Tillman', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (14, 4, 8, 'Edmund Brakus', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (15, 5, 2, 'Elvis Ledner', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (16, 88, 9, 'Melody Zulauf', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (17, 5, 9, 'Ramiro Turner', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (18, 80, 7, 'Cathrine Lind', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (19, 7, 2, 'Adele Lueilwitz', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (20, 4, 4, 'Petra Gusikowski', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (21, 16, 4, 'Sam Emard', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (22, 57, 10, 'Marian Treutel', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (23, 89, 5, 'Abdiel Homenick', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (24, 57, 9, 'Loy Champlin', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (25, 4, 10, 'Gina Connelly', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (26, 88, 7, 'Yoshiko Greenfelder', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (27, 5, 9, 'August Weissnat', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (28, 80, 1, 'Lewis Weissnat', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (29, 16, 4, 'Alanna Hermiston', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (30, 88, 3, 'Darby Johnston', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (31, 70, 4, 'Shanel Koss', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (32, 89, 1, 'Nettie Wunsch', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (33, 16, 1, 'Evan Sauer', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (34, 80, 1, 'Nick Koelpin', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (35, 4, 9, 'Maia Adams', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (36, 15, 3, 'Shaniya Stark', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (37, 70, 8, 'Rodrigo Kassulke', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (38, 89, 9, 'Sabina Schmeler', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (39, 70, 3, 'Kaylee Goodwin', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (40, 7, 6, 'Catherine Monahan', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (41, 4, 9, 'Koby Stoltenberg', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (42, 89, 9, 'Mia Kuhic', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (43, 4, 4, 'Rolando Grimes', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (44, 57, 8, 'Spencer Nienow', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (45, 7, 6, 'Johan Goyette', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (46, 57, 3, 'Javon Hermiston', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (47, 70, 4, 'Orin Prosacco', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (48, 7, 6, 'Quinn Lesch', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (49, 89, 8, 'Juliana Kling', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.inv_editors VALUES (50, 15, 6, 'Kay Stehr', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+
+
+
+--
+-- Data for Name: books; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.books VALUES (1, 55, '9783147581311', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (2, 27, '9786159788457', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (3, 56, '9792208816569', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (4, 42, '9796735035899', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (5, 6, '9781128988364', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (6, 45, '9787752480632', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (7, 48, '9795326047723', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (8, 74, '9794526896872', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (9, 53, '9795407713257', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (10, 79, '9785905747533', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (11, 92, '9797399650664', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (12, 46, '9789179890339', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (13, 12, '9796590374980', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (14, 22, '9790077456879', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (15, 60, '9791890937071', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (16, 10, '9794334820083', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (17, 75, '9795420604181', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (18, 73, '9781458514028', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (19, 11, '9786596828549', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (20, 34, '9790431733790', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (21, 82, '9780137869411', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (22, 97, '9780905992501', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (23, 9, '9781822852299', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (24, 39, '9783758213601', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (25, 49, '9795531872684', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (26, 52, '9796431561265', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (27, 58, '9790065662152', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (28, 61, '9791752502416', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (29, 87, '9786537936944', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.books VALUES (30, 72, '9799580297511', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+
+
+
+--
+-- Data for Name: authors; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.authors VALUES (1, 'Nicklaus Fay', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (2, 'Grant Hettinger', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (3, 'Izaiah Hegmann', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (4, 'Felicita Ernser', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (5, 'Theresa Barton', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (6, 'Maribel Lind', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (7, 'Clarabelle Jacobs', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (8, 'Jedidiah Fadel', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (9, 'Quincy Mosciski', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (10, 'Daisha White', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (11, 'Bonita Hammes', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (12, 'Perry Johnston', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (13, 'Coralie Schoen', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (14, 'Diana Keebler', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (15, 'Tito Adams', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (16, 'Jimmy Gutmann', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (17, 'Agustina Ankunding', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (18, 'Jensen Swift', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (19, 'Annabelle Harvey', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (20, 'Jordy Padberg', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (21, 'Elyse Jaskolski', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (22, 'Cory Barrows', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (23, 'Ed Grady', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (24, 'Bridie Morar', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (25, 'Muhammad Cremin', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (26, 'Arturo Lubowitz', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (27, 'Marcelo Barton', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (28, 'Ashton Roob', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (29, 'Eric Dicki', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (30, 'Glenda Brakus', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (31, 'Myron Berge', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (32, 'Eliane Howe', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (33, 'Cleta Deckow', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (34, 'Chris Kshlerin', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (35, 'Carter Brown', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (36, 'Domenic Cummings', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (37, 'Hoyt Braun', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (38, 'Thelma Bogisich', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (39, 'Adaline Swaniawski', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (40, 'Cameron Runolfsdottir', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (41, 'Nettie Goldner', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (42, 'Jordi Kiehn', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (43, 'Marquis Harber', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (44, 'Flo Hermiston', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (45, 'Nyah Keeling', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (46, 'Ada Brekke', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (47, 'Marc Kautzer', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (48, 'Magdalena Haley', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (49, 'Luther Fritsch', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
+INSERT INTO public.authors VALUES (50, 'Magnolia Ritchie', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 
 --
 -- Data for Name: writes; Type: TABLE DATA; Schema: public; Owner: postgres
@@ -1382,6 +1354,18 @@ INSERT INTO public.writes VALUES (47, 5, 75, '2019-05-05 18:39:50', '2019-05-05 
 INSERT INTO public.writes VALUES (48, 26, 87, '2019-05-05 18:39:50', '2019-05-05 18:39:50');
 INSERT INTO public.writes VALUES (49, 24, 79, '2019-05-05 18:39:50', '2019-05-05 18:39:50');
 INSERT INTO public.writes VALUES (50, 1, 12, '2019-05-05 18:39:50', '2019-05-05 18:39:50');
+
+
+--
+-- Data for Name: password_resets; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- Data for Name: sessions; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
 
 
 --
@@ -1453,12 +1437,6 @@ SELECT pg_catalog.setval('public.journal_issues_id_seq', 50, true);
 
 SELECT pg_catalog.setval('public.journal_volumes_id_seq', 10, true);
 
-
---
--- Name: migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.migrations_id_seq', 3905, true);
 
 
 --

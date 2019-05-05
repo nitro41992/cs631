@@ -26,8 +26,9 @@ class BranchController extends Controller
         $freqBorrowers = DB::table('borrows')
             ->join('readers', 'readers.reader_id', '=', 'borrows.reader_id')
             ->join('books', 'books.document_id', '=', 'borrows.document_id')
-            ->select('readers.reader_id', 'readers.r_name',  DB::raw('count(*) as count'))
-            ->groupBy('readers.reader_id', 'readers.r_name')
+            ->join('branches', 'branches.lib_id', '=', 'borrows.lib_id')
+            ->select('readers.reader_id', 'readers.r_name', 'books.document_id', 'branches.l_name',  DB::raw('count(*) as count'))
+            ->groupBy('readers.reader_id', 'readers.r_name', 'books.document_id', 'branches.l_name', 'branches.lib_id')
             ->orderBy('count', 'desc')
             ->take(10)
             ->get();
@@ -63,28 +64,32 @@ class BranchController extends Controller
             ->get();
 
         $avgFineByUser = DB::table('copies')
-            ->Join('documents', 'documents.document_id', '=', 'copies.document_id')
-            ->Join("borrows", function ($join) {
+            ->join('documents', 'documents.document_id', '=', 'copies.document_id')
+            ->join("borrows", function ($join) {
                 $join->on("copies.document_id", "=", "borrows.document_id")
                     ->on("copies.copy_no", "=", "borrows.copy_no")
                     ->on("copies.lib_id", "=", "borrows.lib_id")
                     ->whereNull('borrows.rd_time');
             })
-            ->Join('readers', 'readers.reader_id', '=', 'borrows.reader_id')
+            ->join('readers', 'readers.reader_id', '=', 'borrows.reader_id')
             ->select(
                 'readers.r_name',
                 'readers.card_num',
                 'borrows.reader_id',
                 DB::raw('round(avg(extract(days from (borrows.bd_time::date + interval \'20\' day - NOW()::date)*(-0.20))::int), 2) as fee'),
+                // DB::raw('borrows.bd_time::date + interval \'20\' day - NOW()::date'),
             )
             ->groupBy(
                 'readers.r_name',
                 'readers.card_num',
                 'borrows.reader_id',
+                //'borrows.bd_time'
             )
             ->whereNotNull(DB::raw('(borrows.bd_time::date + interval \'20\' day - NOW()::date)'))
+            ->where(DB::raw('borrows.bd_time::date + interval \'20\' day - NOW()::date'), '<', '0')
             ->orderBy('readers.r_name')
             ->get();
+        //dd($avgFineByUser);
 
         $totAvgFee = DB::table('borrows')
             ->select(

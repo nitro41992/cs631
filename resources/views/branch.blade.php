@@ -40,6 +40,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Borrower</th>
+                        <th scope="col">Branch Name</th>
                         <th scope="col">Books Borrowed</th>
                     </tr>
                 </thead>
@@ -47,6 +48,7 @@
                 <tbody>
                     <tr>
                         <td>{{$freqBorrower->r_name}}</td>
+                        <td>{{$freqBorrower->l_name}}</td>
                         <td>{{$freqBorrower->count}}</td>
                     </tr>
                 </tbody>

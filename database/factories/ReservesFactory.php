@@ -11,12 +11,12 @@ use Carbon\Carbon;
 
 $factory->define(Reserves::class, function (Faker $faker) {
 
-    $compkeys = Copy::select('document_id', 'copy_no' , 'lib_id')->get()->toArray();
+    $compkeys = Copy::select('document_id', 'copy_no', 'lib_id')->get()->toArray();
     $compkey = $faker->unique(true)->randomElement($compkeys);
 
     $readers = Reader::all()->pluck('reader_id')->toArray();
 
-    $time = Carbon::createFromTimestamp($faker->dateTimeBetween($startDate = '-3 days', $endDate = 'now', $timezone = 'EDT')->getTimeStamp()) ;
+    $time = Carbon::createFromTimestamp($faker->dateTimeBetween($startDate = '-1 days', $endDate = 'now', $timezone = 'EDT')->getTimeStamp());
     return [
         'reader_id' => $faker->randomElement($readers),
         'document_id' => $compkey['document_id'],

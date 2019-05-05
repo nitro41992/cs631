@@ -57,6 +57,18 @@ class CopyController extends Controller
             ->select('reader_id')
             ->first();
 
+
+        $resToCancel =  DB::table('reserves')
+            ->where('d_time', '<=', 'now()')
+            ->get();
+
+
+        if (date('Hi') >= 1800) {
+            DB::table('reserves')
+                ->where('d_time', '<=', 'now()')
+                ->delete();
+        }
+
         $obj = array();
         $obj['copies'] = $copies;
 
@@ -131,7 +143,14 @@ class CopyController extends Controller
 
     public function reserve(Request $request)
     {
-        $time = Carbon::now()->setTimezone('EST');
+        if (date('H') < 18) {
+            $sixPM = mktime(18, 0, 0, date("m"), date("d"), date("y"));
+            $time = date("Y-m-d H:i:s ", $sixPM);
+        } else {
+            $sixPM = mktime(18, 0, 0, date("m"), date("d") + 1, date("y"));
+            $time = date("Y-m-d H:i:s ", $sixPM);
+        }
+
         $id = DB::table('reserves')
             ->insertGetId([
                 'reader_id' => $request->rid,

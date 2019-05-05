@@ -63,8 +63,8 @@ class CopyController extends Controller
             ->whereNull('rd_time')
             ->select('borrows.reader_id', DB::raw('count(*) as count'))
             ->groupBy('borrows.reader_id')
-            ->first();
-        //dd($copies);
+            ->get();
+        //dd($readerLimit);
 
         $resToCancel =  DB::table('reserves')
             ->where('d_time', '<=', 'now()')

@@ -1,23 +1,4 @@
---
--- PostgreSQL database dump
---
 
--- Dumped from database version 11.2
--- Dumped by pg_dump version 11.2
-
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET client_min_messages = warning;
-SET row_security = off;
-
---
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.users VALUES (1, 'Mrs. Lori Sporer', 'fadel.zelda@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'JjmXLVouAv', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
 INSERT INTO public.users VALUES (2, 'Ole Bartoletti DDS', 'steuber.gerardo@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '94cDKpG8CN', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
@@ -70,11 +51,6 @@ INSERT INTO public.users VALUES (48, 'Dr. Mary Crist PhD', 'moshe60@example.com'
 INSERT INTO public.users VALUES (49, 'Shirley Heidenreich I', 'shuel@example.org', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'unQkmdl7Ky', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
 INSERT INTO public.users VALUES (50, 'Georgiana Abernathy', 'price.quitzon@example.com', '2019-05-05 18:39:46', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'CYaUszwcP6', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
 
-
-
---
--- Data for Name: publishers; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.publishers VALUES (1, 'Garth Willms', '64191 Moore Circles
 Port Monserrate, CT 02877', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
@@ -179,9 +155,6 @@ Port Vellaville, SD 37338-2746', '2019-05-05 18:39:46', '2019-05-05 18:39:46');
 
 
 
---
--- Data for Name: documents; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.documents VALUES (1, 'Dolorem eaque ratione inventore voluptas.', '2014-03-14 10:41:37', 6, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
 INSERT INTO public.documents VALUES (2, 'Autem voluptatem tenetur dolore fugit vel.', '1970-02-09 14:00:58', 22, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
@@ -284,9 +257,6 @@ INSERT INTO public.documents VALUES (98, 'Nulla iusto tempore id omnis est sunt 
 INSERT INTO public.documents VALUES (99, 'Voluptas in itaque dolores ea.', '2010-08-27 05:01:49', 12, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
 INSERT INTO public.documents VALUES (100, 'Nihil nulla a voluptas vero est aut.', '1987-11-01 22:35:39', 11, '2019-05-05 18:39:47', '2019-05-05 18:39:47');
 
---
--- Data for Name: branches; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.branches VALUES (1, 'Lindgren-Kuhn', '3572 Quitzon Unions Apt. 787
 Port Kenneth, DC 84180-3909', '2019-05-05 18:39:47', '2019-05-05 18:39:47');
@@ -299,11 +269,6 @@ Mosciskifort, CA 55602-0687', '2019-05-05 18:39:47', '2019-05-05 18:39:47');
 INSERT INTO public.branches VALUES (5, 'Block, Dickinson and Dibbert', '677 Schamberger Plains Suite 231
 Erinfurt, DE 37507', '2019-05-05 18:39:47', '2019-05-05 18:39:47');
 
-
-
---
--- Data for Name: copies; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.copies VALUES (1, 97, 58, 1, '022A48', '2019-05-05 18:39:48', '2019-05-05 18:39:48');
 INSERT INTO public.copies VALUES (2, 93, 99, 3, '052L64', '2019-05-05 18:39:48', '2019-05-05 18:39:48');
@@ -809,9 +774,6 @@ INSERT INTO public.copies VALUES (500, 100, 85, 4, '029S54', '2019-05-05 18:39:4
 
 
 
---
--- Data for Name: readers; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.readers VALUES (1, 'Student', 'Katlyn Stehr', '2247 Karson Passage Suite 355
 Port Eleonore, ND 09042-9196', 20043766, '2019-05-05 18:39:48', '2019-05-05 18:39:48');
@@ -915,11 +877,6 @@ INSERT INTO public.readers VALUES (50, 'Regular', 'Delmer Lakin', '641 Alf Vista
 Rickeyshire, AL 84051-1973', 37345730, '2019-05-05 18:39:48', '2019-05-05 18:39:48');
 
 
-
---
--- Data for Name: reserves; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
 INSERT INTO public.reserves VALUES (1, 45, 99, 10, 1, '2019-05-04 22:46:29', '2019-05-05 18:39:48', '2019-05-05 18:39:48');
 INSERT INTO public.reserves VALUES (2, 30, 38, 16, 1, '2019-05-04 21:11:33', '2019-05-05 18:39:48', '2019-05-05 18:39:48');
 INSERT INTO public.reserves VALUES (3, 10, 50, 37, 2, '2019-05-04 21:47:56', '2019-05-05 18:39:48', '2019-05-05 18:39:48');
@@ -931,11 +888,6 @@ INSERT INTO public.reserves VALUES (8, 4, 33, 85, 4, '2019-05-05 01:49:49', '201
 INSERT INTO public.reserves VALUES (9, 14, 100, 47, 5, '2019-05-05 12:24:24', '2019-05-05 18:39:48', '2019-05-05 18:39:48');
 INSERT INTO public.reserves VALUES (10, 21, 51, 82, 3, '2019-05-05 17:55:57', '2019-05-05 18:39:48', '2019-05-05 18:39:48');
 
-
-
---
--- Data for Name: borrows; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.borrows VALUES (1, 35, 79, 48, 1, '2018-05-18 04:10:29', NULL, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 INSERT INTO public.borrows VALUES (2, 19, 93, 65, 4, '2019-01-27 14:09:58', '2019-02-15 14:09:58', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
@@ -1039,10 +991,6 @@ INSERT INTO public.borrows VALUES (99, 27, 20, 37, 3, '2018-09-04 15:39:30', '20
 INSERT INTO public.borrows VALUES (100, 31, 10, 96, 3, '2018-12-16 04:44:00', '2019-01-04 04:44:00', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 
 
---
--- Data for Name: proceedings; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
 INSERT INTO public.proceedings VALUES (1, 25, '2006-05-28 14:43:31', '4714 Theodore Hill
 West Websterbury, NE 20067', 'LouisaGlover', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 INSERT INTO public.proceedings VALUES (2, 21, '2006-11-05 07:48:05', '196 Mohr Crescent
@@ -1065,9 +1013,7 @@ INSERT INTO public.proceedings VALUES (10, 31, '1998-09-05 22:21:47', '80748 Ski
 Parisianhaven, HI 33135-7097', 'MichaelHermiston', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 
 
---
--- Data for Name: chief_editors; Type: TABLE DATA; Schema: public; Owner: postgres
---
+
 
 INSERT INTO public.chief_editors VALUES (1, 'Clark', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 INSERT INTO public.chief_editors VALUES (2, 'Margret', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
@@ -1076,9 +1022,6 @@ INSERT INTO public.chief_editors VALUES (4, 'Camryn', '2019-05-05 18:39:49', '20
 INSERT INTO public.chief_editors VALUES (5, 'Dakota', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 
 
---
--- Data for Name: journal_volumes; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.journal_volumes VALUES (1, 88, 11, 2, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 INSERT INTO public.journal_volumes VALUES (2, 70, 13, 3, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
@@ -1092,10 +1035,6 @@ INSERT INTO public.journal_volumes VALUES (9, 4, 6, 4, '2019-05-05 18:39:49', '2
 INSERT INTO public.journal_volumes VALUES (10, 80, 3, 1, '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 
 
-
---
--- Data for Name: journal_issues; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.journal_issues VALUES (1, 70, 3, 'Laudantium iste ut qui ab atque. Quasi tempore sed tempora veniam fugit omnis exercitationem. Rerum veniam ut ab eos corporis placeat cum. Debitis facere nam quo nihil. Et amet saepe voluptate optio iusto accusantium harum id. Minima animi placeat non. Similique odio dolorem distinctio laboriosam culpa totam aut. Praesentium omnis consequuntur dicta labore. Odio vel quis saepe quae repudiandae ut. Et et voluptatem provident sed quisquam qui. Hic voluptatibus nam deleniti.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 INSERT INTO public.journal_issues VALUES (2, 57, 9, 'Iste accusamus eligendi sint aut. Possimus facere numquam et id atque asperiores numquam. Consequuntur nam quos cum hic dolorem doloremque expedita. Omnis deleniti pariatur quisquam molestiae ipsum. Est modi corporis voluptatem. Et quae repellendus incidunt quidem eveniet. Voluptatibus veritatis consequatur adipisci dolore voluptas architecto doloribus.', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
@@ -1151,10 +1090,6 @@ INSERT INTO public.journal_issues VALUES (50, 7, 5, 'Aut occaecati odit iste. Qu
 
 
 
---
--- Data for Name: inv_editors; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
 INSERT INTO public.inv_editors VALUES (1, 80, 6, 'Tremayne Douglas', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 INSERT INTO public.inv_editors VALUES (2, 5, 9, 'Natalia Bode', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 INSERT INTO public.inv_editors VALUES (3, 15, 3, 'Janie Jacobs', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
@@ -1208,9 +1143,6 @@ INSERT INTO public.inv_editors VALUES (50, 15, 6, 'Kay Stehr', '2019-05-05 18:39
 
 
 
---
--- Data for Name: books; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.books VALUES (1, 55, '9783147581311', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 INSERT INTO public.books VALUES (2, 27, '9786159788457', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
@@ -1244,10 +1176,6 @@ INSERT INTO public.books VALUES (29, 87, '9786537936944', '2019-05-05 18:39:49',
 INSERT INTO public.books VALUES (30, 72, '9799580297511', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 
 
-
---
--- Data for Name: authors; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.authors VALUES (1, 'Nicklaus Fay', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 INSERT INTO public.authors VALUES (2, 'Grant Hettinger', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
@@ -1300,9 +1228,6 @@ INSERT INTO public.authors VALUES (48, 'Magdalena Haley', '2019-05-05 18:39:49',
 INSERT INTO public.authors VALUES (49, 'Luther Fritsch', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 INSERT INTO public.authors VALUES (50, 'Magnolia Ritchie', '2019-05-05 18:39:49', '2019-05-05 18:39:49');
 
---
--- Data for Name: writes; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.writes VALUES (1, 1, 74, '2019-05-05 18:39:50', '2019-05-05 18:39:50');
 INSERT INTO public.writes VALUES (2, 25, 39, '2019-05-05 18:39:50', '2019-05-05 18:39:50');
@@ -1356,132 +1281,64 @@ INSERT INTO public.writes VALUES (49, 24, 79, '2019-05-05 18:39:50', '2019-05-05
 INSERT INTO public.writes VALUES (50, 1, 12, '2019-05-05 18:39:50', '2019-05-05 18:39:50');
 
 
---
--- Data for Name: password_resets; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- Data for Name: sessions; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- Name: authors_author_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
 SELECT pg_catalog.setval('public.authors_author_id_seq', 50, true);
 
-
---
--- Name: books_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
 
 SELECT pg_catalog.setval('public.books_id_seq', 30, true);
 
 
---
--- Name: borrows_bor_number_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
 SELECT pg_catalog.setval('public.borrows_bor_number_seq', 100, true);
 
-
---
--- Name: branches_lib_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
 
 SELECT pg_catalog.setval('public.branches_lib_id_seq', 5, true);
 
 
---
--- Name: chief_editors_editor_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
 
 SELECT pg_catalog.setval('public.chief_editors_editor_id_seq', 5, true);
 
 
---
--- Name: copies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
 SELECT pg_catalog.setval('public.copies_id_seq', 500, true);
 
-
---
--- Name: documents_document_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
 
 SELECT pg_catalog.setval('public.documents_document_id_seq', 100, true);
 
 
---
--- Name: inv_editors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
 
 SELECT pg_catalog.setval('public.inv_editors_id_seq', 50, true);
 
 
---
--- Name: journal_issues_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
 
 SELECT pg_catalog.setval('public.journal_issues_id_seq', 50, true);
 
 
---
--- Name: journal_volumes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
 
 SELECT pg_catalog.setval('public.journal_volumes_id_seq', 10, true);
 
 
 
---
--- Name: proceedings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
 SELECT pg_catalog.setval('public.proceedings_id_seq', 10, true);
 
 
---
--- Name: publishers_publisher_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
 
 SELECT pg_catalog.setval('public.publishers_publisher_id_seq', 50, true);
 
 
---
--- Name: readers_reader_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
 
 SELECT pg_catalog.setval('public.readers_reader_id_seq', 50, true);
 
 
---
--- Name: reserves_res_number_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
 
 SELECT pg_catalog.setval('public.reserves_res_number_seq', 10, true);
 
 
---
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
 
 SELECT pg_catalog.setval('public.users_id_seq', 50, true);
 
 
---
--- Name: writes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
+
 
 SELECT pg_catalog.setval('public.writes_id_seq', 50, true);
 
 
---
--- PostgreSQL database dump complete
---
+
 
